@@ -1,0 +1,11 @@
+# Phase 2 studies
+
+Coupled scale: two independent seeds941/942,1000neurons,360000bins at10ms (one hour),causal8-bin history,two bases,planted inhibitory block rank4. Exact latent simulation is validated against dense simulation and exact restart. Bounded Poisson means are achieved by inhibitory weights, not clipping. This is deliberately structured coupled synthetic truth, not real brain-wide data or arbitrary full-rank recovery.
+
+Each seed fits a self-history baseline and ranks4/8 x ridge.001/.01 x starts0/1, all float64,max1500iterations. Validation selects only candidates with independent gradient norm<=1e-5; test and truth are evaluated afterward. Report off-diagonal filter recovery, edge detection, oracle prediction, self-history predictive gain,20 target-label permutations and a held-out time-shift control. Shifted-data scoring is not a surrogate refit. No guarantee that all fits converge or that recovery succeeds. Generation and fit parameters checkpoint; L-BFGS history does not.
+
+Streaming comparison: fresh worker per configuration,64neurons,seeds31/47,24000/96000/384000bins,two synthetic families,StreamGLM exact chunked L-BFGS versus NeMoS loader SVRG(.1,.5),same basis/initialization/ridge/dtype/split,512row chunks.36worker outcomes. All settings retained,independent gradient gate<=1e-5,max1500iterations/passes,1-hour timeout per worker. Inputs are resident counts; no full design matrix on either backend. Memory measurement includes counts. This isolates streamed feature/fitting behavior, not fully out-of-core input loading. Timings compare particular solver configurations, not universal library performance.
+
+The streaming timing suite waits for the HNN phase2 runner to exit; large coupled fits may share hardware with HNN and their timing is descriptive. NeMoS pinned to81c7200a0e66686e98fd1907e7fa11e111a0e66a. Runtime orchestration uses psutil7.2.2 installed in the upstream environment. Core library numerical modules were not modified.
+
+Queue: python -m streamglm.run_phase2 under cache/upstream/venv/bin/python,CPU6/7,BLASthreads1. Status artifacts/v8/queue_status.json; scientific progress in each study folder. HNN protocol in /home/satvik/hnn_neuro_bridge/results/phase2/PROTOCOL.md.

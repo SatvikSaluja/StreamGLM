@@ -1,0 +1,242 @@
+[
+  {
+    "status": "DONE",
+    "backend": "lowrank",
+    "neurons": 6,
+    "bins": 400,
+    "gradient_inf_norm": 0.00877212776304144,
+    "gradient_gate_passed": false,
+    "objective": 2.329335723836316,
+    "optimizer_message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+    "test": {
+      "log_likelihood_per_bin": -2.6879937661958104,
+      "valid_bins": 72,
+      "spikes": 64.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -2.649945565636098,
+      "gain_nats_per_bin": -0.03804820055971211,
+      "gain_bits_per_spike": -0.061753444045026
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -2.550884405425533,
+      "valid_bins": 72,
+      "spikes": 64.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -2.649945565636098,
+      "gain_nats_per_bin": 0.09906116021056495,
+      "gain_bits_per_spike": 0.16077942515305033
+    },
+    "filter_relative_error": 0.8297751885666266,
+    "filter_correlation": 0.5824379562044406,
+    "parameters": 54,
+    "seconds": 2.1829379060000065,
+    "peak_rss_gib": 0.2988853454589844,
+    "budget": 10,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "lowrank",
+    "seed": 7
+  },
+  {
+    "status": "DONE",
+    "backend": "nemos",
+    "neurons": 6,
+    "bins": 400,
+    "gradient_inf_norm": 0.012313213638204914,
+    "gradient_gate_passed": false,
+    "objective": 2.4443924756683906,
+    "optimizer_message": "StochasticFitSummary(pass_idx=9, batch_idx=0, n_passes=10, should_stop=False, stop_reason='')",
+    "test": {
+      "log_likelihood_per_bin": -2.6489551130705453,
+      "valid_bins": 72,
+      "spikes": 64.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -2.649945565636098,
+      "gain_nats_per_bin": 0.0009904525655528573,
+      "gain_bits_per_spike": 0.0016075361301287154
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -2.550884405425533,
+      "valid_bins": 72,
+      "spikes": 64.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -2.649945565636098,
+      "gain_nats_per_bin": 0.09906116021056495,
+      "gain_bits_per_spike": 0.16077942515305033
+    },
+    "filter_relative_error": 0.9729017347483688,
+    "filter_correlation": 0.5935409376699234,
+    "parameters": 78,
+    "seconds": 9.063888910997775,
+    "peak_rss_gib": 0.42575836181640625,
+    "budget": 10,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "lowrank",
+    "seed": 7
+  },
+  {
+    "status": "DONE",
+    "backend": "dense",
+    "neurons": 6,
+    "bins": 400,
+    "gradient_inf_norm": 0.004089465489903641,
+    "gradient_gate_passed": false,
+    "objective": 2.275312586954723,
+    "optimizer_message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+    "test": {
+      "log_likelihood_per_bin": -2.7953825277307325,
+      "valid_bins": 72,
+      "spikes": 64.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -2.649945565636098,
+      "gain_nats_per_bin": -0.14543696209463441,
+      "gain_bits_per_spike": -0.23604883197287085
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -2.550884405425533,
+      "valid_bins": 72,
+      "spikes": 64.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -2.649945565636098,
+      "gain_nats_per_bin": 0.09906116021056495,
+      "gain_bits_per_spike": 0.16077942515305033
+    },
+    "filter_relative_error": 1.2629084453598354,
+    "filter_correlation": 0.6243136691834074,
+    "parameters": 78,
+    "seconds": 1.7803587560010783,
+    "peak_rss_gib": 0.2858467102050781,
+    "budget": 10,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "lowrank",
+    "seed": 7
+  },
+  {
+    "status": "DONE",
+    "backend": "lowrank",
+    "neurons": 6,
+    "bins": 400,
+    "gradient_inf_norm": 0.009874750035933837,
+    "gradient_gate_passed": false,
+    "objective": 3.506736557769134,
+    "optimizer_message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+    "test": {
+      "log_likelihood_per_bin": -3.822452650584315,
+      "valid_bins": 72,
+      "spikes": 110.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -3.783032451730512,
+      "gain_nats_per_bin": -0.03942019885380274,
+      "gain_bits_per_spike": -0.03722486753273761
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -3.7546918874432924,
+      "valid_bins": 72,
+      "spikes": 110.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -3.783032451730512,
+      "gain_nats_per_bin": 0.02834056428721965,
+      "gain_bits_per_spike": 0.02676226356207272
+    },
+    "filter_relative_error": 0.9809648158529636,
+    "filter_correlation": 0.5482853147714688,
+    "parameters": 54,
+    "seconds": 1.9885232650012767,
+    "peak_rss_gib": 0.2895050048828125,
+    "budget": 10,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "permutation_fullrank",
+    "seed": 7
+  },
+  {
+    "status": "DONE",
+    "backend": "nemos",
+    "neurons": 6,
+    "bins": 400,
+    "gradient_inf_norm": 0.023865758805479247,
+    "gradient_gate_passed": false,
+    "objective": 3.5619951350929866,
+    "optimizer_message": "StochasticFitSummary(pass_idx=9, batch_idx=0, n_passes=10, should_stop=False, stop_reason='')",
+    "test": {
+      "log_likelihood_per_bin": -3.7763494606968036,
+      "valid_bins": 72,
+      "spikes": 110.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -3.783032451730512,
+      "gain_nats_per_bin": 0.006682991033708656,
+      "gain_bits_per_spike": 0.006310811796635053
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -3.7546918874432924,
+      "valid_bins": 72,
+      "spikes": 110.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -3.783032451730512,
+      "gain_nats_per_bin": 0.02834056428721965,
+      "gain_bits_per_spike": 0.02676226356207272
+    },
+    "filter_relative_error": 0.9007211712605484,
+    "filter_correlation": 0.5965868400883397,
+    "parameters": 78,
+    "seconds": 7.063894650000293,
+    "peak_rss_gib": 0.42972564697265625,
+    "budget": 10,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "permutation_fullrank",
+    "seed": 7
+  },
+  {
+    "status": "DONE",
+    "backend": "dense",
+    "neurons": 6,
+    "bins": 400,
+    "gradient_inf_norm": 0.019225779484947154,
+    "gradient_gate_passed": false,
+    "objective": 3.4641413297575014,
+    "optimizer_message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+    "test": {
+      "log_likelihood_per_bin": -3.765108094695624,
+      "valid_bins": 72,
+      "spikes": 110.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -3.783032451730512,
+      "gain_nats_per_bin": 0.0179243570348883,
+      "gain_bits_per_spike": 0.0169261402944152
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -3.7546918874432924,
+      "valid_bins": 72,
+      "spikes": 110.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -3.783032451730512,
+      "gain_nats_per_bin": 0.02834056428721965,
+      "gain_bits_per_spike": 0.02676226356207272
+    },
+    "filter_relative_error": 1.0320064139008007,
+    "filter_correlation": 0.6492961697908105,
+    "parameters": 78,
+    "seconds": 1.9592865459999302,
+    "peak_rss_gib": 0.28298187255859375,
+    "budget": 10,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "permutation_fullrank",
+    "seed": 7
+  }
+]

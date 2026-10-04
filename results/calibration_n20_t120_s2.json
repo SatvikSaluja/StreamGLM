@@ -1,0 +1,46 @@
+{
+  "config": {
+    "duration": 120.0,
+    "neurons": 20,
+    "history_ms": 25.0,
+    "n_basis": 8,
+    "connection_prob": 0.3,
+    "strength": 0.15,
+    "jitter_mult": 2.0,
+    "regularizer": 0.001,
+    "seed": 2,
+    "out": "results"
+  },
+  "n_spikes": 22031,
+  "rate_hz": [
+    8.508333333333333,
+    10.341666666666667
+  ],
+  "n_connections": 119,
+  "results": {
+    "population GLM": {
+      "weight_spearman": 0.6554052129326308,
+      "sign_accuracy": 0.9747899159663865,
+      "latency_error_ms": 3.134453781512605,
+      "n_evaluated": 119
+    },
+    "pairwise GLM": {
+      "weight_spearman": 0.6386768266628685,
+      "sign_accuracy": 0.9747899159663865,
+      "latency_error_ms": NaN,
+      "n_evaluated": 119
+    },
+    "CCG baseline": {
+      "weight_spearman": 0.32826520438683954,
+      "sign_accuracy": 0.9243697478991597,
+      "latency_error_ms": NaN,
+      "n_evaluated": 119
+    },
+    "jitter null": {
+      "weight_spearman": 0.043661871528272334,
+      "sign_accuracy": 0.7394957983193278,
+      "latency_error_ms": NaN,
+      "n_evaluated": 119
+    }
+  }
+}

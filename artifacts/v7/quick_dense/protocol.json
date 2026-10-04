@@ -1,0 +1,31 @@
+{
+  "neurons": 64,
+  "seed": 31,
+  "datasets": [
+    "lowrank",
+    "permutation_fullrank"
+  ],
+  "split": "60% train, 20% validation; test not inspected",
+  "ridge": "fixed from previous grid: lowrank .1, fullrank .01",
+  "precision": "float64",
+  "budget": 1500,
+  "worker_timeout_s": 600,
+  "repeats": 2,
+  "gradient_gate": 1e-05,
+  "scipy_stopping": "ftol=0, gtol=1e-6",
+  "nemos_stopping": "native LBFGS tol=1e-6",
+  "timing": "first includes feature creation and compilation; repeat reuses NeMoS design and compilation caches; imports excluded; independent check and validation excluded",
+  "scope": "pilot; one seed, no tuning, no general speed claim",
+  "source_sha256": {
+    "artifacts/v7/quick_dense/run.py": "be7309ddcc5b94af154d387af3579022c12dc9ae7a616260308b8ed0b243955e",
+    "streamglm/model.py": "d7704b6561c625c18390b176aae113c591757fedd8af4f43dd83f8d437e58f62",
+    "streamglm/reference.py": "d048b699f6d25cdfd8fb47b44cc3be9fa7539ed4a84d73ba106ee9a56cba6d64",
+    "streamglm/data.py": "c811e522f2c608f73e138f5d6be2b413849312f773ffc2411a30d0ac28499510"
+  },
+  "nemos_reference_commit": "81c7200a0e66686e98fd1907e7fa11e111a0e66a",
+  "cpu_affinity": [
+    6,
+    7
+  ],
+  "blas_threads": 1
+}

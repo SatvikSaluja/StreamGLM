@@ -1,0 +1,23 @@
+{
+  "nemos_version": "0.2.8",
+  "nemos_glm_source_sha256": "695e1442589b562da4c2c570623e3b2e91b81448b1f01e9ef5a635c42b70ad29",
+  "has_stochastic_fit": false,
+  "has_batching_module": false,
+  "shape": [
+    4000,
+    6
+  ],
+  "dtype": "float64",
+  "regularizer": "none",
+  "nemos_seconds": 6.909019610000541,
+  "streamglm_seconds": 2.2031059239961905,
+  "streamglm_converged": true,
+  "nemos_converged": true,
+  "nemos_objective": 3.155375585331562,
+  "streamglm_objective": 3.155375585362639,
+  "objective_absolute_difference": 3.107691881609753e-11,
+  "max_prediction_absolute_difference": 1.1167314413362828e-05,
+  "nemos_gradient_inf_norm": 2.0352261403677182e-12,
+  "streamglm_gradient_inf_norm": 2.0188835279429487e-07,
+  "note": "Small dense unregularized fit. Not a comparison against newer upstream streaming support or a large-model speed claim."
+}

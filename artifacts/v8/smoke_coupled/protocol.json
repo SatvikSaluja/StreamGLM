@@ -1,0 +1,64 @@
+{
+  "configs": [
+    [
+      0,
+      0.01,
+      0
+    ],
+    [
+      4,
+      0.001,
+      0
+    ],
+    [
+      4,
+      0.001,
+      1
+    ],
+    [
+      4,
+      0.01,
+      0
+    ],
+    [
+      4,
+      0.01,
+      1
+    ],
+    [
+      8,
+      0.001,
+      0
+    ],
+    [
+      8,
+      0.001,
+      1
+    ],
+    [
+      8,
+      0.01,
+      0
+    ],
+    [
+      8,
+      0.01,
+      1
+    ]
+  ],
+  "max_iterations": 1500,
+  "gate": 1e-05,
+  "seed": 944,
+  "neurons": 12,
+  "bins": 2000,
+  "bin_s": 0.01,
+  "split": [
+    0.6,
+    0.2,
+    0.2
+  ],
+  "self_history": true,
+  "precision": "float64",
+  "truth_used_for_initialization": false,
+  "scope": "inhibitory rank4 block synthetic network; not real-data evidence or arbitrary full-rank recovery"
+}

@@ -1,0 +1,68 @@
+[
+  {
+    "dataset": "lowrank_n6_s31",
+    "backend": "dense",
+    "neurons": 6,
+    "seed": 31,
+    "family": "lowrank",
+    "tuning_seconds": 3.014333486557007,
+    "candidates": 1,
+    "eligible": 0,
+    "status": "NO_ELIGIBLE_MODEL"
+  },
+  {
+    "dataset": "lowrank_n6_s31",
+    "backend": "lowrank",
+    "neurons": 6,
+    "seed": 31,
+    "family": "lowrank",
+    "tuning_seconds": 3.0097830295562744,
+    "candidates": 1,
+    "eligible": 0,
+    "status": "NO_ELIGIBLE_MODEL"
+  },
+  {
+    "dataset": "lowrank_n6_s31",
+    "backend": "nemos",
+    "neurons": 6,
+    "seed": 31,
+    "family": "lowrank",
+    "tuning_seconds": 6.01422119140625,
+    "candidates": 1,
+    "eligible": 0,
+    "status": "NO_ELIGIBLE_MODEL"
+  },
+  {
+    "dataset": "permutation_fullrank_n6_s31",
+    "backend": "dense",
+    "neurons": 6,
+    "seed": 31,
+    "family": "permutation_fullrank",
+    "tuning_seconds": 5.009810209274292,
+    "candidates": 1,
+    "eligible": 0,
+    "status": "NO_ELIGIBLE_MODEL"
+  },
+  {
+    "dataset": "permutation_fullrank_n6_s31",
+    "backend": "lowrank",
+    "neurons": 6,
+    "seed": 31,
+    "family": "permutation_fullrank",
+    "tuning_seconds": 3.0113558769226074,
+    "candidates": 1,
+    "eligible": 0,
+    "status": "NO_ELIGIBLE_MODEL"
+  },
+  {
+    "dataset": "permutation_fullrank_n6_s31",
+    "backend": "nemos",
+    "neurons": 6,
+    "seed": 31,
+    "family": "permutation_fullrank",
+    "tuning_seconds": 6.049994230270386,
+    "candidates": 1,
+    "eligible": 0,
+    "status": "NO_ELIGIBLE_MODEL"
+  }
+]

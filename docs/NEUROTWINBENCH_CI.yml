@@ -1,0 +1,27 @@
+# Archived inherited NeuroTwinBench workflow; not active for StreamGLM.
+name: CI
+
+# Full HNN simulations do not run here (PROJECT.md section 26). CI runs the
+# synthetic path end to end, the ground-truth resolver against a mock that
+# reproduces hnn-core v0.6.1 data structures, and figure regeneration from
+# committed results. Everything expensive runs offline and commits its output.
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e . matplotlib
+      - name: Tests
+        run: python tests/test_pipeline.py
+      - name: Figures regenerate from stored results
+        run: python figures/make_figures.py

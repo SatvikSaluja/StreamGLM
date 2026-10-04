@@ -1,0 +1,329 @@
+{
+  "converged": true,
+  "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+  "iterations": 48,
+  "evaluations": 53,
+  "objective": 3.9091211755693664,
+  "gradient_inf_norm": 5.047358658930941e-05,
+  "seconds": 15.86114680400351,
+  "trace": [
+    {
+      "evaluation": 1,
+      "objective": 4.057205893457955,
+      "gradient_inf_norm": 0.03456035309813849,
+      "seconds": 1.2506751559994882
+    },
+    {
+      "evaluation": 2,
+      "objective": 4.000469689856508,
+      "gradient_inf_norm": 0.018734489692989027,
+      "seconds": 1.541887190003763
+    },
+    {
+      "evaluation": 3,
+      "objective": 3.9861012955978956,
+      "gradient_inf_norm": 0.06002251179803116,
+      "seconds": 1.809295608996763
+    },
+    {
+      "evaluation": 4,
+      "objective": 3.9656720714791853,
+      "gradient_inf_norm": 0.007952824308021786,
+      "seconds": 2.0942251849919558
+    },
+    {
+      "evaluation": 5,
+      "objective": 3.957464026297775,
+      "gradient_inf_norm": 0.008337939458604221,
+      "seconds": 2.3693266289919848
+    },
+    {
+      "evaluation": 6,
+      "objective": 3.9564378628833774,
+      "gradient_inf_norm": 0.016588234058816313,
+      "seconds": 2.6539335249981377
+    },
+    {
+      "evaluation": 7,
+      "objective": 3.9544712927113177,
+      "gradient_inf_norm": 0.003207620669346581,
+      "seconds": 2.9323476379940985
+    },
+    {
+      "evaluation": 8,
+      "objective": 3.9534716639747987,
+      "gradient_inf_norm": 0.003033998966424344,
+      "seconds": 3.2059884229965974
+    },
+    {
+      "evaluation": 9,
+      "objective": 3.9497771797093364,
+      "gradient_inf_norm": 0.017802000804272113,
+      "seconds": 3.4866473409929313
+    },
+    {
+      "evaluation": 10,
+      "objective": 3.9640562012558154,
+      "gradient_inf_norm": 0.05176569128578181,
+      "seconds": 3.7668618750030873
+    },
+    {
+      "evaluation": 11,
+      "objective": 3.946899300804799,
+      "gradient_inf_norm": 0.027793790323543992,
+      "seconds": 4.02982391200203
+    },
+    {
+      "evaluation": 12,
+      "objective": 3.9435507407162333,
+      "gradient_inf_norm": 0.028239388064579905,
+      "seconds": 4.299999173992546
+    },
+    {
+      "evaluation": 13,
+      "objective": 3.935317864984632,
+      "gradient_inf_norm": 0.01764600072549843,
+      "seconds": 4.576640664992738
+    },
+    {
+      "evaluation": 14,
+      "objective": 3.925164281630125,
+      "gradient_inf_norm": 0.006620029243447532,
+      "seconds": 4.8648620570020285
+    },
+    {
+      "evaluation": 15,
+      "objective": 3.923137175869478,
+      "gradient_inf_norm": 0.00637990092481471,
+      "seconds": 5.158723396001733
+    },
+    {
+      "evaluation": 16,
+      "objective": 3.9209666201572104,
+      "gradient_inf_norm": 0.003066161241926864,
+      "seconds": 5.445699143994716
+    },
+    {
+      "evaluation": 17,
+      "objective": 3.9198946335873006,
+      "gradient_inf_norm": 0.003213667940860048,
+      "seconds": 5.713407725997968
+    },
+    {
+      "evaluation": 18,
+      "objective": 3.918648045692489,
+      "gradient_inf_norm": 0.0020749295302400893,
+      "seconds": 5.980445744993631
+    },
+    {
+      "evaluation": 19,
+      "objective": 3.916896580287099,
+      "gradient_inf_norm": 0.0022197630054437566,
+      "seconds": 6.253299452000647
+    },
+    {
+      "evaluation": 20,
+      "objective": 3.915630237267622,
+      "gradient_inf_norm": 0.003151305780531076,
+      "seconds": 6.538816507003503
+    },
+    {
+      "evaluation": 21,
+      "objective": 3.9139724373849623,
+      "gradient_inf_norm": 0.00186013861927706,
+      "seconds": 6.830550960992696
+    },
+    {
+      "evaluation": 22,
+      "objective": 3.9130911479593564,
+      "gradient_inf_norm": 0.0108468803864132,
+      "seconds": 7.106324434003909
+    },
+    {
+      "evaluation": 23,
+      "objective": 3.911971520241865,
+      "gradient_inf_norm": 0.001525940000489065,
+      "seconds": 7.391712594995624
+    },
+    {
+      "evaluation": 24,
+      "objective": 3.911559753924335,
+      "gradient_inf_norm": 0.0015241960824751103,
+      "seconds": 7.680962580998312
+    },
+    {
+      "evaluation": 25,
+      "objective": 3.911219432718929,
+      "gradient_inf_norm": 0.0018912118414801309,
+      "seconds": 7.985784513002727
+    },
+    {
+      "evaluation": 26,
+      "objective": 3.911097069931897,
+      "gradient_inf_norm": 0.0020997987861333164,
+      "seconds": 8.260014974002843
+    },
+    {
+      "evaluation": 27,
+      "objective": 3.911004526617472,
+      "gradient_inf_norm": 0.0007032608214038905,
+      "seconds": 8.553264084999682
+    },
+    {
+      "evaluation": 28,
+      "objective": 3.910948440408979,
+      "gradient_inf_norm": 0.001401481533325134,
+      "seconds": 8.842998879990773
+    },
+    {
+      "evaluation": 29,
+      "objective": 3.910868962668872,
+      "gradient_inf_norm": 0.0006945217929915451,
+      "seconds": 9.123819118991378
+    },
+    {
+      "evaluation": 30,
+      "objective": 3.91074087794116,
+      "gradient_inf_norm": 0.0008166244589419963,
+      "seconds": 9.39424848499766
+    },
+    {
+      "evaluation": 31,
+      "objective": 3.9105401067169145,
+      "gradient_inf_norm": 0.001241559374684528,
+      "seconds": 9.682224320000387
+    },
+    {
+      "evaluation": 32,
+      "objective": 3.9103800428309183,
+      "gradient_inf_norm": 0.0017318227325190567,
+      "seconds": 9.9677565949969
+    },
+    {
+      "evaluation": 33,
+      "objective": 3.9103353139725066,
+      "gradient_inf_norm": 0.0015090926740149889,
+      "seconds": 10.252432804991258
+    },
+    {
+      "evaluation": 34,
+      "objective": 3.9102161186436013,
+      "gradient_inf_norm": 0.0028743204202002983,
+      "seconds": 10.53859950399783
+    },
+    {
+      "evaluation": 35,
+      "objective": 3.910069228666081,
+      "gradient_inf_norm": 0.001757003975583699,
+      "seconds": 10.831637274997775
+    },
+    {
+      "evaluation": 36,
+      "objective": 3.909755557135071,
+      "gradient_inf_norm": 0.004207524460496232,
+      "seconds": 11.118936618004227
+    },
+    {
+      "evaluation": 37,
+      "objective": 3.909423891691627,
+      "gradient_inf_norm": 0.001294662510399473,
+      "seconds": 11.379403985003592
+    },
+    {
+      "evaluation": 38,
+      "objective": 3.90928913699434,
+      "gradient_inf_norm": 0.0019534681012068843,
+      "seconds": 11.671377935999772
+    },
+    {
+      "evaluation": 39,
+      "objective": 3.9092249371599137,
+      "gradient_inf_norm": 0.0011399654533419694,
+      "seconds": 11.946057886991184
+    },
+    {
+      "evaluation": 40,
+      "objective": 3.9091882416459285,
+      "gradient_inf_norm": 0.00076437354156417,
+      "seconds": 12.240125727999839
+    },
+    {
+      "evaluation": 41,
+      "objective": 3.9091549090775155,
+      "gradient_inf_norm": 0.0003394726056763708,
+      "seconds": 12.509287244000006
+    },
+    {
+      "evaluation": 42,
+      "objective": 3.9091509122791934,
+      "gradient_inf_norm": 0.0008977728976635285,
+      "seconds": 12.788615256999037
+    },
+    {
+      "evaluation": 43,
+      "objective": 3.9091418791899812,
+      "gradient_inf_norm": 0.0001957247590080413,
+      "seconds": 13.06961786399188
+    },
+    {
+      "evaluation": 44,
+      "objective": 3.9091386480883377,
+      "gradient_inf_norm": 0.0001071053916265632,
+      "seconds": 13.34569018399634
+    },
+    {
+      "evaluation": 45,
+      "objective": 3.909133890719036,
+      "gradient_inf_norm": 0.00019332308871979043,
+      "seconds": 13.624799953002366
+    },
+    {
+      "evaluation": 46,
+      "objective": 3.90912958673231,
+      "gradient_inf_norm": 0.000156442370625532,
+      "seconds": 13.902886903990293
+    },
+    {
+      "evaluation": 47,
+      "objective": 3.909126931108885,
+      "gradient_inf_norm": 0.0001952055015740056,
+      "seconds": 14.178186335004284
+    },
+    {
+      "evaluation": 48,
+      "objective": 3.9091251059949643,
+      "gradient_inf_norm": 0.0001486521594537207,
+      "seconds": 14.45132258599915
+    },
+    {
+      "evaluation": 49,
+      "objective": 3.9091239565500926,
+      "gradient_inf_norm": 8.107850845658547e-05,
+      "seconds": 14.730467738991138
+    },
+    {
+      "evaluation": 50,
+      "objective": 3.909122865601393,
+      "gradient_inf_norm": 7.559727248345125e-05,
+      "seconds": 15.010170904002734
+    },
+    {
+      "evaluation": 51,
+      "objective": 3.9091222549940503,
+      "gradient_inf_norm": 0.0003313492777345546,
+      "seconds": 15.290490004001185
+    },
+    {
+      "evaluation": 52,
+      "objective": 3.909121445413775,
+      "gradient_inf_norm": 3.789270332377662e-05,
+      "seconds": 15.576105992004159
+    },
+    {
+      "evaluation": 53,
+      "objective": 3.9091211755693664,
+      "gradient_inf_norm": 5.047358658930941e-05,
+      "seconds": 15.860229390003951
+    }
+  ]
+}

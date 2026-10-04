@@ -1,0 +1,104 @@
+{
+  "config": {
+    "tstop": 5000.0,
+    "mesh": [
+      5,
+      5
+    ],
+    "history_ms": 25.0,
+    "n_basis": 8,
+    "n_procs": 4,
+    "drive_rate": 10.0,
+    "regularizer": 1e-06,
+    "seed": 2,
+    "out": "results"
+  },
+  "sim_wall_s": 61.29078435897827,
+  "n_spikes": 1180,
+  "mean_rate_hz": 3.371428571428572,
+  "n_silent": 0,
+  "per_class": {
+    "L2_basket->L2_basket|gabaa|soma": {
+      "n_evaluated": 100,
+      "n_outside_support": 0,
+      "weight_spearman": 0.44549072325605055,
+      "sign_accuracy": 0.99,
+      "latency_error_ms": NaN
+    },
+    "L2_basket->L2_pyramidal|gabab|soma": {
+      "n_evaluated": 250,
+      "n_outside_support": 0,
+      "weight_spearman": 0.3893645341077087,
+      "sign_accuracy": 0.936,
+      "latency_error_ms": NaN
+    },
+    "L2_basket->L5_pyramidal|gabaa|distal": {
+      "n_evaluated": 250,
+      "n_outside_support": 0,
+      "weight_spearman": -0.13268559373595787,
+      "sign_accuracy": 0.516,
+      "latency_error_ms": NaN
+    },
+    "L2_pyramidal->L2_basket|ampa|soma": {
+      "n_evaluated": 248,
+      "n_outside_support": 2,
+      "weight_spearman": 0.32233365758681626,
+      "sign_accuracy": 0.5766129032258065,
+      "latency_error_ms": NaN
+    },
+    "L2_pyramidal->L2_pyramidal|ampa|proximal": {
+      "n_evaluated": 596,
+      "n_outside_support": 4,
+      "weight_spearman": 0.4838441356575673,
+      "sign_accuracy": 0.43288590604026844,
+      "latency_error_ms": NaN
+    },
+    "L2_pyramidal->L5_basket|ampa|soma": {
+      "n_evaluated": 248,
+      "n_outside_support": 2,
+      "weight_spearman": -0.005052053489573499,
+      "sign_accuracy": 0.42338709677419356,
+      "latency_error_ms": NaN
+    },
+    "L2_pyramidal->L5_pyramidal|ampa|distal": {
+      "n_evaluated": 621,
+      "n_outside_support": 4,
+      "weight_spearman": 0.06851247025994847,
+      "sign_accuracy": 0.6747181964573269,
+      "latency_error_ms": NaN
+    },
+    "L5_basket->L5_basket|gabaa|soma": {
+      "n_evaluated": 90,
+      "n_outside_support": 0,
+      "weight_spearman": 0.21933250638090887,
+      "sign_accuracy": 1.0,
+      "latency_error_ms": NaN
+    },
+    "L5_basket->L5_pyramidal|gabab|soma": {
+      "n_evaluated": 250,
+      "n_outside_support": 0,
+      "weight_spearman": -0.011421109730341878,
+      "sign_accuracy": 0.572,
+      "latency_error_ms": NaN
+    },
+    "L5_pyramidal->L5_basket|ampa|soma": {
+      "n_evaluated": 248,
+      "n_outside_support": 2,
+      "weight_spearman": 0.15058754822636813,
+      "sign_accuracy": 0.6048387096774194,
+      "latency_error_ms": NaN
+    },
+    "L5_pyramidal->L5_pyramidal|ampa|proximal": {
+      "n_evaluated": 596,
+      "n_outside_support": 4,
+      "weight_spearman": 0.11501377918467756,
+      "sign_accuracy": 0.4714765100671141,
+      "latency_error_ms": NaN
+    }
+  },
+  "pooled_warning_only": {
+    "weight_spearman": 0.2295717690821709,
+    "sign_accuracy": 0.5865027166142408,
+    "n_evaluated": 3497
+  }
+}

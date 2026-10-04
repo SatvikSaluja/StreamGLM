@@ -1,0 +1,267 @@
+{
+  "status": "DONE",
+  "kind": "topology",
+  "conn_seed": 15,
+  "event_seed": 1040000,
+  "duration_s": 12800.0,
+  "controls": [
+    {
+      "jitter_seed": 101,
+      "scores": {
+        "L2_pyramidal->L2_pyramidal": {
+          "original": {
+            "roc_auc": 0.7305386807160905,
+            "pr_auc": 0.6664133185698631,
+            "n_edges": 178,
+            "n_non_edges": 418,
+            "prevalence": 0.2986577181208054
+          },
+          "control": {
+            "roc_auc": 0.5804929842481588,
+            "pr_auc": 0.41041009683575097,
+            "n_edges": 178,
+            "n_non_edges": 418,
+            "prevalence": 0.2986577181208054
+          },
+          "paired_uncertainty": {
+            "status": "DONE",
+            "n_nodes": 25,
+            "n_pairs": 596,
+            "bootstrap_valid": 1000,
+            "auc_difference": 0.15004569646793176,
+            "ap_difference": 0.2560032217341121,
+            "auc_difference_interval95": [
+              0.0850684668945233,
+              0.21291451426310803
+            ],
+            "ap_difference_interval95": [
+              0.13388390991632548,
+              0.35532941950287267
+            ],
+            "scope": "conditional on fitted models and fixed circuit; neuron-cluster resampling, not refitting, not an independent-circuit confidence interval"
+          },
+          "distance_control": {
+            "roc_auc": 0.4919359174237943,
+            "pr_auc": 0.3026012067025772,
+            "n_edges": 178,
+            "n_non_edges": 418,
+            "prevalence": 0.2986577181208054
+          }
+        },
+        "L5_pyramidal->L5_pyramidal": {
+          "original": {
+            "roc_auc": 0.567913015429278,
+            "pr_auc": 0.45129313286161243,
+            "n_edges": 178,
+            "n_non_edges": 418,
+            "prevalence": 0.2986577181208054
+          },
+          "control": {
+            "roc_auc": 0.5410999408633944,
+            "pr_auc": 0.37164065162433224,
+            "n_edges": 178,
+            "n_non_edges": 418,
+            "prevalence": 0.2986577181208054
+          },
+          "paired_uncertainty": {
+            "status": "DONE",
+            "n_nodes": 25,
+            "n_pairs": 596,
+            "bootstrap_valid": 1000,
+            "auc_difference": 0.026813074565883555,
+            "ap_difference": 0.07965248123728019,
+            "auc_difference_interval95": [
+              -0.02022712113017207,
+              0.07848877305066002
+            ],
+            "ap_difference_interval95": [
+              -0.0002445802607392202,
+              0.14708728621754327
+            ],
+            "scope": "conditional on fitted models and fixed circuit; neuron-cluster resampling, not refitting, not an independent-circuit confidence interval"
+          },
+          "distance_control": {
+            "roc_auc": 0.4919359174237943,
+            "pr_auc": 0.3026012067025772,
+            "n_edges": 178,
+            "n_non_edges": 418,
+            "prevalence": 0.2986577181208054
+          }
+        }
+      },
+      "converged": true
+    },
+    {
+      "jitter_seed": 202,
+      "scores": {
+        "L2_pyramidal->L2_pyramidal": {
+          "original": {
+            "roc_auc": 0.7305386807160905,
+            "pr_auc": 0.6664133185698631,
+            "n_edges": 178,
+            "n_non_edges": 418,
+            "prevalence": 0.2986577181208054
+          },
+          "control": {
+            "roc_auc": 0.5776167947959787,
+            "pr_auc": 0.3979518203985355,
+            "n_edges": 178,
+            "n_non_edges": 418,
+            "prevalence": 0.2986577181208054
+          },
+          "paired_uncertainty": {
+            "status": "DONE",
+            "n_nodes": 25,
+            "n_pairs": 596,
+            "bootstrap_valid": 1000,
+            "auc_difference": 0.1529218859201118,
+            "ap_difference": 0.2684614981713276,
+            "auc_difference_interval95": [
+              0.08455061595864392,
+              0.21512186399155134
+            ],
+            "ap_difference_interval95": [
+              0.1414381700029938,
+              0.36471366929795546
+            ],
+            "scope": "conditional on fitted models and fixed circuit; neuron-cluster resampling, not refitting, not an independent-circuit confidence interval"
+          },
+          "distance_control": {
+            "roc_auc": 0.4919359174237943,
+            "pr_auc": 0.3026012067025772,
+            "n_edges": 178,
+            "n_non_edges": 418,
+            "prevalence": 0.2986577181208054
+          }
+        },
+        "L5_pyramidal->L5_pyramidal": {
+          "original": {
+            "roc_auc": 0.567913015429278,
+            "pr_auc": 0.45129313286161243,
+            "n_edges": 178,
+            "n_non_edges": 418,
+            "prevalence": 0.2986577181208054
+          },
+          "control": {
+            "roc_auc": 0.5429815601311758,
+            "pr_auc": 0.37271970815876376,
+            "n_edges": 178,
+            "n_non_edges": 418,
+            "prevalence": 0.2986577181208054
+          },
+          "paired_uncertainty": {
+            "status": "DONE",
+            "n_nodes": 25,
+            "n_pairs": 596,
+            "bootstrap_valid": 1000,
+            "auc_difference": 0.024931455298102145,
+            "ap_difference": 0.07857342470284867,
+            "auc_difference_interval95": [
+              -0.022591331000556013,
+              0.07555596048961115
+            ],
+            "ap_difference_interval95": [
+              -0.0004159830566835151,
+              0.14283194731769663
+            ],
+            "scope": "conditional on fitted models and fixed circuit; neuron-cluster resampling, not refitting, not an independent-circuit confidence interval"
+          },
+          "distance_control": {
+            "roc_auc": 0.4919359174237943,
+            "pr_auc": 0.3026012067025772,
+            "n_edges": 178,
+            "n_non_edges": 418,
+            "prevalence": 0.2986577181208054
+          }
+        }
+      },
+      "converged": true
+    },
+    {
+      "jitter_seed": 303,
+      "scores": {
+        "L2_pyramidal->L2_pyramidal": {
+          "original": {
+            "roc_auc": 0.7305386807160905,
+            "pr_auc": 0.6664133185698631,
+            "n_edges": 178,
+            "n_non_edges": 418,
+            "prevalence": 0.2986577181208054
+          },
+          "control": {
+            "roc_auc": 0.579377452825117,
+            "pr_auc": 0.41752505535116147,
+            "n_edges": 178,
+            "n_non_edges": 418,
+            "prevalence": 0.2986577181208054
+          },
+          "paired_uncertainty": {
+            "status": "DONE",
+            "n_nodes": 25,
+            "n_pairs": 596,
+            "bootstrap_valid": 1000,
+            "auc_difference": 0.15116122789097353,
+            "ap_difference": 0.2488882632187016,
+            "auc_difference_interval95": [
+              0.0835196426046911,
+              0.21522503341268673
+            ],
+            "ap_difference_interval95": [
+              0.12367510765616938,
+              0.35725341919226156
+            ],
+            "scope": "conditional on fitted models and fixed circuit; neuron-cluster resampling, not refitting, not an independent-circuit confidence interval"
+          },
+          "distance_control": {
+            "roc_auc": 0.4919359174237943,
+            "pr_auc": 0.3026012067025772,
+            "n_edges": 178,
+            "n_non_edges": 418,
+            "prevalence": 0.2986577181208054
+          }
+        },
+        "L5_pyramidal->L5_pyramidal": {
+          "original": {
+            "roc_auc": 0.567913015429278,
+            "pr_auc": 0.45129313286161243,
+            "n_edges": 178,
+            "n_non_edges": 418,
+            "prevalence": 0.2986577181208054
+          },
+          "control": {
+            "roc_auc": 0.5417450674694909,
+            "pr_auc": 0.3704997953664209,
+            "n_edges": 178,
+            "n_non_edges": 418,
+            "prevalence": 0.2986577181208054
+          },
+          "paired_uncertainty": {
+            "status": "DONE",
+            "n_nodes": 25,
+            "n_pairs": 596,
+            "bootstrap_valid": 1000,
+            "auc_difference": 0.026167947959787052,
+            "ap_difference": 0.08079333749519152,
+            "auc_difference_interval95": [
+              -0.02157206685919564,
+              0.07653951635655722
+            ],
+            "ap_difference_interval95": [
+              0.0024361716633669235,
+              0.1437472070432016
+            ],
+            "scope": "conditional on fitted models and fixed circuit; neuron-cluster resampling, not refitting, not an independent-circuit confidence interval"
+          },
+          "distance_control": {
+            "roc_auc": 0.4919359174237943,
+            "pr_auc": 0.3026012067025772,
+            "n_edges": 178,
+            "n_non_edges": 418,
+            "prevalence": 0.2986577181208054
+          }
+        }
+      },
+      "converged": true
+    }
+  ]
+}

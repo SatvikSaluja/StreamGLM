@@ -1,0 +1,39 @@
+{
+  "neurons": [
+    64
+  ],
+  "seeds": [
+    31
+  ],
+  "bins": [
+    24000,
+    48000,
+    96000
+  ],
+  "families": [
+    "lowrank",
+    "permutation_fullrank"
+  ],
+  "backends": [
+    "StreamGLM SciPy L-BFGS-B",
+    "NeMoS native LBFGS"
+  ],
+  "split": "60% train, 20% validation; test not inspected",
+  "ridge": "fixed: lowrank .1, permutation_fullrank .01; same for both backends",
+  "precision": "float64",
+  "max_iterations": 1500,
+  "worker_timeout_s": 120,
+  "suite_limit_s": 2100,
+  "repeats": 2,
+  "gradient_gate": 1e-05,
+  "scipy_stopping": "ftol=0, gtol=1e-6",
+  "nemos_stopping": "native tol=1e-6; solver criteria differ, independent gate used",
+  "timing": "first includes feature creation and compilation; repeat reuses NeMoS design and compilation caches; imports excluded; independent checks and validation excluded; repeat is not isolated compilation-free timing",
+  "cpu_affinity": [
+    6,
+    7
+  ],
+  "threads": 1,
+  "source_sha256": "2211a2d1297e7b9dcb79f91de5998ee95f56147c55f7644bd6f72754afb83f2a",
+  "scope": "one-seed length scaling; nested prefixes of fresh 96000-bin simulations; no tuning or general performance claim; dense StreamGLM versus materialized NeMoS LBFGS, not NeMoS streaming"
+}

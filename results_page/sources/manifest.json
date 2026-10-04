@@ -1,0 +1,90 @@
+{
+  "built_utc": "04 Oct 2026, 16:08 UTC",
+  "sources": [
+    {
+      "file": "topology_c11_e1000000.json",
+      "original": "/home/satvik/hnn_neuro_bridge/results/phase2/topology_c11_e1000000/report.json",
+      "modified_utc": "2026-09-30T01:51:35.732684+00:00"
+    },
+    {
+      "file": "topology_c12_e1010000.json",
+      "original": "/home/satvik/hnn_neuro_bridge/results/phase2_full/topology_c12_e1010000/report.json",
+      "modified_utc": "2026-10-02T19:29:04.576027+00:00"
+    },
+    {
+      "file": "topology_c13_e1020000.json",
+      "original": "/home/satvik/hnn_neuro_bridge/results/phase2_full/topology_c13_e1020000/report.json",
+      "modified_utc": "2026-10-03T00:40:19.969100+00:00"
+    },
+    {
+      "file": "topology_c15_e1040000.json",
+      "original": "/home/satvik/hnn_neuro_bridge/results/phase2_full/topology_c15_e1040000/report.json",
+      "modified_utc": "2026-10-04T01:31:01.586020+00:00"
+    },
+    {
+      "file": "calibration5_seed0.json",
+      "original": "/home/satvik/hnn_neuro_bridge/results/calibration5/seed0/calibration_n20_t300_s0.json",
+      "modified_utc": "2026-09-29T13:48:31.038454+00:00"
+    },
+    {
+      "file": "calibration5_seed1.json",
+      "original": "/home/satvik/hnn_neuro_bridge/results/calibration5/seed1/calibration_n20_t300_s1.json",
+      "modified_utc": "2026-09-29T13:51:03.512217+00:00"
+    },
+    {
+      "file": "calibration5_seed2.json",
+      "original": "/home/satvik/hnn_neuro_bridge/results/calibration5/seed2/calibration_n20_t300_s2.json",
+      "modified_utc": "2026-09-29T13:53:31.083725+00:00"
+    },
+    {
+      "file": "location.json",
+      "original": "/home/satvik/hnn_neuro_bridge/results/phase2_long/location_s3_1280s/report.json",
+      "modified_utc": "2026-09-30T22:53:11.528740+00:00"
+    },
+    {
+      "file": "shared.json",
+      "original": "/home/satvik/hnn_neuro_bridge/results/phase2_full/shared_c11_2560s/report.json",
+      "modified_utc": "2026-10-02T04:40:42.643012+00:00"
+    },
+    {
+      "file": "streamglm_selected.json",
+      "original": "/home/satvik/side_project/artifacts/v6/tuned/selected.json",
+      "modified_utc": "2026-09-28T16:21:15.873205+00:00"
+    },
+    {
+      "file": "streamglm_tuning_report.md",
+      "original": "/home/satvik/side_project/artifacts/v6/tuned/report.md",
+      "modified_utc": "2026-09-28T20:01:43.476072+00:00"
+    },
+    {
+      "file": "streamglm_tuning_protocol.json",
+      "original": "/home/satvik/side_project/artifacts/v6/tuned/protocol.json",
+      "modified_utc": "2026-09-28T02:29:42.437204+00:00"
+    },
+    {
+      "file": "streamglm_failure_audit.md",
+      "original": "/home/satvik/side_project/artifacts/v6/failure_audit/README.md",
+      "modified_utc": "2026-09-28T20:01:43.476072+00:00"
+    },
+    {
+      "file": "streamglm_length_scaling.json",
+      "original": "/home/satvik/side_project/artifacts/v7/length_scaling/results.json",
+      "modified_utc": "2026-09-29T05:59:23.180777+00:00"
+    },
+    {
+      "file": "streamglm_timing_protocol.json",
+      "original": "/home/satvik/side_project/artifacts/v7/extended_dense/protocol.json",
+      "modified_utc": "2026-09-29T05:46:49.457606+00:00"
+    },
+    {
+      "file": "streamglm_release_report.json",
+      "original": "/home/satvik/side_project/artifacts/v4/release_report.json",
+      "modified_utc": "2026-09-27T19:45:20.679289+00:00"
+    },
+    {
+      "file": "topology_c16_e1050000_checkpoint.json",
+      "original": "/home/satvik/hnn_neuro_bridge/results/phase2_full/topology_c16_e1050000/status.json",
+      "modified_utc": "2026-10-04T16:08:46.654522+00:00"
+    }
+  ]
+}

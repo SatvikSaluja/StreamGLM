@@ -1,0 +1,20 @@
+{
+  "hnn_core_version": "0.6.1",
+  "mesh_shape": [
+    5,
+    5
+  ],
+  "n_real_cells": 70,
+  "inplane_distance_um": 1.0,
+  "coupling_window_ms": 25.0,
+  "n_connection_specs": 16,
+  "n_realized_pairs": 5840,
+  "formula": {
+    "distance": "xy plane only",
+    "scaled_lamtha": "lamtha * inplane_distance",
+    "gaussian_factor": "exp(-(distance_xy / scaled_lamtha)^2)",
+    "effective_weight": "A_weight * gain * gaussian_factor",
+    "effective_delay_ms": "A_delay / gaussian_factor",
+    "within_class_invariant": "weight * delay == A_weight * gain * A_delay"
+  }
+}

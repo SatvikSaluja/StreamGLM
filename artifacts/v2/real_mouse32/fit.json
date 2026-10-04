@@ -1,0 +1,233 @@
+{
+  "converged": true,
+  "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+  "iterations": 34,
+  "evaluations": 37,
+  "objective": 3.909284933157823,
+  "gradient_inf_norm": 1.791577668463053e-05,
+  "seconds": 9.573086330012302,
+  "trace": [
+    {
+      "evaluation": 1,
+      "objective": 4.057202228237944,
+      "gradient_inf_norm": 0.034571104481649885,
+      "seconds": 1.1491499750118237
+    },
+    {
+      "evaluation": 2,
+      "objective": 4.000517622502497,
+      "gradient_inf_norm": 0.01870599456156959,
+      "seconds": 1.397599280011491
+    },
+    {
+      "evaluation": 3,
+      "objective": 3.9863298542484435,
+      "gradient_inf_norm": 0.060517898200993334,
+      "seconds": 1.6276148530014325
+    },
+    {
+      "evaluation": 4,
+      "objective": 3.965876782568233,
+      "gradient_inf_norm": 0.008019616987005953,
+      "seconds": 1.8708907180116512
+    },
+    {
+      "evaluation": 5,
+      "objective": 3.957627359849224,
+      "gradient_inf_norm": 0.008896034721255965,
+      "seconds": 2.108938763005426
+    },
+    {
+      "evaluation": 6,
+      "objective": 3.9563806138595203,
+      "gradient_inf_norm": 0.01617920940323114,
+      "seconds": 2.336039294008515
+    },
+    {
+      "evaluation": 7,
+      "objective": 3.954380705540484,
+      "gradient_inf_norm": 0.0035179477365271856,
+      "seconds": 2.575165594011196
+    },
+    {
+      "evaluation": 8,
+      "objective": 3.9529857574609255,
+      "gradient_inf_norm": 0.004104722366107643,
+      "seconds": 2.8026509620103752
+    },
+    {
+      "evaluation": 9,
+      "objective": 3.9479102046004075,
+      "gradient_inf_norm": 0.025237594446797764,
+      "seconds": 3.032561339001404
+    },
+    {
+      "evaluation": 10,
+      "objective": 3.952290392869467,
+      "gradient_inf_norm": 0.04625492490794976,
+      "seconds": 3.261416513007134
+    },
+    {
+      "evaluation": 11,
+      "objective": 3.945255092279745,
+      "gradient_inf_norm": 0.03336773171410074,
+      "seconds": 3.487885067006573
+    },
+    {
+      "evaluation": 12,
+      "objective": 3.9393475202879165,
+      "gradient_inf_norm": 0.027037856940475943,
+      "seconds": 3.7293658450071234
+    },
+    {
+      "evaluation": 13,
+      "objective": 3.9278931968317314,
+      "gradient_inf_norm": 0.006538362826661274,
+      "seconds": 3.9666435820108745
+    },
+    {
+      "evaluation": 14,
+      "objective": 3.924686400542246,
+      "gradient_inf_norm": 0.013057883440463141,
+      "seconds": 4.198503393999999
+    },
+    {
+      "evaluation": 15,
+      "objective": 3.9204450348555513,
+      "gradient_inf_norm": 0.006534136911954452,
+      "seconds": 4.426001569008804
+    },
+    {
+      "evaluation": 16,
+      "objective": 3.917204713983676,
+      "gradient_inf_norm": 0.0030884945406451994,
+      "seconds": 4.666483350010822
+    },
+    {
+      "evaluation": 17,
+      "objective": 3.9146983951842986,
+      "gradient_inf_norm": 0.007670943176326561,
+      "seconds": 4.902564969001105
+    },
+    {
+      "evaluation": 18,
+      "objective": 3.9122735946694345,
+      "gradient_inf_norm": 0.003974275192163964,
+      "seconds": 5.128480850005872
+    },
+    {
+      "evaluation": 19,
+      "objective": 3.9108738605911313,
+      "gradient_inf_norm": 0.0014225197481029972,
+      "seconds": 5.361844834013027
+    },
+    {
+      "evaluation": 20,
+      "objective": 3.9100605279320475,
+      "gradient_inf_norm": 0.0017327876374563641,
+      "seconds": 5.592292665009154
+    },
+    {
+      "evaluation": 21,
+      "objective": 3.909715697672086,
+      "gradient_inf_norm": 0.0022617177202525185,
+      "seconds": 5.818957362003857
+    },
+    {
+      "evaluation": 22,
+      "objective": 3.909479454198194,
+      "gradient_inf_norm": 0.000919372327233494,
+      "seconds": 6.059137939999346
+    },
+    {
+      "evaluation": 23,
+      "objective": 3.909403422207754,
+      "gradient_inf_norm": 0.0007238470923733731,
+      "seconds": 6.2906073270132765
+    },
+    {
+      "evaluation": 24,
+      "objective": 3.9093569249169953,
+      "gradient_inf_norm": 0.00042347455820316443,
+      "seconds": 6.515577442012727
+    },
+    {
+      "evaluation": 25,
+      "objective": 3.90931959991388,
+      "gradient_inf_norm": 0.00032384985853533063,
+      "seconds": 6.757089500999427
+    },
+    {
+      "evaluation": 26,
+      "objective": 3.9093165666712073,
+      "gradient_inf_norm": 0.0008586932887572814,
+      "seconds": 6.994862766005099
+    },
+    {
+      "evaluation": 27,
+      "objective": 3.909307071199926,
+      "gradient_inf_norm": 0.0001864744450311763,
+      "seconds": 7.230487022010493
+    },
+    {
+      "evaluation": 28,
+      "objective": 3.909304256149179,
+      "gradient_inf_norm": 0.0001435904339710102,
+      "seconds": 7.46066346000589
+    },
+    {
+      "evaluation": 29,
+      "objective": 3.9093005528804863,
+      "gradient_inf_norm": 0.00020214912206956295,
+      "seconds": 7.685292435999145
+    },
+    {
+      "evaluation": 30,
+      "objective": 3.909298825327314,
+      "gradient_inf_norm": 0.00046881742591368904,
+      "seconds": 7.909739057999104
+    },
+    {
+      "evaluation": 31,
+      "objective": 3.9092955203654682,
+      "gradient_inf_norm": 0.00013710909999458613,
+      "seconds": 8.15484398600529
+    },
+    {
+      "evaluation": 32,
+      "objective": 3.909293116136322,
+      "gradient_inf_norm": 0.00010581765293941557,
+      "seconds": 8.381131820002338
+    },
+    {
+      "evaluation": 33,
+      "objective": 3.9092910950627178,
+      "gradient_inf_norm": 0.0001348579966024432,
+      "seconds": 8.624848766005016
+    },
+    {
+      "evaluation": 34,
+      "objective": 3.909287399806579,
+      "gradient_inf_norm": 0.00015824165813262608,
+      "seconds": 8.856875595010933
+    },
+    {
+      "evaluation": 35,
+      "objective": 3.909286375970685,
+      "gradient_inf_norm": 0.00014404624672019066,
+      "seconds": 9.101339976012241
+    },
+    {
+      "evaluation": 36,
+      "objective": 3.9092851044264956,
+      "gradient_inf_norm": 5.992105236622962e-05,
+      "seconds": 9.337544149006135
+    },
+    {
+      "evaluation": 37,
+      "objective": 3.909284933157823,
+      "gradient_inf_norm": 1.791577668463053e-05,
+      "seconds": 9.572352196002612
+    }
+  ]
+}

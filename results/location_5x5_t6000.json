@@ -1,0 +1,19 @@
+{
+  "config": {
+    "tstop": 6000.0,
+    "mesh": [
+      5,
+      5
+    ],
+    "seeds": [
+      2
+    ],
+    "history_ms": 25.0,
+    "n_basis": 8,
+    "n_procs": 2,
+    "regularizer": 0.001,
+    "max_iter": 2000,
+    "out": "results"
+  },
+  "records": []
+}

@@ -1,0 +1,135 @@
+{
+  "rows": [
+    {
+      "bins": 4000,
+      "seed": 7,
+      "results": {
+        "streamed": {
+          "backend": "streamed",
+          "status": "DONE",
+          "max_iter": 1000,
+          "optimizer_success": true,
+          "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+          "iterations": 241,
+          "objective": 6.257880501092304,
+          "initial_objective": 6.410283305889735,
+          "gradient_inf_norm": 9.6632883484105e-08,
+          "accuracy_gate_passed": true,
+          "heldout_log_likelihood_per_bin": -6.336615687912383,
+          "test_valid_bins": 792,
+          "fit_seconds_including_preparation": 2.9668095890001496,
+          "bins": 4000,
+          "neurons": 16,
+          "n_basis": 2,
+          "dtype": "float64",
+          "regularizer": "none",
+          "cpu_affinity": [
+            6,
+            7
+          ],
+          "versions": {
+            "numpy": "2.4.6",
+            "scipy": "1.17.1",
+            "jax": "0.10.2"
+          },
+          "total_seconds": 3.5040233210002043,
+          "peak_rss_gib": 0.2868080139160156,
+          "seed": 7
+        },
+        "nemos_common": {
+          "backend": "nemos_common",
+          "status": "DONE",
+          "max_iter": 1000,
+          "nemos_version": "0.2.8",
+          "nemos_source_hashes": {
+            "glm.py": "695e1442589b562da4c2c570623e3b2e91b81448b1f01e9ef5a635c42b70ad29",
+            "observation_models.py": "4290462f71ccead53e870503ece78e2e77b1e034e01179e88c3111f12a984542"
+          },
+          "has_stochastic_fit": false,
+          "optimizer_success": true,
+          "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+          "iterations": 259,
+          "objective": 6.257881417474415,
+          "initial_objective": 6.410284222311146,
+          "gradient_inf_norm": 6.991932336038696e-08,
+          "accuracy_gate_passed": true,
+          "heldout_log_likelihood_per_bin": -6.336615323610924,
+          "test_valid_bins": 792,
+          "fit_seconds_including_preparation": 3.5986740579996876,
+          "bins": 4000,
+          "neurons": 16,
+          "n_basis": 2,
+          "dtype": "float64",
+          "regularizer": "none",
+          "cpu_affinity": [
+            6,
+            7
+          ],
+          "versions": {
+            "numpy": "2.4.6",
+            "scipy": "1.17.1",
+            "jax": "0.10.2"
+          },
+          "total_seconds": 6.186109695000141,
+          "peak_rss_gib": 0.5028495788574219,
+          "seed": 7
+        },
+        "nemos_native": {
+          "backend": "nemos_native",
+          "status": "DONE",
+          "max_iter": 1000,
+          "nemos_version": "0.2.8",
+          "nemos_source_hashes": {
+            "glm.py": "695e1442589b562da4c2c570623e3b2e91b81448b1f01e9ef5a635c42b70ad29",
+            "observation_models.py": "4290462f71ccead53e870503ece78e2e77b1e034e01179e88c3111f12a984542"
+          },
+          "has_stochastic_fit": false,
+          "optimizer_success": true,
+          "message": "OptimizationInfo(function_val=6.257880501040333, num_steps=381, converged=True, reached_max_steps=False)",
+          "iterations": null,
+          "objective": 6.257881417461746,
+          "initial_objective": 6.410284222311146,
+          "gradient_inf_norm": 1.3517477400002559e-09,
+          "accuracy_gate_passed": true,
+          "heldout_log_likelihood_per_bin": -6.3366153332132,
+          "test_valid_bins": 792,
+          "fit_seconds_including_preparation": 10.353853113000241,
+          "bins": 4000,
+          "neurons": 16,
+          "n_basis": 2,
+          "dtype": "float64",
+          "regularizer": "none",
+          "cpu_affinity": [
+            6,
+            7
+          ],
+          "versions": {
+            "numpy": "2.4.6",
+            "scipy": "1.17.1",
+            "jax": "0.10.2"
+          },
+          "total_seconds": 11.90476672900013,
+          "peak_rss_gib": 0.6231231689453125,
+          "seed": 7
+        }
+      },
+      "comparisons": {
+        "nemos_common": {
+          "max_prediction_abs_difference": 6.805942950771637e-06,
+          "max_initial_gradient_abs_difference": 3.976168809409997e-17,
+          "objective_abs_difference": 9.163821115265591e-07,
+          "heldout_ll_abs_difference": 3.6430145922139445e-07
+        },
+        "nemos_native": {
+          "max_prediction_abs_difference": 9.9649236063315e-06,
+          "max_initial_gradient_abs_difference": 3.976168809409997e-17,
+          "objective_abs_difference": 9.163694425495805e-07,
+          "heldout_ll_abs_difference": 3.546991829139756e-07
+        }
+      },
+      "input_sha256": "48d97ec662a35b5ee39bf8cfa5215a04a8744b6f60a979fa010e5878e0861a9c"
+    }
+  ],
+  "status": "DONE",
+  "note": "Dense unregularized exp-Poisson; identical zero weights and training-rate intercepts; 80/20 chronological split with reset history; native solver differs from common SciPy driver. Accuracy gate is gradient infinity norm <=1e-5. Shared host; no upstream streaming comparison."
+}

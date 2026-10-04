@@ -1,0 +1,36 @@
+{
+  "neurons": [
+    64,
+    128
+  ],
+  "seeds": [
+    31,
+    47
+  ],
+  "families": [
+    "lowrank",
+    "permutation_fullrank"
+  ],
+  "backends": [
+    "StreamGLM SciPy L-BFGS-B",
+    "NeMoS native LBFGS"
+  ],
+  "split": "60% train, 20% validation; test not inspected",
+  "ridge": "fixed: lowrank .1, permutation_fullrank .01; same for both backends",
+  "precision": "float64",
+  "max_iterations": 1500,
+  "worker_timeout_s": 180,
+  "suite_limit_s": 3000,
+  "repeats": 2,
+  "gradient_gate": 1e-05,
+  "scipy_stopping": "ftol=0, gtol=1e-6",
+  "nemos_stopping": "native tol=1e-6; solver criteria differ, independent gate used",
+  "timing": "first includes feature creation and compilation; repeat reuses NeMoS design and compilation caches; imports excluded; independent checks and validation excluded; repeat is not isolated compilation-free timing",
+  "cpu_affinity": [
+    6,
+    7
+  ],
+  "threads": 1,
+  "source_sha256": "b58045a7c7f29dd1b5dff6d95c63a2a67f3fca316f4fab2845624ad283d54f8e",
+  "scope": "fixed-configuration two-seed pilot, no tuning or general performance claim"
+}

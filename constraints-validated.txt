@@ -1,0 +1,11 @@
+# Versions actually used for the v0.2 local validation runs (Python 3.11).
+# NeMoS is intentionally omitted: the local tree has development source while
+# reporting 0.2.8. Its source hash is in artifacts/v2/upstream_comparison.json.
+numpy==2.4.6
+scipy==1.17.1
+jax==0.10.2
+jaxlib==0.10.2
+pynapple==0.11.4
+pynwb==4.2.0
+h5py==3.16.0
+matplotlib==3.11.2

@@ -1,0 +1,72 @@
+{
+  "name": "SVRG_f64",
+  "bins": 400000,
+  "seconds": 837.3779654502869,
+  "peak_gb": 5.221884,
+  "n_basis": 5,
+  "solver": "SVRG",
+  "float32": false,
+  "batch_size": 4096,
+  "max_iter": 500,
+  "design_gb_raw": 1.136,
+  "held_out_mean_rate": 0.003402768685001005,
+  "filters_sha": 741989386,
+  "filters_npy": "results/solver/SVRG_f64_filters.npy",
+  "per_class": {
+    "L2_basket->L2_basket|gabaa|soma": {
+      "rho": 0.6057590958205086,
+      "sign": 0.44,
+      "n": 100
+    },
+    "L2_basket->L2_pyramidal|gabab|soma": {
+      "rho": -0.27492702798960245,
+      "sign": 0.124,
+      "n": 250
+    },
+    "L2_basket->L5_pyramidal|gabaa|distal": {
+      "rho": 0.6647196946089007,
+      "sign": 0.0,
+      "n": 250
+    },
+    "L2_pyramidal->L2_basket|ampa|soma": {
+      "rho": 0.6977855974014329,
+      "sign": 1.0,
+      "n": 248
+    },
+    "L2_pyramidal->L2_pyramidal|ampa|proximal": {
+      "rho": 0.06891044069463939,
+      "sign": 1.0,
+      "n": 596
+    },
+    "L2_pyramidal->L5_basket|ampa|soma": {
+      "rho": 0.5909282448322523,
+      "sign": 1.0,
+      "n": 248
+    },
+    "L2_pyramidal->L5_pyramidal|ampa|distal": {
+      "rho": 0.33272850907247986,
+      "sign": 1.0,
+      "n": 621
+    },
+    "L5_basket->L5_basket|gabaa|soma": {
+      "rho": 0.3893965930461425,
+      "sign": 0.43333333333333335,
+      "n": 90
+    },
+    "L5_basket->L5_pyramidal|gabab|soma": {
+      "rho": 0.5902022667043183,
+      "sign": 0.004,
+      "n": 250
+    },
+    "L5_pyramidal->L5_basket|ampa|soma": {
+      "rho": 0.3961276218431622,
+      "sign": 1.0,
+      "n": 248
+    },
+    "L5_pyramidal->L5_pyramidal|ampa|proximal": {
+      "rho": 0.45020596305459937,
+      "sign": 1.0,
+      "n": 596
+    }
+  }
+}

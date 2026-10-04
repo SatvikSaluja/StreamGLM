@@ -1,0 +1,15 @@
+{
+  "url": "https://osf.io/download/jb2gd/",
+  "sha256": "1a919a033305b8f58b5c3e217577256183b14ed5b436d9c70989dee6dafe0f35",
+  "source_tutorial": "https://pynapple.org/examples/tutorial_HD_dataset.html",
+  "dataset": "Peyrache-2015 Mouse32-140822",
+  "epochs_seconds": [
+    [
+      8813.0,
+      9113.0
+    ]
+  ],
+  "bin_s": 0.005,
+  "recording_type": "head-direction recording; not Neuropixels",
+  "quality_filter": "training firing rate >= 0.1 Hz; no additional unit-quality metadata filter"
+}

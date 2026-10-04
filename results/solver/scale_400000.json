@@ -1,0 +1,72 @@
+{
+  "name": "scale_400000",
+  "bins": 400000,
+  "seconds": 283.3924458026886,
+  "peak_gb": 5.290964,
+  "n_basis": 5,
+  "solver": "LBFGS",
+  "float32": false,
+  "batch_size": null,
+  "max_iter": 300,
+  "design_gb_raw": 1.136,
+  "held_out_mean_rate": 0.0010710611413985265,
+  "filters_sha": 980596624,
+  "filters_npy": "results/solver/scale_400000_filters.npy",
+  "per_class": {
+    "L2_basket->L2_basket|gabaa|soma": {
+      "rho": 0.6002721912775433,
+      "sign": 1.0,
+      "n": 100
+    },
+    "L2_basket->L2_pyramidal|gabab|soma": {
+      "rho": 0.4363225708248139,
+      "sign": 0.912,
+      "n": 250
+    },
+    "L2_basket->L5_pyramidal|gabaa|distal": {
+      "rho": -0.01644800254434835,
+      "sign": 0.476,
+      "n": 250
+    },
+    "L2_pyramidal->L2_basket|ampa|soma": {
+      "rho": 0.7124169923610292,
+      "sign": 0.7580645161290323,
+      "n": 248
+    },
+    "L2_pyramidal->L2_pyramidal|ampa|proximal": {
+      "rho": 0.3224526924354178,
+      "sign": 0.9681208053691275,
+      "n": 596
+    },
+    "L2_pyramidal->L5_basket|ampa|soma": {
+      "rho": 0.6980977696546018,
+      "sign": 0.8185483870967742,
+      "n": 248
+    },
+    "L2_pyramidal->L5_pyramidal|ampa|distal": {
+      "rho": 0.14113060943802896,
+      "sign": 1.0,
+      "n": 621
+    },
+    "L5_basket->L5_basket|gabaa|soma": {
+      "rho": 0.24004650482509196,
+      "sign": 1.0,
+      "n": 90
+    },
+    "L5_basket->L5_pyramidal|gabab|soma": {
+      "rho": 0.42527559491090616,
+      "sign": 0.4,
+      "n": 250
+    },
+    "L5_pyramidal->L5_basket|ampa|soma": {
+      "rho": 0.36135360861391247,
+      "sign": 0.7903225806451613,
+      "n": 248
+    },
+    "L5_pyramidal->L5_pyramidal|ampa|proximal": {
+      "rho": 0.47341965083781606,
+      "sign": 0.8221476510067114,
+      "n": 596
+    }
+  }
+}
