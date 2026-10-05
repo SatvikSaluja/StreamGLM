@@ -1,0 +1,41 @@
+{
+  "project": "StreamGLM",
+  "built_utc": "05 Oct 2026, 15:32 UTC",
+  "sources": [
+    {
+      "file": "streamglm_selected.json",
+      "original": "/home/satvik/side_project/artifacts/v6/tuned/selected.json",
+      "modified_utc": "2026-09-28T16:21:15.873205+00:00"
+    },
+    {
+      "file": "streamglm_tuning_report.md",
+      "original": "/home/satvik/side_project/artifacts/v6/tuned/report.md",
+      "modified_utc": "2026-09-28T20:01:43.476072+00:00"
+    },
+    {
+      "file": "streamglm_tuning_protocol.json",
+      "original": "/home/satvik/side_project/artifacts/v6/tuned/protocol.json",
+      "modified_utc": "2026-09-28T02:29:42.437204+00:00"
+    },
+    {
+      "file": "streamglm_failure_audit.md",
+      "original": "/home/satvik/side_project/artifacts/v6/failure_audit/README.md",
+      "modified_utc": "2026-09-28T20:01:43.476072+00:00"
+    },
+    {
+      "file": "streamglm_length_scaling.json",
+      "original": "/home/satvik/side_project/artifacts/v7/length_scaling/results.json",
+      "modified_utc": "2026-09-29T05:59:23.180777+00:00"
+    },
+    {
+      "file": "streamglm_timing_protocol.json",
+      "original": "/home/satvik/side_project/artifacts/v7/extended_dense/protocol.json",
+      "modified_utc": "2026-09-29T05:46:49.457606+00:00"
+    },
+    {
+      "file": "streamglm_release_report.json",
+      "original": "/home/satvik/side_project/artifacts/v4/release_report.json",
+      "modified_utc": "2026-09-27T19:45:20.679289+00:00"
+    }
+  ]
+}

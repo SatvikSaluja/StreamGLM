@@ -1,0 +1,72 @@
+{
+  "neurons": [
+    64,
+    128
+  ],
+  "seeds": [
+    31,
+    47
+  ],
+  "bins": 12000,
+  "ridges": [
+    0.0,
+    0.001,
+    0.01,
+    0.1
+  ],
+  "ranks": [
+    2,
+    4,
+    8,
+    16
+  ],
+  "stepsizes": [
+    0.1,
+    0.5,
+    1.0
+  ],
+  "families": [
+    "lowrank",
+    "permutation_fullrank"
+  ],
+  "split": "60/20/20 chronological with history resets",
+  "selection": "highest validation likelihood among gradient-gate-passing candidates within each backend",
+  "gate": 1e-05,
+  "lowrank_initial_seed": 0,
+  "refit": false,
+  "candidate_timeout_s": 900,
+  "precision": "float64",
+  "ridge_definition": "0.5 * ridge * sum(W**2), intercept unpenalized, loss summed over neurons",
+  "upstream_commit": "81c7200a0e66686e98fd1907e7fa11e111a0e66a",
+  "source_sha256": {
+    "reference.py": "d048b699f6d25cdfd8fb47b44cc3be9fa7539ed4a84d73ba106ee9a56cba6d64",
+    "real_example.py": "3edcba9e8a945f628b7d61184494af2302a359e67f65c2eb4e3a0cc87c0dc340",
+    "upstream_streaming.py": "1f19c12a587483312c565b2232d00da6ae91d95e96ce1e52e436de47a0d58561",
+    "persistence.py": "38b0995c16bc600e7721101af8df2eb6c26ac1e8bbc6ffc8d3dda9b2e4d32851",
+    "release_report.py": "b051eeea99352039225893bb91f5a28506ca238853ab802ed0a69b109a39810e",
+    "matched_benchmark.py": "dfee9ae728f29e2d7463865813ae89694fdaf30ffd686c06f71b1d40d9957bae",
+    "validation_suite.py": "9737929bf294a06675b4ba409872882c9003f47797ed883197b945643b6a6dce",
+    "model.py": "d7704b6561c625c18390b176aae113c591757fedd8af4f43dd83f8d437e58f62",
+    "__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+    "data.py": "c811e522f2c608f73e138f5d6be2b413849312f773ffc2411a30d0ac28499510",
+    "integration.py": "621a2e77127fc70aff99d8a8e8e857d6c0e8d1dd4e3192aaf8bf2d764d1d5a5b",
+    "neuropixels.py": "afc67e9ba909cffbfa6449dc54c445e4302671beaaeb3016e819371951cab59c",
+    "synthetic.py": "1cf46b9fa555c75f0f5e50e69dfc9cd9b93d6fe667c51ea66623fef0a88a44ed",
+    "three_way.py": "6f5022583a6fe3627ff19f704143c2a9ddc443a9ccd4bc37b7601939c0d21005",
+    "fit_benchmark.py": "c7f66f9dcc8136b526874793d6aeae483c7609561edc2a8f52d7d54befea0591",
+    "evaluation.py": "ec9dc8c5d6f35aa15360dc2b5d8c35bad3c57e4e2d4081f36db6d8889b55e550",
+    "demo.py": "5789f76335512dbdab193f7d351c1cec346b7c0b9781dc30612ce2cfba30b6b2",
+    "upstream_compare.py": "dc2583b324b531ef5c1e6c1ddff695498fa9531e38708f951f7fd3cf68730fc6",
+    "cli.py": "69eb2229ad7ca997a3bc45050dc107198c16826058920b656850dfd887364185",
+    "pipeline.py": "9e3842a2db27216c5a014d4b120560ab0d4778282d7de72dcc53f9deac469f71",
+    "provenance.py": "d5ba404a4d630c5bae7e4dcb30cd8215f2b3ac3511ec69049c7957e913545c48",
+    "__init__.py": "1afa7457e66c26c803a10b878fdc4865e3a709369b4f7a78c1c2639fc57dfe71",
+    "tuned_comparison.py": "095f36c5b19435c2e2cf839afb70ea98a51ebc39ef35c405cc854e3690abd613",
+    "large_fit.py": "350564ada2ada352a4f7846b20139c170c1d27827a3f6ad45b80409a641a3886",
+    "plots.py": "c343a263d1609ec08a1d3523563c3b9867213abb2df5b1a824558b1071238c78",
+    "benchmark.py": "6051a1e2651b73a58c55f4cd0b09baa7a252c69995e82dde64779d51bbaec19c",
+    "optim.py": "eef2dd92d5584acb7319c83ee1d81bd007ad30c194dd2c9416e639abbc391dc2",
+    "adapters.py": "4eb1738f04c4df2a7334db38698b3eb32743e2dd0b5182eab744d0656ebdb754",
+    "datasets.py": "1279ff9010bde820e74c6eeaf8c6f446bcb226807ed5590830a9fc7f97f7a36f"
+  }
+}

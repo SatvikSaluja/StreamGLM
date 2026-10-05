@@ -1,0 +1,439 @@
+{
+  "real_data": [
+    {
+      "requested_units": 100,
+      "retained_units": 98,
+      "selected_rank": 5,
+      "all_optimizer_converged": true,
+      "test_gain_over_self_history_nats_per_bin": 0.08797990612844231,
+      "test_gain_over_self_history_bits_per_spike": 0.04561445552115204,
+      "seconds": 214.4723804529931,
+      "peak_rss_gib": 0.43279266357421875,
+      "selected_gradient_inf_norm": 0.00010740703738723763
+    },
+    {
+      "requested_units": 195,
+      "retained_units": 185,
+      "selected_rank": 5,
+      "all_optimizer_converged": true,
+      "test_gain_over_self_history_nats_per_bin": 0.19636126093183037,
+      "test_gain_over_self_history_bits_per_spike": 0.07660879754741066,
+      "seconds": 753.9750293629913,
+      "peak_rss_gib": 0.4920616149902344,
+      "selected_gradient_inf_norm": 0.00035839450807532183
+    }
+  ],
+  "synthetic_stress": {
+    "status": "DONE",
+    "generator": "independent Poisson, 4 Hz/unit, seed 732",
+    "neurons": 1000,
+    "recording_seconds": 3600,
+    "bins": 360000,
+    "bin_s": 0.01,
+    "history_bins": 10,
+    "n_basis": 3,
+    "split": "60/20/20 chronological; validation portion unused; no rank selection",
+    "counts_fingerprint": "97d7549e092357066606e8f588162bf7a8a4bd235649e7b1bd7a29daa656d8db",
+    "fits": {
+      "0": {
+        "converged": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "iterations": 2,
+        "evaluations": 5,
+        "objective": 168.80782879483525,
+        "gradient_inf_norm": 3.2268439635988113e-06,
+        "seconds": 270.8478898970061,
+        "trace": [
+          {
+            "evaluation": 1,
+            "objective": 168.80811152586753,
+            "gradient_inf_norm": 0.0001868654863826054,
+            "seconds": 32.638788227995974
+          },
+          {
+            "evaluation": 2,
+            "objective": 168.81125649692538,
+            "gradient_inf_norm": 0.0006646184737341685,
+            "seconds": 92.26200625600177
+          },
+          {
+            "evaluation": 3,
+            "objective": 168.8078330200177,
+            "gradient_inf_norm": 6.390510923865083e-05,
+            "seconds": 151.7684871340025
+          },
+          {
+            "evaluation": 4,
+            "objective": 168.80785093759414,
+            "gradient_inf_norm": 0.00015438657336489523,
+            "seconds": 212.84605159799685
+          },
+          {
+            "evaluation": 5,
+            "objective": 168.80782879483525,
+            "gradient_inf_norm": 3.2268439635988113e-06,
+            "seconds": 270.79068760400696
+          }
+        ],
+        "test": {
+          "log_likelihood_per_bin": -169.29413501311907,
+          "valid_bins": 71990,
+          "spikes": 2879262.0,
+          "bin_s": 0.01,
+          "intercept_log_likelihood_per_bin": -169.29410301370686,
+          "gain_nats_per_bin": -3.199941221356044e-05,
+          "gain_bits_per_spike": -1.1542703180610825e-06
+        }
+      },
+      "5": {
+        "converged": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "iterations": 37,
+        "evaluations": 39,
+        "objective": 168.80243295493892,
+        "gradient_inf_norm": 3.382525424862789e-05,
+        "seconds": 1288.5245519360033,
+        "trace": [
+          {
+            "evaluation": 1,
+            "objective": 168.87139973936192,
+            "gradient_inf_norm": 0.0013031926722647086,
+            "seconds": 69.0326220140123
+          },
+          {
+            "evaluation": 2,
+            "objective": 168.83529507033626,
+            "gradient_inf_norm": 0.0007769507552536283,
+            "seconds": 138.1926220280002
+          },
+          {
+            "evaluation": 3,
+            "objective": 168.8153711410026,
+            "gradient_inf_norm": 0.0018625207130757962,
+            "seconds": 187.28827433400147
+          },
+          {
+            "evaluation": 4,
+            "objective": 168.80797711745237,
+            "gradient_inf_norm": 0.00027407559236983665,
+            "seconds": 250.00939988800383
+          },
+          {
+            "evaluation": 5,
+            "objective": 168.8072255682933,
+            "gradient_inf_norm": 0.00019081372068753782,
+            "seconds": 302.17808219500876
+          },
+          {
+            "evaluation": 6,
+            "objective": 168.80649327547243,
+            "gradient_inf_norm": 0.00013449271895521245,
+            "seconds": 351.0895073520078
+          },
+          {
+            "evaluation": 7,
+            "objective": 168.8061921716614,
+            "gradient_inf_norm": 0.0005489839224677916,
+            "seconds": 415.90394000700326
+          },
+          {
+            "evaluation": 8,
+            "objective": 168.80573382951277,
+            "gradient_inf_norm": 0.00028651213348118953,
+            "seconds": 467.71100812900113
+          },
+          {
+            "evaluation": 9,
+            "objective": 168.805186869273,
+            "gradient_inf_norm": 0.00015888612743138452,
+            "seconds": 503.4562251580064
+          },
+          {
+            "evaluation": 10,
+            "objective": 168.80486585060487,
+            "gradient_inf_norm": 0.00020022358590346325,
+            "seconds": 528.6739375430043
+          },
+          {
+            "evaluation": 11,
+            "objective": 168.80455416028119,
+            "gradient_inf_norm": 0.00016393897275149475,
+            "seconds": 561.3547421890107
+          },
+          {
+            "evaluation": 12,
+            "objective": 168.80451781976453,
+            "gradient_inf_norm": 0.0005412015358900219,
+            "seconds": 589.580594545012
+          },
+          {
+            "evaluation": 13,
+            "objective": 168.8043769565946,
+            "gradient_inf_norm": 0.00023748231648630332,
+            "seconds": 617.1604140900017
+          },
+          {
+            "evaluation": 14,
+            "objective": 168.80414240741445,
+            "gradient_inf_norm": 0.0001083838193094471,
+            "seconds": 643.3002612200071
+          },
+          {
+            "evaluation": 15,
+            "objective": 168.80390438688573,
+            "gradient_inf_norm": 0.00018069278855378099,
+            "seconds": 667.3918636900053
+          },
+          {
+            "evaluation": 16,
+            "objective": 168.80376625853324,
+            "gradient_inf_norm": 0.0002987600982650623,
+            "seconds": 691.5832403570093
+          },
+          {
+            "evaluation": 17,
+            "objective": 168.80358385318434,
+            "gradient_inf_norm": 9.568105931431225e-05,
+            "seconds": 717.0801364580111
+          },
+          {
+            "evaluation": 18,
+            "objective": 168.80350250606853,
+            "gradient_inf_norm": 6.060496529003554e-05,
+            "seconds": 742.1464984840131
+          },
+          {
+            "evaluation": 19,
+            "objective": 168.8033752973605,
+            "gradient_inf_norm": 0.00011649962160312359,
+            "seconds": 768.0789464720001
+          },
+          {
+            "evaluation": 20,
+            "objective": 168.80326086943754,
+            "gradient_inf_norm": 0.0001615792481580512,
+            "seconds": 793.2279251450091
+          },
+          {
+            "evaluation": 21,
+            "objective": 168.8031503473642,
+            "gradient_inf_norm": 9.178268952860377e-05,
+            "seconds": 818.2341203200049
+          },
+          {
+            "evaluation": 22,
+            "objective": 168.80307900035177,
+            "gradient_inf_norm": 7.649911408341814e-05,
+            "seconds": 843.8921587460063
+          },
+          {
+            "evaluation": 23,
+            "objective": 168.80301073835855,
+            "gradient_inf_norm": 6.024056468338456e-05,
+            "seconds": 870.0499141300097
+          },
+          {
+            "evaluation": 24,
+            "objective": 168.80293910652875,
+            "gradient_inf_norm": 0.00010914111105470389,
+            "seconds": 896.8328985120024
+          },
+          {
+            "evaluation": 25,
+            "objective": 168.80286814604267,
+            "gradient_inf_norm": 7.496560302605655e-05,
+            "seconds": 926.5194427530078
+          },
+          {
+            "evaluation": 26,
+            "objective": 168.8028190941861,
+            "gradient_inf_norm": 4.908293078578753e-05,
+            "seconds": 960.1487327970099
+          },
+          {
+            "evaluation": 27,
+            "objective": 168.80278310447065,
+            "gradient_inf_norm": 5.69494577460287e-05,
+            "seconds": 990.9944784420077
+          },
+          {
+            "evaluation": 28,
+            "objective": 168.80273687799942,
+            "gradient_inf_norm": 4.905284318265175e-05,
+            "seconds": 1019.1610559890105
+          },
+          {
+            "evaluation": 29,
+            "objective": 168.80269111848514,
+            "gradient_inf_norm": 0.00010144783574038328,
+            "seconds": 1042.4534336860088
+          },
+          {
+            "evaluation": 30,
+            "objective": 168.80265520380067,
+            "gradient_inf_norm": 6.623786663004474e-05,
+            "seconds": 1066.4634628170024
+          },
+          {
+            "evaluation": 31,
+            "objective": 168.8026330252008,
+            "gradient_inf_norm": 3.4789888862911465e-05,
+            "seconds": 1090.5847726979991
+          },
+          {
+            "evaluation": 32,
+            "objective": 168.8025968386038,
+            "gradient_inf_norm": 4.146608388731629e-05,
+            "seconds": 1115.3331748670025
+          },
+          {
+            "evaluation": 33,
+            "objective": 168.80256362050764,
+            "gradient_inf_norm": 0.0001089627434834219,
+            "seconds": 1139.4391691140045
+          },
+          {
+            "evaluation": 34,
+            "objective": 168.80253010497987,
+            "gradient_inf_norm": 6.694526196818973e-05,
+            "seconds": 1162.9254980120022
+          },
+          {
+            "evaluation": 35,
+            "objective": 168.80251067366177,
+            "gradient_inf_norm": 2.4554001835883214e-05,
+            "seconds": 1186.7093883380003
+          },
+          {
+            "evaluation": 36,
+            "objective": 168.80249261687067,
+            "gradient_inf_norm": 4.611559521430041e-05,
+            "seconds": 1211.3722654410085
+          },
+          {
+            "evaluation": 37,
+            "objective": 168.8024692446585,
+            "gradient_inf_norm": 5.474097602032115e-05,
+            "seconds": 1237.3931790680072
+          },
+          {
+            "evaluation": 38,
+            "objective": 168.80244840118496,
+            "gradient_inf_norm": 3.5135877259952007e-05,
+            "seconds": 1261.7229094480135
+          },
+          {
+            "evaluation": 39,
+            "objective": 168.80243295493892,
+            "gradient_inf_norm": 3.382525424862789e-05,
+            "seconds": 1288.481546148003
+          }
+        ],
+        "test": {
+          "log_likelihood_per_bin": -169.294516818415,
+          "valid_bins": 71990,
+          "spikes": 2879262.0,
+          "bin_s": 0.01,
+          "intercept_log_likelihood_per_bin": -169.29410301370686,
+          "gain_nats_per_bin": -0.0004138047081291684,
+          "gain_bits_per_spike": -1.4926602053803268e-05
+        }
+      }
+    },
+    "gain_over_self_history_nats_per_bin": -0.00038180529591613777,
+    "hypothetical_full_design_gib": 8.046627044677734,
+    "peak_rss_gib": 1.24078369140625,
+    "seconds": 1623.017261157991,
+    "versions": {
+      "jax": "0.10.2",
+      "numpy": "2.4.6",
+      "scipy": "1.17.1"
+    },
+    "note": "Synthetic independent null at 10 ms bins, not 1 ms Neuropixels or biophysical recovery. Whole-process RSS includes mapped input pages. Shared host; convergence diagnostics retained."
+  },
+  "current_upstream": {
+    "status": "DONE",
+    "nemos_version": "0.0.1.dev1",
+    "versions": {
+      "jax": "0.11.2",
+      "numpy": "2.5.3",
+      "scipy": "1.18.1",
+      "pynapple": "0.11.4"
+    },
+    "upstream_commit": "81c7200a0e66686e98fd1907e7fa11e111a0e66a",
+    "train_valid_bins": 4784,
+    "train_epoch_lengths": [
+      2400,
+      2400
+    ],
+    "stochastic_summary": "StochasticFitSummary(pass_idx=1299, batch_idx=9, n_passes=1500, should_stop=True, stop_reason='independent full-gradient threshold reached')",
+    "stochastic_objective": 3.03699740194563,
+    "stochastic_gradient_inf_norm": 9.970997818137513e-06,
+    "stochastic_accuracy_passed": true,
+    "reference_converged": true,
+    "reference_gradient_inf_norm": 1.7257877357874005e-07,
+    "objective_difference": 9.246618688507624e-07,
+    "stochastic_test": {
+      "log_likelihood_per_bin": -3.1180833576688127,
+      "valid_bins": 1192,
+      "spikes": 1391.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -3.1488813613812563,
+      "gain_nats_per_bin": 0.030798003712443428,
+      "gain_bits_per_spike": 0.03807555402765252
+    },
+    "reference_test": {
+      "log_likelihood_per_bin": -3.1181484634643803,
+      "valid_bins": 1192,
+      "spikes": 1391.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -3.1488813613812563,
+      "gain_nats_per_bin": 0.030732897916875848,
+      "gain_bits_per_spike": 0.03799506377056338
+    },
+    "seconds": 431.1042638330109,
+    "peak_rss_gib": 0.4709815979003906,
+    "passes_budget": 1500,
+    "stepsize": 0.5,
+    "note": "Both solvers share this process; timings/RSS are not comparative. Current upstream already supports streamed convolution via custom loaders. No native low-rank model is used in this check."
+  },
+  "limitations": [
+    "The two real-data subsets overlap within one VISp recording, not independent biological replications.",
+    "Quality labels come from the supplied workshop extract; no waveform-level quality reanalysis.",
+    "Real-data coupling has no stimulus/behavior adjustment and does not establish synaptic or causal connectivity.",
+    "The 1,000-unit hour-long case is independent synthetic Poisson at 10 ms bins, not real Neuropixels at 1 ms.",
+    "Optimizer relative-objective stopping does not certify a global optimum or a small gradient; diagnostics retained.",
+    "The current-NeMoS exercise validates loader interoperability and accuracy, not a performance advantage over upstream streaming.",
+    "CPU timing was measured on a shared host while HNN and other validation jobs ran.",
+    "No remote CI, upstream acceptance, package publication, or 1,000-unit hour-long real-data fit is claimed."
+  ],
+  "source_sha256": {
+    "reference.py": "d048b699f6d25cdfd8fb47b44cc3be9fa7539ed4a84d73ba106ee9a56cba6d64",
+    "real_example.py": "3edcba9e8a945f628b7d61184494af2302a359e67f65c2eb4e3a0cc87c0dc340",
+    "upstream_streaming.py": "1f19c12a587483312c565b2232d00da6ae91d95e96ce1e52e436de47a0d58561",
+    "persistence.py": "38b0995c16bc600e7721101af8df2eb6c26ac1e8bbc6ffc8d3dda9b2e4d32851",
+    "release_report.py": "b051eeea99352039225893bb91f5a28506ca238853ab802ed0a69b109a39810e",
+    "matched_benchmark.py": "dfee9ae728f29e2d7463865813ae89694fdaf30ffd686c06f71b1d40d9957bae",
+    "validation_suite.py": "9737929bf294a06675b4ba409872882c9003f47797ed883197b945643b6a6dce",
+    "model.py": "d7704b6561c625c18390b176aae113c591757fedd8af4f43dd83f8d437e58f62",
+    "__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+    "data.py": "c811e522f2c608f73e138f5d6be2b413849312f773ffc2411a30d0ac28499510",
+    "integration.py": "621a2e77127fc70aff99d8a8e8e857d6c0e8d1dd4e3192aaf8bf2d764d1d5a5b",
+    "neuropixels.py": "afc67e9ba909cffbfa6449dc54c445e4302671beaaeb3016e819371951cab59c",
+    "synthetic.py": "1cf46b9fa555c75f0f5e50e69dfc9cd9b93d6fe667c51ea66623fef0a88a44ed",
+    "fit_benchmark.py": "c7f66f9dcc8136b526874793d6aeae483c7609561edc2a8f52d7d54befea0591",
+    "evaluation.py": "ec9dc8c5d6f35aa15360dc2b5d8c35bad3c57e4e2d4081f36db6d8889b55e550",
+    "demo.py": "5789f76335512dbdab193f7d351c1cec346b7c0b9781dc30612ce2cfba30b6b2",
+    "upstream_compare.py": "dc2583b324b531ef5c1e6c1ddff695498fa9531e38708f951f7fd3cf68730fc6",
+    "cli.py": "69eb2229ad7ca997a3bc45050dc107198c16826058920b656850dfd887364185",
+    "pipeline.py": "9e3842a2db27216c5a014d4b120560ab0d4778282d7de72dcc53f9deac469f71",
+    "provenance.py": "d5ba404a4d630c5bae7e4dcb30cd8215f2b3ac3511ec69049c7957e913545c48",
+    "__init__.py": "1afa7457e66c26c803a10b878fdc4865e3a709369b4f7a78c1c2639fc57dfe71",
+    "large_fit.py": "c3ab7f018436f7bda89dab93cc73adeba6335efe44f234004233b8988f61deca",
+    "plots.py": "c343a263d1609ec08a1d3523563c3b9867213abb2df5b1a824558b1071238c78",
+    "benchmark.py": "6051a1e2651b73a58c55f4cd0b09baa7a252c69995e82dde64779d51bbaec19c",
+    "optim.py": "eef2dd92d5584acb7319c83ee1d81bd007ad30c194dd2c9416e639abbc391dc2",
+    "adapters.py": "4eb1738f04c4df2a7334db38698b3eb32743e2dd0b5182eab744d0656ebdb754",
+    "datasets.py": "1279ff9010bde820e74c6eeaf8c6f446bcb226807ed5590830a9fc7f97f7a36f"
+  }
+}
