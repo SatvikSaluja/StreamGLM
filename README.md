@@ -2,7 +2,9 @@
 
 [Results report](RESULTS_REPORT.md) · [Simulation commands](SIMULATIONS.md) · [HTML results page](results_page/index.html) · [Page source reports](results_page/sources)
 
-The GitHub publication is a compact source/evidence snapshot. Download the `results_page` folder and open `index.html` in a browser; GitHub's file view displays HTML source rather than rendering the page. Large recordings and caches remain local. Actions workflows are not enabled in this publication snapshot.
+Read the [live results](https://satviksaluja.github.io/StreamGLM/), [written report](https://satviksaluja.github.io/StreamGLM/RESULTS_REPORT.html), [run guide](https://satviksaluja.github.io/StreamGLM/SIMULATIONS.html), and [complete evidence archive](https://satviksaluja.github.io/StreamGLM/evidence.html) on GitHub Pages. The site is published from the `gh-pages` branch after building and validating every internal link. Large recordings and caches remain local.
+
+To preview the publication locally: `pip install -r requirements-pages.txt`, then `python scripts/build_pages.py` and `python -m http.server --directory _site 8000`. The builder publishes committed reports and compact evidence, renders Markdown as HTML, and rejects broken internal links. To deploy, run `bash scripts/publish_pages.sh`. GitHub Pages uses **Deploy from a branch**, `gh-pages`, `/ (root)`. The script builds only committed reports and compact evidence, validates links, and pushes the generated site. A ready-to-use Actions workflow is saved in `docs/pages-workflow.yml`; installing it in `.github/workflows/pages.yml` and switching Pages to GitHub Actions requires GitHub credentials with workflow permission.
 
 **Memory-bounded population GLMs for long neural recordings.**
 

@@ -6,7 +6,7 @@ If you only observe the spikes a circuit produced, how much of the circuit can y
 
 Experimental neuroscience cannot answer this, because the true synaptic wiring of a recorded network is unknown. NeuroTwinBench uses biophysically detailed simulation ([HNN-Core](https://github.com/jonescompneurolab/hnn-core)) as a source of exact ground truth, hides the wiring, fits statistical models ([NeMoS](https://github.com/flatironinstitute/nemos) population GLMs on JAX) to the spikes alone, and scores the result against what actually generated them.
 
-This is a **study with reusable code**, not a framework. The deliverable is a falsifiable result with calibration, baselines, a null and error bars. [PROJECT.md](PROJECT.md) is the governing specification.
+This is a **study with reusable code**, not a framework. The deliverable is a falsifiable result with calibration, baselines, a null and error bars. [PROJECT.md](../PROJECT.md) is the governing specification.
 
 ---
 

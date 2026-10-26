@@ -35,7 +35,7 @@ Bits/spike are gains over training constant-rate predictions. Correlations are P
 
 ## Failure and convergence accounting
 
-Of 256 candidates, 188 passed the convergence gate, 46 finished without passing it, 21 failed with nonfinite objective/gradient, and one timed out. All 24 model selections were available. See [the detailed audit](../failure_audit/README.md). The identical-settings timeout retry is supplementary; original outcomes remain unchanged.
+Of 256 candidates, 188 passed the convergence gate, 46 finished without passing it, 21 failed with nonfinite objective/gradient, and one timed out. All 24 model selections were available. See [the detailed audit](streamglm_failure_audit.md). The identical-settings timeout retry is supplementary; original outcomes remain unchanged.
 
 ## Identical-settings retry outcome
 

@@ -107,7 +107,7 @@ measure two passes at fixed parameters, not time to convergence. Peak RSS includ
 the Python/JAX runtime, compilation and mapped file pages, and is measured using
 Linux `ru_maxrss`. The OS may retain mapped pages; total RSS is not guaranteed
 constant with recording length. Larger repeated benchmarks are still required.
-Raw records and traces are in [artifacts](artifacts/).
+Raw records and traces are in [artifacts](../artifacts/).
 
 ## Limits and next steps
 
@@ -134,5 +134,5 @@ This worktree is `/home/satvik/side_project`, branch
 `side-project/streaming-glm`, forked from NeuroTwinBench commit `9dca3ef`.
 The inherited `neurotwinbench/`, `experiments/`, `PROJECT.md` and
 `CODEX_HANDOFF.md` describe the older project and are not part of this package.
-Its previous README is preserved at [docs/NEUROTWINBENCH_README.md](docs/NEUROTWINBENCH_README.md).
+Its previous README is preserved at [docs/NEUROTWINBENCH_README.md](../docs/NEUROTWINBENCH_README.md).
 The primary experiment runs in a separate worktree and was not stopped or edited.

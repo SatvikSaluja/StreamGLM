@@ -12,3 +12,6 @@ fit_heartbeat.txt
 build/
 dist/
 .venv-wheel/
+
+# Generated GitHub Pages site
+_site/
