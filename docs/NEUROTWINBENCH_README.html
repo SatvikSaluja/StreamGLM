@@ -1,0 +1,157 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NEUROTWINBENCH_README</title><style>body{max-width:1100px;margin:auto;padding:32px 20px;font:16px/1.65 system-ui;color:#1e2933;background:#fafbf9}a{color:#165e79}table{border-collapse:collapse;display:block;overflow:auto}td,th{padding:8px;border:1px solid #dce2e6}pre{padding:16px;background:#edf0ed;overflow:auto}img{max-width:100%}nav{display:flex;gap:20px;flex-wrap:wrap}li{overflow-wrap:anywhere}h1,h2{line-height:1.25}</style></head><body><nav aria-label="Results navigation"><a href="../index.html">Results</a><a href="../RESULTS_REPORT.html">Written report</a><a href="../SIMULATIONS.html">Run guide</a><a href="../evidence.html">All evidence</a></nav><main><h1 id="neurotwinbench-inherited-project-documentation">NeuroTwinBench (inherited project documentation)</h1>
+<p><strong>A ground-truth study of when functional connectivity stops reflecting biological connectivity.</strong></p>
+<p>If you only observe the spikes a circuit produced, how much of the circuit can you recover — and under what conditions does that recovery stop being trustworthy?</p>
+<p>Experimental neuroscience cannot answer this, because the true synaptic wiring of a recorded network is unknown. NeuroTwinBench uses biophysically detailed simulation (<a href="https://github.com/jonescompneurolab/hnn-core">HNN-Core</a>) as a source of exact ground truth, hides the wiring, fits statistical models (<a href="https://github.com/flatironinstitute/nemos">NeMoS</a> population GLMs on JAX) to the spikes alone, and scores the result against what actually generated them.</p>
+<p>This is a <strong>study with reusable code</strong>, not a framework. The deliverable is a falsifiable result with calibration, baselines, a null and error bars. <a href="https://github.com/SatvikSaluja/StreamGLM/blob/main/PROJECT.md">PROJECT.md</a> is the governing specification.</p>
+<hr />
+<h2 id="install">Install</h2>
+<pre><code class="language-bash">conda create -n neurotwin python=3.11 &amp;&amp; conda activate neurotwin
+pip install -e .
+pip install -e '.[hnn]' psutil mpi4py     # hnn-core; needs NEURON
+export PATH=&quot;$CONDA_PREFIX/bin:$PATH&quot;     # MPIBackend runs a bare `nrniv`
+</code></pre>
+<h2 id="run">Run</h2>
+<pre><code class="language-bash">python tests/test_pipeline.py                     # full check, no NEURON, CI-safe
+python scripts/ground_truth_audit.py --mesh 5 5   # identifiability, no simulation
+python experiments/calibrate.py --duration 300    # validate the estimator
+python experiments/hnn_first.py --n-procs 4       # easiest HNN condition
+python experiments/grid.py --seeds 2 3 4          # the two-axis experiment
+python figures/make_figures.py                    # rebuild figures from results/
+</code></pre>
+<hr />
+<h2 id="the-method">The method</h2>
+<pre><code>HNN-Core circuit  ──simulate──&gt;  spikes  ──hide the wiring──&gt;  population GLM
+       │                                                            │
+       └────────────── exact per-pair ground truth ─────────────────┴──&gt; compare
+</code></pre>
+<p><strong>Built inside-out.</strong> The estimator is validated on data from a known coupled GLM — same basis, same link, so the model is exactly specified — <em>before</em> it is pointed at biophysics. Without that control, poor recovery on HNN data is uninterpretable: broken estimator, wrong basis, wrong binning and genuine model mismatch all look identical.</p>
+<pre><code>population GLM   rho +0.797   sign 100%
+pairwise GLM     rho +0.755   sign  96%
+CCG baseline     rho +0.519   sign  94%
+jitter null      rho +0.116   sign  84%   (chance)
+</code></pre>
+<hr />
+<h2 id="what-the-ground-truth-says-before-any-simulation">What the ground truth says before any simulation</h2>
+<p><code>scripts/ground_truth_audit.py</code> is pure arithmetic over <code>net.connectivity</code> — no NEURON, runs in seconds. It answers <em>which metrics are identifiable at all</em> before compute is spent. Five findings shape the whole study.</p>
+<p><strong>1. Weight and delay are perfectly rank-confounded.</strong> From <code>cell._get_gaussian_connection</code>, <code>weight = A_weight·gain·g(d)</code> and <code>delay = A_delay/g(d)</code>, so within any class <code>weight × delay</code> is constant and</p>
+<blockquote>
+<p>ρ(true weight, true delay) = <strong>−1.000000</strong>, in all 16 classes at both 5×5 and 10×10.</p>
+</blockquote>
+<p>Spearman is the primary metric, so the default model cannot separate them. Independent delay recovery needs purpose-built connections.</p>
+<p><strong>2. <code>lamtha</code> is not a valid grouping key.</strong> Several classes share a λ with different <code>A_weight</code>, and the invariant holds only at fixed <code>A_weight</code>:</p>
+<table>
+<thead>
+<tr>
+<th>grouping</th>
+<th>CV</th>
+<th>ρ(w, d)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>each λ=50 class individually</td>
+<td>0.0027</td>
+<td>−1.000000</td>
+</tr>
+<tr>
+<td><strong>pooled by λ=50</strong></td>
+<td><strong>0.6861</strong></td>
+<td><strong>−0.553918</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The pooled row reads as <em>"inhibitory weights have usable range and delay is only partly confounded"</em> — the inverse of both real findings. Group by <code>(src_type, target_type, receptor, loc)</code>.</p>
+<p><strong>3. Dynamic range splits along the E/I axis.</strong> <code>inplane_distance</code> cancels out, so <code>mesh_shape</code> is the only lever.</p>
+<table>
+<thead>
+<tr>
+<th>λ</th>
+<th>classes</th>
+<th>weight CV @5×5</th>
+<th>@10×10</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3</td>
+<td>all pyramidal-source</td>
+<td>0.55</td>
+<td>1.36</td>
+</tr>
+<tr>
+<td>20</td>
+<td>basket→basket</td>
+<td>0.017</td>
+<td>0.069</td>
+</tr>
+<tr>
+<td>50 / 70</td>
+<td>basket→pyramidal</td>
+<td>0.003 / 0.001</td>
+<td>0.011 / 0.006</td>
+</tr>
+</tbody>
+</table>
+<p>Ranking inhibitory weights ranks numerical noise — a property of the model, not a failure of the estimator.</p>
+<p><strong>4. E and I weight ranges are disjoint, so pooled rank metrics are invalid.</strong> Excitatory weights run 7.1e-6 to 5.0e-4, inhibitory 9.9e-4 to 5.0e-2. <strong>All 1440 largest-magnitude pairs out of 5840 are inhibitory.</strong> A pooled ρ scores E-vs-I and nothing else, while looking excellent.</p>
+<p><strong>5. The large mesh changes what is observable.</strong> At 5×5, 99% of excitatory connections have effective delay inside a 25 ms window; at 10×10, only ~53%. Nearly half the true edges become invisible regardless of strength — so <strong>5×5 is the development environment</strong>, not merely the small condition.</p>
+<p>That last one drives the <strong>evaluation-set rule</strong>: a connection whose delay exceeds the history window cannot be represented by the model, so scoring it as a miss measures the window, not the estimator. Those are reported separately, never silently dropped. The same rule covers neurons that never fired.</p>
+<hr />
+<h2 id="what-the-simulations-say">What the simulations say</h2>
+<p><strong>Drive response is non-monotonic.</strong> Quadrupling the drive <em>silences</em> the pyramidal populations — they fall to 0.3 and 0.0 Hz while basket cells fire at 9–10 Hz. The drive recruits interneurons whose weights are ~100× larger, and feedforward inhibition shuts the pyramidal cells down. The static weight disparity of finding 4 predicts a dynamic regime change.</p>
+<table>
+<thead>
+<tr>
+<th><code>rate_constant</code></th>
+<th>mean Hz</th>
+<th>silent</th>
+<th>L2bask / L2pyr / L5bask / L5pyr</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10</td>
+<td>5.7</td>
+<td>3/70</td>
+<td>5.0 / 6.3 / 3.7 / 6.1</td>
+</tr>
+<tr>
+<td>40</td>
+<td>2.9</td>
+<td>48/70</td>
+<td>9.0 / <strong>0.3</strong> / 10.3 / <strong>0.0</strong></td>
+</tr>
+<tr>
+<td>120</td>
+<td>21.2</td>
+<td>1/70</td>
+<td>27.3 / 28.8 / 31.0 / 7.2</td>
+</tr>
+</tbody>
+</table>
+<p><strong>MPI: 9.5 s per simulated second</strong> at 4 processes, with byte-identical spike counts. 8 procs is <em>slower</em> than 4 — with 70 cells there is too little work per rank. And 4.26× on two processes is superlinear, so this is not parallel scaling: <code>MPIBackend</code> is simply a faster code path than <code>JoblibBackend</code>.</p>
+<p><strong>The grid costs one simulation per seed.</strong> Both experimental axes are post-hoc on the same spikes — drive observability changes which covariates reach the estimator, observed population is a column mask.</p>
+<hr />
+<h2 id="things-this-project-had-to-retract">Things this project had to retract</h2>
+<p>Kept visible because the reasoning was sound in each case and the next person will make the same move.</p>
+<p><strong>Location is not identifiable in the default model.</strong> L2pyr→L5pyr AMPA is added twice, once proximal and once distal, with identical weights — an apparently perfect controlled contrast, and originally billed here as the strongest result in the project. But all 625 pairs carry <em>both</em> synapses, and a GLM estimates one filter per ordered pair. Nothing recovers what was never separable. A purpose-built network (<code>network="location"</code>) now makes it identifiable by splitting the source population, one half per section.</p>
+<p><strong>Solver tolerance is not a confound.</strong> Suspected that early stopping was acting as the real regularizer. Tested it: ρ is invariant to <code>tol</code> across two penalties. The spread that prompted the suspicion was sampling noise, which had been flagged as such when measured and then over-corrected on.</p>
+<p><strong>There is no plateau to find on synthetic data.</strong> §5 originally said to pick the duration at which recovery stabilises. On synthetic data the generating model <em>is</em> the fitted model, so ρ → 1.0 and no plateau below it can exist. The plateau belongs to the HNN curve, where model mismatch imposes a real ceiling — and the gap between the two curves at matched duration is the actual measurement.</p>
+<p><strong>The pairwise baseline ties the population GLM</strong> (+0.755 vs +0.763). Against the CCG alone, +0.763 vs +0.519 reads as a clear win for joint estimation. Against the pairwise model it is not a win at all yet.</p>
+<hr />
+<h2 id="layout">Layout</h2>
+<pre><code>neurotwinbench/
+├── ground_truth.py   HNN connectivity -&gt; effective per-pair weight/delay/sign/loc
+├── simulate.py       NEURON + drive + cache; default and location networks
+├── synthetic.py      known-coupling GLM generator (the calibration fixture)
+├── fit.py            population GLM, pairwise baseline, regularizer selection
+└── metrics.py        recovery, jitter null, CCG, edge detection, evaluation set
+experiments/  calibrate · latency_calibration · hnn_first · grid · location
+scripts/      ground_truth_audit.py
+figures/      regenerate from results/ alone, no NEURON
+upstream/     proposed hnn-core contributions
+tests/        runs in CI, no NEURON required
+</code></pre>
+<p>Flat until the science requires otherwise. No plugin layer, no adapters, no dashboard.</p>
+<h2 id="license">License</h2>
+<p>MIT</p></main></body></html>

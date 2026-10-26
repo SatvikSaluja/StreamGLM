@@ -1,0 +1,149 @@
+{
+  "converged": true,
+  "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+  "iterations": 20,
+  "evaluations": 23,
+  "objective": 1.5606600460573707,
+  "gradient_inf_norm": 4.800691574077852e-06,
+  "seconds": 17.47432910099451,
+  "trace": [
+    {
+      "evaluation": 1,
+      "objective": 1.5765136166807332,
+      "gradient_inf_norm": 0.00011220155046295612,
+      "seconds": 1.7338930769910803
+    },
+    {
+      "evaluation": 2,
+      "objective": 1.5758313414864609,
+      "gradient_inf_norm": 0.000884958517532497,
+      "seconds": 2.423596180989989
+    },
+    {
+      "evaluation": 3,
+      "objective": 1.5789589941203157,
+      "gradient_inf_norm": 0.0029914745824368687,
+      "seconds": 3.1512247779901372
+    },
+    {
+      "evaluation": 4,
+      "objective": 1.5754713761851733,
+      "gradient_inf_norm": 0.0013596511991181015,
+      "seconds": 3.914744713998516
+    },
+    {
+      "evaluation": 5,
+      "objective": 1.5767017592648402,
+      "gradient_inf_norm": 0.0027163356138800495,
+      "seconds": 4.743327846998
+    },
+    {
+      "evaluation": 6,
+      "objective": 1.5750154602702926,
+      "gradient_inf_norm": 0.001762245824606021,
+      "seconds": 5.457279201000347
+    },
+    {
+      "evaluation": 7,
+      "objective": 1.5734511103742557,
+      "gradient_inf_norm": 0.0020512598249083605,
+      "seconds": 6.15831702799187
+    },
+    {
+      "evaluation": 8,
+      "objective": 1.5693740285471223,
+      "gradient_inf_norm": 0.00220542191485797,
+      "seconds": 6.903019236997352
+    },
+    {
+      "evaluation": 9,
+      "objective": 1.5638100821907936,
+      "gradient_inf_norm": 0.0007268784033948015,
+      "seconds": 7.614337156992406
+    },
+    {
+      "evaluation": 10,
+      "objective": 1.5624008096465085,
+      "gradient_inf_norm": 0.0006367767802990627,
+      "seconds": 8.31302185000095
+    },
+    {
+      "evaluation": 11,
+      "objective": 1.5615141849518632,
+      "gradient_inf_norm": 0.00045541614341488776,
+      "seconds": 9.006981231999816
+    },
+    {
+      "evaluation": 12,
+      "objective": 1.5612374087768541,
+      "gradient_inf_norm": 0.0002969511745852722,
+      "seconds": 9.704138525994495
+    },
+    {
+      "evaluation": 13,
+      "objective": 1.5610568897271269,
+      "gradient_inf_norm": 0.0003510701247174033,
+      "seconds": 10.4534495639964
+    },
+    {
+      "evaluation": 14,
+      "objective": 1.5608727738632262,
+      "gradient_inf_norm": 0.00018542875295521013,
+      "seconds": 11.149766949994955
+    },
+    {
+      "evaluation": 15,
+      "objective": 1.5607196468144982,
+      "gradient_inf_norm": 0.0001015856601959966,
+      "seconds": 11.854672539993771
+    },
+    {
+      "evaluation": 16,
+      "objective": 1.5606906351513914,
+      "gradient_inf_norm": 0.00010156206965042033,
+      "seconds": 12.54662676800217
+    },
+    {
+      "evaluation": 17,
+      "objective": 1.5606712105041425,
+      "gradient_inf_norm": 4.3670151080009214e-05,
+      "seconds": 13.245515353992232
+    },
+    {
+      "evaluation": 18,
+      "objective": 1.560664826884973,
+      "gradient_inf_norm": 2.5764519984118215e-05,
+      "seconds": 13.943738310990739
+    },
+    {
+      "evaluation": 19,
+      "objective": 1.560662234834948,
+      "gradient_inf_norm": 2.1491885857507142e-05,
+      "seconds": 14.626080456990167
+    },
+    {
+      "evaluation": 20,
+      "objective": 1.5606609056935055,
+      "gradient_inf_norm": 2.6668273388107165e-05,
+      "seconds": 15.319426153000677
+    },
+    {
+      "evaluation": 21,
+      "objective": 1.5606603278102016,
+      "gradient_inf_norm": 8.48261606080242e-06,
+      "seconds": 16.00468201500189
+    },
+    {
+      "evaluation": 22,
+      "objective": 1.5606601323611649,
+      "gradient_inf_norm": 4.677917164193899e-06,
+      "seconds": 16.745775497998693
+    },
+    {
+      "evaluation": 23,
+      "objective": 1.5606600460573707,
+      "gradient_inf_norm": 4.800691574077852e-06,
+      "seconds": 17.473718875990016
+    }
+  ]
+}

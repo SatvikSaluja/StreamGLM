@@ -1,0 +1,214 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>streamglm_failure_audit</title><style>body{max-width:1100px;margin:auto;padding:32px 20px;font:16px/1.65 system-ui;color:#1e2933;background:#fafbf9}a{color:#165e79}table{border-collapse:collapse;display:block;overflow:auto}td,th{padding:8px;border:1px solid #dce2e6}pre{padding:16px;background:#edf0ed;overflow:auto}img{max-width:100%}nav{display:flex;gap:20px;flex-wrap:wrap}li{overflow-wrap:anywhere}h1,h2{line-height:1.25}</style></head><body><nav aria-label="Results navigation"><a href="../index.html">Results</a><a href="../RESULTS_REPORT.html">Written report</a><a href="../SIMULATIONS.html">Run guide</a><a href="../evidence.html">All evidence</a></nav><main><h1 id="completed-grid-failure-audit">Completed-grid failure audit</h1>
+<p>All 256 original candidate outcomes and all selected results are preserved.
+Classification is based on per-candidate JSON, traceback logs and convergence gates.</p>
+<table>
+<thead>
+<tr>
+<th>Backend</th>
+<th style="text-align: right;">Converged</th>
+<th style="text-align: right;">Finished, gate failed</th>
+<th style="text-align: right;">Nonfinite objective/gradient</th>
+<th style="text-align: right;">Timeout</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dense</td>
+<td style="text-align: right;">32</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>lowrank</td>
+<td style="text-align: right;">110</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td>nemos</td>
+<td style="text-align: right;">46</td>
+<td style="text-align: right;">29</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+<h2 id="numerical-failures">Numerical failures</h2>
+<p>All 21 exceptions are NeMoS SVRG on the permutation-full-rank synthetic family. Sixteen use stepsize 1.0; five use 0.5. Every traceback ends in the independent full-objective check detecting a nonfinite objective/gradient. This supports instability at these tested settings, not a general failure of NeMoS. Smaller stepsizes were already included in the original grid; all eight NeMoS dataset groups selected a converged model. Do not silently replace divergent candidates with changed configurations.</p>
+<h2 id="timeout">Timeout</h2>
+<p>The single timeout is lowrank_n128_s47/candidate04: rank 16, ridge 0, budget 1500. Supervisor wall duration was 1206.7 s against a 900 s limit, while the last saved progress reported 120.1 s and gradient infinity norm 6.969e-5 (above the 1e-5 gate). A system pause or clock discontinuity is possible; the available logs do not establish the cause. An identical-settings, fresh-initialization diagnostic retry is recorded separately in timeout_retry.json. It does not overwrite the original grid or change its selected models.</p>
+<h2 id="interpretation">Interpretation</h2>
+<p>188/256 original candidates passed the convergence gate. Another 46 finished but failed that gate; 22 failed execution. These categories must be reported separately. All 24 backend/dataset selections exist, so no dataset/backend comparison was lost. The comparison is conditional on the tested settings, budgets, implementation and two seeds, not a general solver ranking.</p>
+<h2 id="per-failure-evidence">Per-failure evidence</h2>
+<table>
+<thead>
+<tr>
+<th>Dataset</th>
+<th>Candidate</th>
+<th>Classification</th>
+<th style="text-align: right;">Ridge</th>
+<th style="text-align: right;">Step</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>lowrank_n128_s47</td>
+<td>candidate04</td>
+<td>timeout</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">None</td>
+</tr>
+<tr>
+<td>permutation_fullrank_n128_s31</td>
+<td>candidate06</td>
+<td>nonfinite_objective_gradient</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.5</td>
+</tr>
+<tr>
+<td>permutation_fullrank_n128_s31</td>
+<td>candidate07</td>
+<td>nonfinite_objective_gradient</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">1.0</td>
+</tr>
+<tr>
+<td>permutation_fullrank_n128_s31</td>
+<td>candidate14</td>
+<td>nonfinite_objective_gradient</td>
+<td style="text-align: right;">0.001</td>
+<td style="text-align: right;">0.5</td>
+</tr>
+<tr>
+<td>permutation_fullrank_n128_s31</td>
+<td>candidate15</td>
+<td>nonfinite_objective_gradient</td>
+<td style="text-align: right;">0.001</td>
+<td style="text-align: right;">1.0</td>
+</tr>
+<tr>
+<td>permutation_fullrank_n128_s31</td>
+<td>candidate23</td>
+<td>nonfinite_objective_gradient</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">1.0</td>
+</tr>
+<tr>
+<td>permutation_fullrank_n128_s31</td>
+<td>candidate31</td>
+<td>nonfinite_objective_gradient</td>
+<td style="text-align: right;">0.1</td>
+<td style="text-align: right;">1.0</td>
+</tr>
+<tr>
+<td>permutation_fullrank_n128_s47</td>
+<td>candidate06</td>
+<td>nonfinite_objective_gradient</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.5</td>
+</tr>
+<tr>
+<td>permutation_fullrank_n128_s47</td>
+<td>candidate07</td>
+<td>nonfinite_objective_gradient</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">1.0</td>
+</tr>
+<tr>
+<td>permutation_fullrank_n128_s47</td>
+<td>candidate14</td>
+<td>nonfinite_objective_gradient</td>
+<td style="text-align: right;">0.001</td>
+<td style="text-align: right;">0.5</td>
+</tr>
+<tr>
+<td>permutation_fullrank_n128_s47</td>
+<td>candidate15</td>
+<td>nonfinite_objective_gradient</td>
+<td style="text-align: right;">0.001</td>
+<td style="text-align: right;">1.0</td>
+</tr>
+<tr>
+<td>permutation_fullrank_n128_s47</td>
+<td>candidate22</td>
+<td>nonfinite_objective_gradient</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">0.5</td>
+</tr>
+<tr>
+<td>permutation_fullrank_n128_s47</td>
+<td>candidate23</td>
+<td>nonfinite_objective_gradient</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">1.0</td>
+</tr>
+<tr>
+<td>permutation_fullrank_n128_s47</td>
+<td>candidate31</td>
+<td>nonfinite_objective_gradient</td>
+<td style="text-align: right;">0.1</td>
+<td style="text-align: right;">1.0</td>
+</tr>
+<tr>
+<td>permutation_fullrank_n64_s31</td>
+<td>candidate07</td>
+<td>nonfinite_objective_gradient</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">1.0</td>
+</tr>
+<tr>
+<td>permutation_fullrank_n64_s31</td>
+<td>candidate15</td>
+<td>nonfinite_objective_gradient</td>
+<td style="text-align: right;">0.001</td>
+<td style="text-align: right;">1.0</td>
+</tr>
+<tr>
+<td>permutation_fullrank_n64_s31</td>
+<td>candidate23</td>
+<td>nonfinite_objective_gradient</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">1.0</td>
+</tr>
+<tr>
+<td>permutation_fullrank_n64_s31</td>
+<td>candidate31</td>
+<td>nonfinite_objective_gradient</td>
+<td style="text-align: right;">0.1</td>
+<td style="text-align: right;">1.0</td>
+</tr>
+<tr>
+<td>permutation_fullrank_n64_s47</td>
+<td>candidate07</td>
+<td>nonfinite_objective_gradient</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">1.0</td>
+</tr>
+<tr>
+<td>permutation_fullrank_n64_s47</td>
+<td>candidate15</td>
+<td>nonfinite_objective_gradient</td>
+<td style="text-align: right;">0.001</td>
+<td style="text-align: right;">1.0</td>
+</tr>
+<tr>
+<td>permutation_fullrank_n64_s47</td>
+<td>candidate23</td>
+<td>nonfinite_objective_gradient</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">1.0</td>
+</tr>
+<tr>
+<td>permutation_fullrank_n64_s47</td>
+<td>candidate31</td>
+<td>nonfinite_objective_gradient</td>
+<td style="text-align: right;">0.1</td>
+<td style="text-align: right;">1.0</td>
+</tr>
+</tbody>
+</table>
+<h2 id="identical-settings-retry-outcome">Identical-settings retry outcome</h2>
+<p>The timeout candidate finished in 126.7 seconds on retry, using 0.311 GiB peak RSS. It reached the 1500-iteration limit, with gradient infinity norm 9.87083e-05, above the 1e-5 gate. It remains ineligible. Validation log likelihood was -51.508607, compared with -50.513115 for the original selected rank-2, ridge-0.01 model (higher is better). No held-out test evaluation was performed for the retry, and no selected model or original candidate record changed.</p>
+<p>Accounting with the supplementary retry: 188 converged, 47 completed without convergence, 21 numerical failures. Historical original accounting remains 188/46/21/1. This retry resolves the missing outcome without changing the comparison conclusions.</p></main></body></html>

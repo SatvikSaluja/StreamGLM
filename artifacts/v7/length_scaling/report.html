@@ -1,0 +1,138 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>report</title><style>body{max-width:1100px;margin:auto;padding:32px 20px;font:16px/1.65 system-ui;color:#1e2933;background:#fafbf9}a{color:#165e79}table{border-collapse:collapse;display:block;overflow:auto}td,th{padding:8px;border:1px solid #dce2e6}pre{padding:16px;background:#edf0ed;overflow:auto}img{max-width:100%}nav{display:flex;gap:20px;flex-wrap:wrap}li{overflow-wrap:anywhere}h1,h2{line-height:1.25}</style></head><body><nav aria-label="Results navigation"><a href="../../../index.html">Results</a><a href="../../../RESULTS_REPORT.html">Written report</a><a href="../../../SIMULATIONS.html">Run guide</a><a href="../../../evidence.html">All evidence</a></nav><main><h1 id="recording-length-scaling-pilot">Recording-length scaling pilot</h1>
+<p>Fixed configuration; one seed and two executions per worker. All measurements include the timing limitations in protocol.json.</p>
+<table>
+<thead>
+<tr>
+<th>Bins</th>
+<th>Seed</th>
+<th>Family</th>
+<th>Backend</th>
+<th style="text-align: right;">First s</th>
+<th style="text-align: right;">Repeat s</th>
+<th>Both pass gradient gate</th>
+<th style="text-align: right;">Peak GiB</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>24000</td>
+<td>31</td>
+<td>lowrank</td>
+<td>streamglm</td>
+<td style="text-align: right;">2.379</td>
+<td style="text-align: right;">1.606</td>
+<td>True</td>
+<td style="text-align: right;">0.311</td>
+</tr>
+<tr>
+<td>24000</td>
+<td>31</td>
+<td>lowrank</td>
+<td>nemos</td>
+<td style="text-align: right;">7.863</td>
+<td style="text-align: right;">2.781</td>
+<td>True</td>
+<td style="text-align: right;">0.730</td>
+</tr>
+<tr>
+<td>24000</td>
+<td>31</td>
+<td>permutation_fullrank</td>
+<td>streamglm</td>
+<td style="text-align: right;">7.446</td>
+<td style="text-align: right;">6.436</td>
+<td>True</td>
+<td style="text-align: right;">0.315</td>
+</tr>
+<tr>
+<td>24000</td>
+<td>31</td>
+<td>permutation_fullrank</td>
+<td>nemos</td>
+<td style="text-align: right;">11.489</td>
+<td style="text-align: right;">6.545</td>
+<td>True</td>
+<td style="text-align: right;">0.723</td>
+</tr>
+<tr>
+<td>48000</td>
+<td>31</td>
+<td>lowrank</td>
+<td>streamglm</td>
+<td style="text-align: right;">3.960</td>
+<td style="text-align: right;">3.274</td>
+<td>True</td>
+<td style="text-align: right;">0.316</td>
+</tr>
+<tr>
+<td>48000</td>
+<td>31</td>
+<td>lowrank</td>
+<td>nemos</td>
+<td style="text-align: right;">8.413</td>
+<td style="text-align: right;">3.627</td>
+<td>True</td>
+<td style="text-align: right;">0.814</td>
+</tr>
+<tr>
+<td>48000</td>
+<td>31</td>
+<td>permutation_fullrank</td>
+<td>streamglm</td>
+<td style="text-align: right;">13.007</td>
+<td style="text-align: right;">12.867</td>
+<td>True</td>
+<td style="text-align: right;">0.309</td>
+</tr>
+<tr>
+<td>48000</td>
+<td>31</td>
+<td>permutation_fullrank</td>
+<td>nemos</td>
+<td style="text-align: right;">14.459</td>
+<td style="text-align: right;">9.781</td>
+<td>True</td>
+<td style="text-align: right;">0.879</td>
+</tr>
+<tr>
+<td>96000</td>
+<td>31</td>
+<td>lowrank</td>
+<td>streamglm</td>
+<td style="text-align: right;">5.605</td>
+<td style="text-align: right;">4.802</td>
+<td>True</td>
+<td style="text-align: right;">0.335</td>
+</tr>
+<tr>
+<td>96000</td>
+<td>31</td>
+<td>lowrank</td>
+<td>nemos</td>
+<td style="text-align: right;">9.809</td>
+<td style="text-align: right;">5.034</td>
+<td>True</td>
+<td style="text-align: right;">1.018</td>
+</tr>
+<tr>
+<td>96000</td>
+<td>31</td>
+<td>permutation_fullrank</td>
+<td>streamglm</td>
+<td style="text-align: right;">22.125</td>
+<td style="text-align: right;">21.315</td>
+<td>True</td>
+<td style="text-align: right;">0.332</td>
+</tr>
+<tr>
+<td>96000</td>
+<td>31</td>
+<td>permutation_fullrank</td>
+<td>nemos</td>
+<td style="text-align: right;">21.120</td>
+<td style="text-align: right;">16.682</td>
+<td>True</td>
+<td style="text-align: right;">1.020</td>
+</tr>
+</tbody>
+</table></main></body></html>

@@ -1,0 +1,73 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>METHODS</title><style>body{max-width:1100px;margin:auto;padding:32px 20px;font:16px/1.65 system-ui;color:#1e2933;background:#fafbf9}a{color:#165e79}table{border-collapse:collapse;display:block;overflow:auto}td,th{padding:8px;border:1px solid #dce2e6}pre{padding:16px;background:#edf0ed;overflow:auto}img{max-width:100%}nav{display:flex;gap:20px;flex-wrap:wrap}li{overflow-wrap:anywhere}h1,h2{line-height:1.25}</style></head><body><nav aria-label="Results navigation"><a href="../index.html">Results</a><a href="../RESULTS_REPORT.html">Written report</a><a href="../SIMULATIONS.html">Run guide</a><a href="../evidence.html">All evidence</a></nav><main><h1 id="model-and-numerical-conventions">Model and numerical conventions</h1>
+<p>For observed count vector y(t), temporal basis b(h,k), h=1..H:</p>
+<pre><code>eta_j(t) = intercept_j + sum_{k,i,h} y_i(t-h) b(h,k) W(k,i,j)
+E[y_j(t) | observed history] = exp(eta_j(t))
+</code></pre>
+<p>Predictions are conditional expected counts per bin, not firing rates and not
+free-running recurrent simulations. Bin duration is part of recording metadata.
+Every evaluation requires a complete within-epoch history. Initial H bins of
+each epoch or split are excluded, rather than padded with assumed zero history.
+Chunk boundaries retain real overlap. Final partial chunks are padded only for
+fixed JAX shapes, with an explicit loss mask.</p>
+<p>Dense mode stores W with axes (basis, source, target). Factorized mode stores
+U and V with axes (basis, neuron, rank), W_k=U_k V_k.T. Projection commutes with
+shared linear temporal filtering, so the factorized path projects raw counts
+before convolution. All chunks use the same current parameter values during
+an exact full-data objective/gradient pass.</p>
+<p>With <code>self_history=True</code>, the diagonal of W is removed and replaced by an
+independent coefficient S(k,j). Rank zero plus self-history is the independent
+self-history baseline. Off-diagonal truncation plus a free diagonal need not
+itself be a rank-r matrix; the term 'rank' refers to the underlying factors.</p>
+<p>The objective is:</p>
+<pre><code>mean_t sum_j [exp(eta_j(t)) - y_j(t)*eta_j(t)] + ridge/2 * ||effective_W||²
+</code></pre>
+<p>Log-factorials are omitted only during optimization. Evaluation includes them.
+Intercepts are unpenalized. The low-rank penalty uses Gram matrices, subtracting
+the coupling diagonal and adding S when applicable. It never constructs an
+N-by-N matrix during fitting. Export/reference routines can materialize it
+explicitly on small data.</p>
+<p>No clipping modifies the exp link. Nonfinite objective/gradient or predictions
+raise errors. Large rates or poorly scaled parameters require rescaling,
+regularization, or a smaller Adam learning rate, rather than silently changing
+the fitted likelihood. All CLI commands use float64. The library has an explicit
+dtype option and never toggles global JAX precision on import.</p>
+<h2 id="optimizers-and-memory">Optimizers and memory</h2>
+<p>L-BFGS is full-data optimization with streamed objective evaluation. Its line
+search can require multiple passes per iteration. Optimizer history scales with
+parameter count, not recording duration. Each chunk's reverse pass finishes
+before advancing; JAX checkpointing recomputes basis intermediates. Framework
+and compiler workspace must still be measured.</p>
+<p>Adam visits sequential chunks and updates parameters once per valid chunk.
+It is deterministic, not a shuffled sampling scheme. Each completed epoch gets
+an additional full-data objective/gradient check. Its stopping rule is a full
+gradient infinity norm tolerance. Running out of epochs reports nonconvergence.
+L-BFGS can stop by relative objective reduction; the report retains its actual
+message and gradient norm rather than claiming that every convergence flag
+means the same criterion.</p>
+<p>Adam checkpoints include first/second moments and update count, and resume at
+completed epoch boundaries. L-BFGS checkpoints contain accepted parameters;
+restart reinitializes its history. Checkpoint fingerprints cover all counts,
+unit IDs, epoch lengths and bin duration. Resume also checks basis, precision,
+chunk length, regularization and optimizer configuration.</p>
+<h2 id="data-conversion">Data conversion</h2>
+<p>NWB/Pynapple imports use explicit half-open epochs and read one unit's spikes at
+a time. Output counts are int32 memory maps. A unit's spike train and its
+per-epoch histogram can be resident during conversion; this is not claimed to
+use only one fit-sized chunk. Tiny floating-point discrepancies at nominal bin
+edges are snapped within a bound based on machine precision and timestamp size.
+Incomplete final bins are rejected. Metadata includes the original interval
+times, bin width, unit order and source identifier.</p>
+<p>HNN import copies the compressed spikes NPY member in bounded byte blocks and
+preserves explicit segment lengths. It does not rerun HNN or infer missing
+segmentation. Data gaps must be separate epochs; filling them with zeros changes
+the conditioning history and is not an acceptable substitute.</p>
+<h2 id="statistical-interpretation">Statistical interpretation</h2>
+<p>Model selection uses validation likelihood, with final test data held out.
+Training-only mean rates define the intercept baseline and firing-rate filter.
+Candidate fits share the same retained units and valid evaluation rows.
+The self-history baseline controls for a neuron's own recent spikes.</p>
+<p>Predictive coupling can reflect common inputs, stimulus or behavior. No
+anatomical interpretation follows from likelihood improvement alone. Low-rank
+factor axes can rotate or rescale while preserving W, so analysis should use
+reconstructed interactions or invariant subspaces, not label individual factors
+as uniquely identified brain mechanisms.</p></main></body></html>

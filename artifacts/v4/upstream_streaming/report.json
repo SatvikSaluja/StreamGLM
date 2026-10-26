@@ -1,0 +1,46 @@
+{
+  "status": "DONE",
+  "nemos_version": "0.0.1.dev1",
+  "versions": {
+    "jax": "0.11.2",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "pynapple": "0.11.4"
+  },
+  "upstream_commit": "81c7200a0e66686e98fd1907e7fa11e111a0e66a",
+  "train_valid_bins": 4784,
+  "train_epoch_lengths": [
+    2400,
+    2400
+  ],
+  "stochastic_summary": "StochasticFitSummary(pass_idx=299, batch_idx=9, n_passes=300, should_stop=False, stop_reason='')",
+  "stochastic_objective": 3.037414082928023,
+  "stochastic_gradient_inf_norm": 0.00024349461045725478,
+  "stochastic_accuracy_passed": false,
+  "reference_converged": true,
+  "reference_gradient_inf_norm": 1.7257877357874005e-07,
+  "objective_difference": 0.00041760564426196467,
+  "stochastic_test": {
+    "log_likelihood_per_bin": -3.117132329888299,
+    "valid_bins": 1192,
+    "spikes": 1391.0,
+    "bin_s": 1.0,
+    "intercept_log_likelihood_per_bin": -3.1488813613812563,
+    "gain_nats_per_bin": 0.031749031492957304,
+    "gain_bits_per_spike": 0.039251309118042484
+  },
+  "reference_test": {
+    "log_likelihood_per_bin": -3.1181484634643803,
+    "valid_bins": 1192,
+    "spikes": 1391.0,
+    "bin_s": 1.0,
+    "intercept_log_likelihood_per_bin": -3.1488813613812563,
+    "gain_nats_per_bin": 0.030732897916875848,
+    "gain_bits_per_spike": 0.03799506377056338
+  },
+  "seconds": 60.40904643900285,
+  "peak_rss_gib": 0.4397468566894531,
+  "passes_budget": 300,
+  "stepsize": 0.5,
+  "note": "Both solvers share this process; timings/RSS are not comparative. Current upstream already supports streamed convolution via custom loaders. No native low-rank model is used in this check."
+}

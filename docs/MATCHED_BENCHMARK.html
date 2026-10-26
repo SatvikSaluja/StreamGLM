@@ -1,0 +1,56 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MATCHED_BENCHMARK</title><style>body{max-width:1100px;margin:auto;padding:32px 20px;font:16px/1.65 system-ui;color:#1e2933;background:#fafbf9}a{color:#165e79}table{border-collapse:collapse;display:block;overflow:auto}td,th{padding:8px;border:1px solid #dce2e6}pre{padding:16px;background:#edf0ed;overflow:auto}img{max-width:100%}nav{display:flex;gap:20px;flex-wrap:wrap}li{overflow-wrap:anywhere}h1,h2{line-height:1.25}</style></head><body><nav aria-label="Results navigation"><a href="../index.html">Results</a><a href="../RESULTS_REPORT.html">Written report</a><a href="../SIMULATIONS.html">Run guide</a><a href="../evidence.html">All evidence</a></nav><main><h1 id="matched-dense-model-benchmark">Matched dense-model benchmark</h1>
+<p>This benchmark separates implementation comparison from model compression.
+All three arms fit unrestricted recurrent population GLMs, including diagonal
+self-history weights, with an exponential Poisson link and no regularization.
+There is no low-rank constraint or rank selection in this experiment.</p>
+<h2 id="reproduce">Reproduce</h2>
+<pre><code class="language-bash">OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 JAX_PLATFORMS=cpu \
+taskset -c 6,7 .venv/bin/python -m streamglm.matched_benchmark \
+  --out artifacts/my_matched_benchmark
+</code></pre>
+<p>Use a new output directory. Defaults are 16 neurons, two temporal basis
+functions spanning eight bins, 4,000/16,000/64,000 bins, and data seeds 7/11/19.
+Each dataset is generated once and shared by all three fresh worker processes.
+SHA-256 hashes of the input files, local source, and installed NeMoS GLM and
+observation-model source are saved. Version strings alone are insufficient for
+the locally installed NeMoS build.</p>
+<p>The three arms are:</p>
+<ol>
+<li>StreamGLM's exact chunked objective, with SciPy L-BFGS-B.</li>
+<li>NeMoS's materialized causal features and public Poisson likelihood, with
+   exactly the same SciPy driver and flattened parameter ordering.</li>
+<li>Native <code>NeMoS.PopulationGLM.fit</code>, using its own L-BFGS implementation.</li>
+</ol>
+<p>Arm 2 isolates the feature/objective implementation. It is deliberately <strong>not</strong>
+a claim to benchmark NeMoS's native optimizer. Arm 3 supplies that additional
+reference. None benchmarks newer upstream streaming or stochastic fitting.</p>
+<h2 id="matching-and-acceptance">Matching and acceptance</h2>
+<p>All arms use float64, zero initial coupling, training-rate intercepts, and an
+80/20 chronological split. Features are recomputed separately for train and
+test; the first eight bins of each split are excluded. No hyperparameters are
+selected using held-out data. The counts are cast to float64 before NeMoS
+likelihood evaluation to avoid float32 evaluation of integer-input log-factorials.</p>
+<p>The common driver uses <code>ftol=1e-14</code>, <code>gtol=1e-7</code>, <code>maxcor=10</code>; native NeMoS
+uses <code>tol=1e-7</code>. These native stopping rules are not asserted equivalent.
+Every arm has a 1,000-iteration budget and 180-second process timeout.
+An independent final gradient infinity-norm threshold of <code>1e-5</code> checks accuracy.
+Optimizer success, stopping message, and gradient are retained separately.</p>
+<p>Agreement requires both fits to pass that gradient check, initial objective and
+gradient differences at most <code>1e-10</code>, final objective and held-out likelihood
+differences at most <code>1e-6</code>, and maximum held-out predicted-count difference at
+most <code>1e-3</code>. Absolute likelihood differences are in nats per valid time bin,
+summed over neurons. Failed and timed-out jobs remain in the output table.</p>
+<h2 id="timing-and-memory-interpretation">Timing and memory interpretation</h2>
+<p>Preparation-plus-fit time includes feature construction, initial objective
+evaluation, compilation and optimization. Total worker time is also saved.
+Linux <code>ru_maxrss</code> records whole-process peak memory, including imports, data,
+optimizer state and held-out scoring. It does not isolate feature memory.
+The native NeMoS arm includes the independent objective-audit compilation as
+well as its own optimizer compilation; it is not a clean fit-only timing of
+<code>NeMoS.fit</code>. Use the common-driver arms for the primary implementation tradeoff.</p>
+<p>The runs use CPU cores 6 and 7 while the independent HNN simulation shares the
+host. Three seeds are distinct datasets, not repeated timing trials on identical
+data. Backend order is fixed. Do not interpret these measurements as a controlled
+hardware speedup, an asymptotic memory proof, or evidence for a 1,000-neuron fit.</p>
+<p>The initial <code>matched_smoke</code> artifact predates the float64 log-factorial fix and
+is retained as diagnostic history. Use <code>matched_dense</code> for the final comparison.</p></main></body></html>

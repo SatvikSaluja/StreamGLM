@@ -1,0 +1,94 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SIMULATIONS</title><style>body{max-width:1100px;margin:auto;padding:32px 20px;font:16px/1.65 system-ui;color:#1e2933;background:#fafbf9}a{color:#165e79}table{border-collapse:collapse;display:block;overflow:auto}td,th{padding:8px;border:1px solid #dce2e6}pre{padding:16px;background:#edf0ed;overflow:auto}img{max-width:100%}nav{display:flex;gap:20px;flex-wrap:wrap}li{overflow-wrap:anywhere}h1,h2{line-height:1.25}</style></head><body><nav aria-label="Results navigation"><a href="./index.html">Results</a><a href="./RESULTS_REPORT.html">Written report</a><a href="./SIMULATIONS.html">Run guide</a><a href="./evidence.html">All evidence</a></nav><main><h1 id="streamglm-experiments-and-command-guide">StreamGLM: experiments and command guide</h1>
+<p>Repository: https://github.com/SatvikSaluja/StreamGLM . Run commands from its root. Results and limitations: <a href="RESULTS_REPORT.html">RESULTS_REPORT.md</a>. Commands below are individual tasks, not an instruction to launch them all simultaneously.</p>
+<h2 id="setup">Setup</h2>
+<p>Local validated interpreter: <code>cache/upstream/venv/bin/python</code>. Activate it before running:</p>
+<pre><code class="language-bash">source cache/upstream/venv/bin/activate
+export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
+python -m pip install -e .
+</code></pre>
+<p>For a fresh checkout create a Python 3.11 virtual environment, install the project and the dependencies in pyproject.toml. Historical streaming comparison pins NeMoS commit <code>81c7200a0e66686e98fd1907e7fa11e111a0e66a</code>; package names alone do not reproduce that API. Check <a href="constraints-validated.txt">constraints-validated.txt</a> and each saved protocol. Several older scripts assume the original local interpreter/cache layout; review before moving machines. Use CPU cores 6–7 if sharing the original laptop with HNN; do not benchmark runtime on a competing host.</p>
+<h2 id="main-pending-work-coupled-1000-neuron-benchmark">Main pending work: coupled 1,000-neuron benchmark</h2>
+<p>Executable: <a href="https://github.com/SatvikSaluja/StreamGLM/blob/main/streamglm/coupled_scale.py">streamglm/coupled_scale.py</a>. Two generated seeds, 360,000 bins at 10 ms (one hour), inhibitory block rank-4 truth, two basis functions, eight-bin causal history. This structured generator is not arbitrary brain-wide connectivity.</p>
+<pre><code class="language-bash">python -u -m streamglm.coupled_scale --seed 941 --neurons 1000 --bins 360000 --out artifacts/v8/coupled1000_seed941
+python -u -m streamglm.coupled_scale --seed 942 --neurons 1000 --bins 360000 --out artifacts/v8/coupled1000_seed942
+</code></pre>
+<p>Run sequentially. Seed 941: candidate0–5 JSON/NPZ completed, checkpoint6 exists. Seed 942: generated data exist; no completed fit report at snapshot. Each seed fits self-history and ranks 4/8 × ridge .001/.01 × two initializations. Selection uses validation and gradient norm &lt;=1e-5, then evaluates test likelihood, oracle comparison, off-diagonal truth recovery, edge detection, 20 target-label permutations and held-out time shift. A shifted-data score is not a surrogate refit.</p>
+<p>Same command/output path resumes completed candidates and saved parameters. L-BFGS history restarts. Generated data and checkpoints must be retained locally; a fresh clone does not contain them. <code>status.json</code> is a checkpoint, not a liveness check. Look for <code>report.json</code> and inspect convergence before claiming success. Previous candidates took 2–9 hours each; no five-hour completion promise is justified.</p>
+<h2 id="pending-streaming-versus-streaming-comparison">Pending streaming-versus-streaming comparison</h2>
+<pre><code class="language-bash">python -u -m streamglm.streaming_benchmark --out artifacts/v8/streaming_comparison
+</code></pre>
+<p>Run on an otherwise idle machine after HNN finishes. The protocol covers 64 neurons; seeds 31/47; 24k/96k/384k bins; two generating families; StreamGLM exact chunked optimization versus NeMoS loader SVRG at two step sizes. 36 worker outcomes, all failures retained, independent gradient gate. Counts are resident; neither materializes the full design. It is not fully out-of-core input loading or a universal library benchmark.</p>
+<h2 id="completed-tuned-synthetic-benchmark-and-new-confirmation">Completed tuned synthetic benchmark and new confirmation</h2>
+<pre><code class="language-bash"># Existing results: artifacts/v6/tuned; --resume retains completed work.
+python -m streamglm.tuned_comparison --neurons 64 128 --seeds 31 47 --out artifacts/v6/tuned --resume
+# New seeds, unchanged selection protocol. Dry-run first:
+python -m streamglm.pending_runs confirmation
+python -m streamglm.pending_runs confirmation --run
+</code></pre>
+<p>Confirmation uses seeds 59/71 and a fresh output directory. It is supplied as code in <a href="https://github.com/SatvikSaluja/StreamGLM/blob/main/streamglm/pending_runs.py">streamglm/pending_runs.py</a>; no confirmation result is claimed. Rank/penalty choices must be validation-selected; do not tune against final test/truth scores.</p>
+<h2 id="other-experiments-and-outputs">Other experiments and outputs</h2>
+<table>
+<thead>
+<tr>
+<th>Command / module</th>
+<th>Purpose</th>
+<th>Existing evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>python -m streamglm.validation_suite</code></td>
+<td>Small synthetic fixtures, optional HNN predictive input via --hnn</td>
+<td>artifacts/v2/validation</td>
+</tr>
+<tr>
+<td><code>python -m streamglm.demo</code></td>
+<td>Small demonstration</td>
+<td>artifacts/demo.json</td>
+</tr>
+<tr>
+<td><code>python -m streamglm.matched_benchmark --out artifacts/reproduce/matched</code></td>
+<td>Shared-optimizer and native NeMoS comparisons</td>
+<td>artifacts/v3/matched_dense</td>
+</tr>
+<tr>
+<td><code>python -m streamglm.three_way --out artifacts/reproduce/three_way</code></td>
+<td>Dense / low rank / NeMoS before tuned study</td>
+<td>artifacts/v5/three_way</td>
+</tr>
+<tr>
+<td><code>python -m streamglm.benchmark --bins 32768 --neurons 1000 --out artifacts/reproduce/memory.json</code></td>
+<td>Evaluation memory/pass-time, not full recovery</td>
+<td>artifacts/v2/benchmark_*</td>
+</tr>
+<tr>
+<td><code>python -m streamglm.upstream_streaming --passes 1500 --out artifacts/reproduce/upstream</code></td>
+<td>Loader integration with pinned upstream</td>
+<td>artifacts/v4/upstream_streaming_1500</td>
+</tr>
+<tr>
+<td><code>python -m streamglm.large_fit --counts artifacts/reproduce/null_counts.npy --out artifacts/reproduce/null1000 --seed 732</code></td>
+<td>Independent Poisson null, 1,000 neurons</td>
+<td>artifacts/v4/null_1000_1h (seed733 replicate exists)</td>
+</tr>
+<tr>
+<td><code>python -m streamglm.neuropixels --neurons 100 --duration 300 --out artifacts/reproduce/allen100</code></td>
+<td>Public Allen data import and fitting</td>
+<td>artifacts/v4/allen_visp_100_300s</td>
+</tr>
+<tr>
+<td><code>python -m streamglm.neuropixels --neurons 195 --duration 300 --out artifacts/reproduce/allen195</code></td>
+<td>Second cohort from same recording</td>
+<td>artifacts/v4/allen_visp_195_300s</td>
+</tr>
+<tr>
+<td><code>python -m streamglm.coupled_scale --neurons 12 --bins 2000 --seed 941 --out artifacts/reproduce/coupled_smoke</code></td>
+<td>Small code-path smoke only</td>
+<td>artifacts/v8/smoke_coupled</td>
+</tr>
+</tbody>
+</table>
+<p>All modules have command-line help where arguments are supported. Public data commands need network access and storage. Real session replication requires selecting a separate suitable NWB session; importing another cohort from the same session is not independent replication. Use the documented <code>streamglm import-nwb</code> and <code>streamglm pipeline</code> commands in README for user-supplied sessions.</p>
+<p>Historical scripts <code>run_phase2</code> and <code>finalize_pending</code> orchestrate broad queues and use local paths/status files. Prefer explicit modules above; the historical HNN wait condition can observe a stale runner status. Low-rank-plus-sparse coupling is a proposed architecture, not an implemented simulation recipe. Separate self-history already exists and should not be advertised as a new contribution.</p>
+<h2 id="publishing-and-saved-evidence">Publishing and saved evidence</h2>
+<p>Commit code, protocols and compact reports. Never stage whole cache/artifacts folders without review. Count arrays, NPZ models/checkpoints, downloaded NWB files and logs are deliberately excluded from new publication bundles. The linked reports in results_page/sources let readers inspect all webpage numbers without hundreds of GB of arrays.</p></main></body></html>

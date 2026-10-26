@@ -1,0 +1,156 @@
+{
+  "status": "DONE",
+  "seconds": 15.843237305000002,
+  "original_neurons": 8,
+  "retained_neurons": 8,
+  "unit_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "min_training_rate_hz": 0.0,
+  "split": "chronological 60/20/20 within each epoch; histories reset",
+  "selection": {
+    "selected": {
+      "rank": 1,
+      "seed": 0,
+      "converged": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 31,
+      "seconds": 2.2118514879998656,
+      "gradient_inf_norm": 0.00019028388363501007,
+      "validation": {
+        "log_likelihood_per_bin": -3.8662494136962695,
+        "valid_bins": 3992,
+        "spikes": 5549.0,
+        "bin_s": 1.0,
+        "intercept_log_likelihood_per_bin": -3.8979651697397366,
+        "gain_nats_per_bin": 0.03171575604346708,
+        "gain_bits_per_spike": 0.03291739169870623
+      }
+    },
+    "candidates": [
+      {
+        "rank": 0,
+        "seed": 0,
+        "converged": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "iterations": 9,
+        "seconds": 1.0858287379999183,
+        "gradient_inf_norm": 8.832082809237968e-05,
+        "validation": {
+          "log_likelihood_per_bin": -3.895358619577544,
+          "valid_bins": 3992,
+          "spikes": 5549.0,
+          "bin_s": 1.0,
+          "intercept_log_likelihood_per_bin": -3.8979651697397366,
+          "gain_nats_per_bin": 0.0026065501621928204,
+          "gain_bits_per_spike": 0.0027053062381245324
+        }
+      },
+      {
+        "rank": 1,
+        "seed": 0,
+        "converged": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "iterations": 31,
+        "seconds": 2.2118514879998656,
+        "gradient_inf_norm": 0.00019028388363501007,
+        "validation": {
+          "log_likelihood_per_bin": -3.8662494136962695,
+          "valid_bins": 3992,
+          "spikes": 5549.0,
+          "bin_s": 1.0,
+          "intercept_log_likelihood_per_bin": -3.8979651697397366,
+          "gain_nats_per_bin": 0.03171575604346708,
+          "gain_bits_per_spike": 0.03291739169870623
+        }
+      },
+      {
+        "rank": 1,
+        "seed": 1,
+        "converged": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "iterations": 34,
+        "seconds": 2.3740855830001237,
+        "gradient_inf_norm": 3.9153001018083834e-05,
+        "validation": {
+          "log_likelihood_per_bin": -3.8662664270998204,
+          "valid_bins": 3992,
+          "spikes": 5549.0,
+          "bin_s": 1.0,
+          "intercept_log_likelihood_per_bin": -3.8979651697397366,
+          "gain_nats_per_bin": 0.03169874263991636,
+          "gain_bits_per_spike": 0.03289973369717413
+        }
+      },
+      {
+        "rank": 2,
+        "seed": 0,
+        "converged": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "iterations": 90,
+        "seconds": 3.965004721000014,
+        "gradient_inf_norm": 0.0005017323826134732,
+        "validation": {
+          "log_likelihood_per_bin": -3.8664248740114684,
+          "valid_bins": 3992,
+          "spikes": 5549.0,
+          "bin_s": 1.0,
+          "intercept_log_likelihood_per_bin": -3.8979651697397366,
+          "gain_nats_per_bin": 0.031540295728268074,
+          "gain_bits_per_spike": 0.032735283603440635
+        }
+      },
+      {
+        "rank": 2,
+        "seed": 1,
+        "converged": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "iterations": 72,
+        "seconds": 3.31930480799997,
+        "gradient_inf_norm": 4.819967719334864e-05,
+        "validation": {
+          "log_likelihood_per_bin": -3.8666258853110924,
+          "valid_bins": 3992,
+          "spikes": 5549.0,
+          "bin_s": 1.0,
+          "intercept_log_likelihood_per_bin": -3.8979651697397366,
+          "gain_nats_per_bin": 0.03133928442864403,
+          "gain_bits_per_spike": 0.03252665645684125
+        }
+      }
+    ]
+  },
+  "test": {
+    "log_likelihood_per_bin": -3.8957449249451575,
+    "valid_bins": 3992,
+    "spikes": 5620.0,
+    "bin_s": 1.0,
+    "intercept_log_likelihood_per_bin": -3.92693456692869,
+    "gain_nats_per_bin": 0.031189641983532627,
+    "gain_bits_per_spike": 0.0319623825858443
+  },
+  "self_history_test": {
+    "log_likelihood_per_bin": -3.9243732242937437,
+    "valid_bins": 3992,
+    "spikes": 5620.0,
+    "bin_s": 1.0,
+    "intercept_log_likelihood_per_bin": -3.92693456692869,
+    "gain_nats_per_bin": 0.0025613426349465813,
+    "gain_bits_per_spike": 0.0026248013130391414
+  },
+  "test_gain_over_self_history_nats_per_bin": 0.02862829934858624,
+  "versions": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "jax": "0.10.2"
+  },
+  "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "interpretation": "Predictive benchmark. Coupling does not establish anatomical or causal connectivity. No stimulus/behavior covariates in this version."
+}

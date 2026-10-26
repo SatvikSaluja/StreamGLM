@@ -1,0 +1,305 @@
+{
+  "status": "DONE",
+  "generator": "independent Poisson, 4 Hz/unit, seed 733",
+  "seed": 733,
+  "neurons": 1000,
+  "recording_seconds": 3600.0,
+  "bins": 360000,
+  "bin_s": 0.01,
+  "history_bins": 10,
+  "n_basis": 3,
+  "split": "60/20/20 chronological; validation portion unused; no rank selection",
+  "counts_fingerprint": "240a2a58a569621298f3432bee17205c273e911345502f86673b7d94b3c30dec",
+  "fits": {
+    "0": {
+      "converged": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 2,
+      "evaluations": 5,
+      "objective": 168.75086845232298,
+      "gradient_inf_norm": 3.431173785997923e-06,
+      "seconds": 127.01882657600072,
+      "trace": [
+        {
+          "evaluation": 1,
+          "objective": 168.75112723765653,
+          "gradient_inf_norm": 0.00018626805704719245,
+          "seconds": 26.412785606000398
+        },
+        {
+          "evaluation": 2,
+          "objective": 168.7543862015246,
+          "gradient_inf_norm": 0.0007028441570110048,
+          "seconds": 50.505223157997534
+        },
+        {
+          "evaluation": 3,
+          "objective": 168.750872351523,
+          "gradient_inf_norm": 5.968099320164268e-05,
+          "seconds": 76.31428700700053
+        },
+        {
+          "evaluation": 4,
+          "objective": 168.7508888159148,
+          "gradient_inf_norm": 0.00013970899139234102,
+          "seconds": 101.56802839699958
+        },
+        {
+          "evaluation": 5,
+          "objective": 168.75086845232298,
+          "gradient_inf_norm": 3.431173785997923e-06,
+          "seconds": 126.98207938199994
+        }
+      ],
+      "test": {
+        "log_likelihood_per_bin": -169.27604089416533,
+        "valid_bins": 71990,
+        "spikes": 2878895.0,
+        "bin_s": 0.01,
+        "intercept_log_likelihood_per_bin": -169.27599181630902,
+        "gain_nats_per_bin": -4.907785632168523e-05,
+        "gain_bits_per_spike": -1.7705429726888716e-06
+      }
+    },
+    "5": {
+      "converged": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 33,
+      "evaluations": 35,
+      "objective": 168.74568079036507,
+      "gradient_inf_norm": 0.00015780236456584327,
+      "seconds": 1015.9702181679968,
+      "trace": [
+        {
+          "evaluation": 1,
+          "objective": 168.81429260382177,
+          "gradient_inf_norm": 0.0012806012176760494,
+          "seconds": 32.88054631299747
+        },
+        {
+          "evaluation": 2,
+          "objective": 168.7782419539721,
+          "gradient_inf_norm": 0.0008046590769524927,
+          "seconds": 63.39380876899668
+        },
+        {
+          "evaluation": 3,
+          "objective": 168.75837766420807,
+          "gradient_inf_norm": 0.001919780330081236,
+          "seconds": 91.7360291019977
+        },
+        {
+          "evaluation": 4,
+          "objective": 168.75103191914764,
+          "gradient_inf_norm": 0.00028464110450521,
+          "seconds": 122.06704116799665
+        },
+        {
+          "evaluation": 5,
+          "objective": 168.75027641785013,
+          "gradient_inf_norm": 0.0001956219681628896,
+          "seconds": 151.56790535399705
+        },
+        {
+          "evaluation": 6,
+          "objective": 168.74956557043484,
+          "gradient_inf_norm": 0.00012344904600282848,
+          "seconds": 184.5997316489993
+        },
+        {
+          "evaluation": 7,
+          "objective": 168.7492749269816,
+          "gradient_inf_norm": 0.0005966461552737636,
+          "seconds": 216.0157858929997
+        },
+        {
+          "evaluation": 8,
+          "objective": 168.74880356773227,
+          "gradient_inf_norm": 0.0002927257564309203,
+          "seconds": 245.64629382400017
+        },
+        {
+          "evaluation": 9,
+          "objective": 168.7482612412263,
+          "gradient_inf_norm": 0.00013637376663608197,
+          "seconds": 274.7523281929971
+        },
+        {
+          "evaluation": 10,
+          "objective": 168.74793995099583,
+          "gradient_inf_norm": 0.00018420258972846204,
+          "seconds": 304.40577980799935
+        },
+        {
+          "evaluation": 11,
+          "objective": 168.74761529725862,
+          "gradient_inf_norm": 0.00018925939621124583,
+          "seconds": 336.87682061799933
+        },
+        {
+          "evaluation": 12,
+          "objective": 168.74764597174664,
+          "gradient_inf_norm": 0.000709209995351805,
+          "seconds": 371.12009406200013
+        },
+        {
+          "evaluation": 13,
+          "objective": 168.74744001886853,
+          "gradient_inf_norm": 0.00027974072086499015,
+          "seconds": 400.6628690519974
+        },
+        {
+          "evaluation": 14,
+          "objective": 168.7471894321409,
+          "gradient_inf_norm": 0.00012851246010635181,
+          "seconds": 430.3641095879975
+        },
+        {
+          "evaluation": 15,
+          "objective": 168.74694963134957,
+          "gradient_inf_norm": 0.00018016796792611508,
+          "seconds": 460.7276837629979
+        },
+        {
+          "evaluation": 16,
+          "objective": 168.74681228537048,
+          "gradient_inf_norm": 0.0003224761375401705,
+          "seconds": 491.884164097999
+        },
+        {
+          "evaluation": 17,
+          "objective": 168.74665963484824,
+          "gradient_inf_norm": 8.130253356886218e-05,
+          "seconds": 524.3362472949993
+        },
+        {
+          "evaluation": 18,
+          "objective": 168.74657344017228,
+          "gradient_inf_norm": 9.264937914973412e-05,
+          "seconds": 556.5212281229979
+        },
+        {
+          "evaluation": 19,
+          "objective": 168.74645872420476,
+          "gradient_inf_norm": 0.00012572802753395908,
+          "seconds": 587.4386094019974
+        },
+        {
+          "evaluation": 20,
+          "objective": 168.74632914585473,
+          "gradient_inf_norm": 0.00012973066715738646,
+          "seconds": 619.4652838879992
+        },
+        {
+          "evaluation": 21,
+          "objective": 168.74623581744962,
+          "gradient_inf_norm": 0.00013691825426811766,
+          "seconds": 652.0949116999982
+        },
+        {
+          "evaluation": 22,
+          "objective": 168.7461693467646,
+          "gradient_inf_norm": 7.528994675270587e-05,
+          "seconds": 682.4915805729979
+        },
+        {
+          "evaluation": 23,
+          "objective": 168.7461054692617,
+          "gradient_inf_norm": 5.368389660192384e-05,
+          "seconds": 712.0205972799995
+        },
+        {
+          "evaluation": 24,
+          "objective": 168.7460375970059,
+          "gradient_inf_norm": 0.00016313383846552519,
+          "seconds": 740.961889072998
+        },
+        {
+          "evaluation": 25,
+          "objective": 168.74596902119566,
+          "gradient_inf_norm": 7.291434245502794e-05,
+          "seconds": 770.038555649
+        },
+        {
+          "evaluation": 26,
+          "objective": 168.74592220180068,
+          "gradient_inf_norm": 3.5704729526377996e-05,
+          "seconds": 802.2038837749969
+        },
+        {
+          "evaluation": 27,
+          "objective": 168.74589432720987,
+          "gradient_inf_norm": 7.309091930594232e-05,
+          "seconds": 832.4568246409981
+        },
+        {
+          "evaluation": 28,
+          "objective": 168.74585715347393,
+          "gradient_inf_norm": 6.0467817880874154e-05,
+          "seconds": 857.5544571039973
+        },
+        {
+          "evaluation": 29,
+          "objective": 168.74580274352027,
+          "gradient_inf_norm": 7.149918888681162e-05,
+          "seconds": 879.3442024269971
+        },
+        {
+          "evaluation": 30,
+          "objective": 168.74578421520903,
+          "gradient_inf_norm": 0.00012455429218236888,
+          "seconds": 901.3952753959966
+        },
+        {
+          "evaluation": 31,
+          "objective": 168.7457613866184,
+          "gradient_inf_norm": 3.513810124239408e-05,
+          "seconds": 923.7585169739978
+        },
+        {
+          "evaluation": 32,
+          "objective": 168.74574303102298,
+          "gradient_inf_norm": 2.826471669377281e-05,
+          "seconds": 947.1834864579978
+        },
+        {
+          "evaluation": 33,
+          "objective": 168.74571870425123,
+          "gradient_inf_norm": 6.57728342484058e-05,
+          "seconds": 970.1674869219969
+        },
+        {
+          "evaluation": 34,
+          "objective": 168.74569030401224,
+          "gradient_inf_norm": 6.56428117676375e-05,
+          "seconds": 993.0103848059989
+        },
+        {
+          "evaluation": 35,
+          "objective": 168.74568079036507,
+          "gradient_inf_norm": 0.00015780236456584327,
+          "seconds": 1015.9436060599983
+        }
+      ],
+      "test": {
+        "log_likelihood_per_bin": -169.27622111682763,
+        "valid_bins": 71990,
+        "spikes": 2878895.0,
+        "bin_s": 0.01,
+        "intercept_log_likelihood_per_bin": -169.27599181630902,
+        "gain_nats_per_bin": -0.00022930051861810825,
+        "gain_bits_per_spike": -8.27229329684106e-06
+      }
+    }
+  },
+  "gain_over_self_history_nats_per_bin": -0.00018022266229422712,
+  "hypothetical_full_design_gib": 8.046627044677734,
+  "peak_rss_gib": 1.2686882019042969,
+  "seconds": 1191.2390677900003,
+  "versions": {
+    "jax": "0.10.2",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1"
+  },
+  "note": "Synthetic independent null at 10 ms bins, not 1 ms Neuropixels or biophysical recovery. Whole-process RSS includes mapped input pages. Shared host; convergence diagnostics retained."
+}

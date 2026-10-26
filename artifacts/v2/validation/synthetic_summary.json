@@ -1,0 +1,50 @@
+{
+  "records": [
+    {
+      "seed": 1,
+      "selected_rank": 1,
+      "weight_relative_error": 0.49119148697871495,
+      "test": {
+        "log_likelihood_per_bin": -3.8861605719068346,
+        "valid_bins": 3992,
+        "spikes": 5620.0,
+        "bin_s": 0.01,
+        "intercept_log_likelihood_per_bin": -3.92693456692869,
+        "gain_nats_per_bin": 0.04077399502185546,
+        "gain_bits_per_spike": 0.041784193262940666
+      },
+      "gain_over_self_history": 0.03784689671970831
+    },
+    {
+      "seed": 2,
+      "selected_rank": 1,
+      "weight_relative_error": 0.4481140290824842,
+      "test": {
+        "log_likelihood_per_bin": -3.9756168361262825,
+        "valid_bins": 3992,
+        "spikes": 5782.0,
+        "bin_s": 0.01,
+        "intercept_log_likelihood_per_bin": -4.01097166034193,
+        "gain_nats_per_bin": 0.03535482421564817,
+        "gain_bits_per_spike": 0.035215646564013714
+      },
+      "gain_over_self_history": 0.0323278599095147
+    },
+    {
+      "seed": 3,
+      "selected_rank": 2,
+      "weight_relative_error": 0.37780365990673453,
+      "test": {
+        "log_likelihood_per_bin": -3.9385463130146325,
+        "valid_bins": 3992,
+        "spikes": 5694.0,
+        "bin_s": 0.01,
+        "intercept_log_likelihood_per_bin": -3.97649770742997,
+        "gain_nats_per_bin": 0.03795139441533725,
+        "gain_bits_per_spike": 0.03838621983898314
+      },
+      "gain_over_self_history": 0.03500135392288284
+    }
+  ],
+  "note": "Three small known inhibitory low-rank fixtures; not a universal power or anatomical recovery claim."
+}

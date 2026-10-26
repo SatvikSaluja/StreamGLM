@@ -1,0 +1,151 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>VALIDATION</title><style>body{max-width:1100px;margin:auto;padding:32px 20px;font:16px/1.65 system-ui;color:#1e2933;background:#fafbf9}a{color:#165e79}table{border-collapse:collapse;display:block;overflow:auto}td,th{padding:8px;border:1px solid #dce2e6}pre{padding:16px;background:#edf0ed;overflow:auto}img{max-width:100%}nav{display:flex;gap:20px;flex-wrap:wrap}li{overflow-wrap:anywhere}h1,h2{line-height:1.25}</style></head><body><nav aria-label="Results navigation"><a href="../index.html">Results</a><a href="../RESULTS_REPORT.html">Written report</a><a href="../SIMULATIONS.html">Run guide</a><a href="../evidence.html">All evidence</a></nav><main><h1 id="validation-record-and-limits">Validation record and limits</h1>
+<h2 id="tested-behavior">Tested behavior</h2>
+<ul>
+<li>Independent NumPy/JAX materialized reference for likelihood, gradient and rates.</li>
+<li>Independent NeMoS causal convolution, likelihood and fixed-parameter gradients.</li>
+<li>Independently converged small dense fits against the installed NeMoS version.</li>
+<li>Histories shorter/longer than chunks, short epochs and partial final batches.</li>
+<li>No current-bin or cross-epoch spike leakage.</li>
+<li>Read-only memory maps, lazy temporal/column selection and split boundaries.</li>
+<li>Half-open spike binning, large absolute timestamp edges, NWB and Pynapple input.</li>
+<li>HNN NPZ extraction preserving known segmentation.</li>
+<li>Dense and factorized separate self-history, including rank zero.</li>
+<li>Pickle-free model round trips and explicit float32 persistence under x64 mode.</li>
+<li>Adam resume identical to uninterrupted fitting; mismatched data rejected.</li>
+<li>L-BFGS parameter restart and the CLI fit/resume/predict/evaluate lifecycle.</li>
+</ul>
+<p>The integration tests create tiny NWB files locally; they do not require network
+access. The real-data example is explicit and separate from unit tests.</p>
+<h2 id="experiments-run">Experiments run</h2>
+<ol>
+<li>Three 20,000-bin, eight-neuron inhibitory low-rank synthetic fixtures.</li>
+<li>A 120,000-bin, 70-neuron prefix from the cached HNN seed-200 recording.</li>
+<li>A fixed 300-second wake interval (8813–9113 s), 5 ms bins, from public Mouse32
+   head-direction data. All 49 units are imported; 44 meet the training-rate
+   threshold of 0.1 Hz. No additional spike-sorting quality criterion is implied.</li>
+<li>Fresh-process streamed/materialized fixed-parameter memory comparisons and
+   a 1,000-neuron streamed pass benchmark.</li>
+</ol>
+<p>Each predictive pipeline has a chronological 60/20/20 train/validation/test
+split, separate self-history coefficients, fixed ridge, and rank candidates
+0,1,2. Rank 1 and 2 each use two initializations. Hyperparameter grids were
+fixed before examining test scores. Results are single-session examples,
+not population-level statistical significance or independent animal replication.</p>
+<h2 id="complete-workflow-measurements-2026-09-26">Complete-workflow measurements (2026-09-26)</h2>
+<p><code>artifacts/v3/</code> adds fresh-process float64 synthetic runs with chronological
+60/20/20 splits, ranks 0/1/2, two initializations for nonzero ranks, and a
+self-history baseline. Generation, fitting, selection and scoring are included
+in total time. Peak RSS includes the entire process. These runs shared the host
+with HNN simulation; the second also overlapped the test suite briefly.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Bins</th>
+<th style="text-align: right;">Neurons</th>
+<th style="text-align: right;">Total seconds</th>
+<th style="text-align: right;">Peak GiB</th>
+<th style="text-align: right;">Test gain over self-history (nats/bin)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">20,000</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">16.34</td>
+<td style="text-align: right;">0.357</td>
+<td style="text-align: right;">0.02863</td>
+</tr>
+<tr>
+<td style="text-align: right;">40,000</td>
+<td style="text-align: right;">32</td>
+<td style="text-align: right;">36.50</td>
+<td style="text-align: right;">0.367</td>
+<td style="text-align: right;">0.04350</td>
+</tr>
+</tbody>
+</table>
+<p>All five candidates in each run reported optimizer convergence. This includes
+relative-objective stopping, not necessarily satisfaction of gradient tolerance;
+individual messages and gradient norms are retained. These are single-seed
+workflow checks, not a controlled scaling law, speedup, or power calibration.
+Changing neuron count also changes the synthetic generator's firing statistics.</p>
+<h2 id="matched-unrestricted-fits-2026-09-26">Matched unrestricted fits (2026-09-26)</h2>
+<p>Protocol: <a href="MATCHED_BENCHMARK.html">MATCHED_BENCHMARK.md</a>. Complete table, numerical
+agreement gates, and figure: <code>artifacts/v3/matched_dense/</code>. Nine synthetic
+datasets (16 neurons; three recording lengths and three data seeds) were each
+fit in three fresh processes, totaling 27 fits. All fit gradient infinity norms
+passed the independent 1e-5 accuracy threshold.</p>
+<p>Median measurements across three data seeds, using the <strong>same SciPy optimizer</strong>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Bins</th>
+<th style="text-align: right;">StreamGLM seconds</th>
+<th style="text-align: right;">NeMoS objective seconds</th>
+<th style="text-align: right;">StreamGLM peak GiB</th>
+<th style="text-align: right;">NeMoS objective peak GiB</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">4,000</td>
+<td style="text-align: right;">2.76</td>
+<td style="text-align: right;">3.39</td>
+<td style="text-align: right;">0.284</td>
+<td style="text-align: right;">0.514</td>
+</tr>
+<tr>
+<td style="text-align: right;">16,000</td>
+<td style="text-align: right;">7.74</td>
+<td style="text-align: right;">5.96</td>
+<td style="text-align: right;">0.292</td>
+<td style="text-align: right;">0.586</td>
+</tr>
+<tr>
+<td style="text-align: right;">64,000</td>
+<td style="text-align: right;">25.15</td>
+<td style="text-align: right;">14.97</td>
+<td style="text-align: right;">0.299</td>
+<td style="text-align: right;">0.867</td>
+</tr>
+</tbody>
+</table>
+<p>These measurements show a memory/runtime tradeoff in the tested configurations:
+lower process memory for StreamGLM, but slower execution on the two longer
+recordings under the common driver. Whole-process memory includes the libraries'
+different import overheads. The native NeMoS reference is reported separately;
+its measurement includes an additional objective-audit compilation.</p>
+<p>16 of 18 pairwise agreement checks passed all thresholds. Both misses involved
+the 4,000-bin, seed-11 dataset: held-out likelihood differences were 1.16e-6 and
+1.27e-6 nats/bin, slightly exceeding the predeclared 1e-6 threshold. Their fitted
+objective differences were below 5e-11 and maximum predicted-count differences
+below 9e-6. These misses remain failures in the report; there is no claim that
+every fit matches to machine precision. No failures were removed or thresholds
+relaxed. Tests additionally cover integer-input likelihood precision and
+preservation of iteration-limit/failure diagnostics.</p>
+<h2 id="not-established">Not established</h2>
+<ul>
+<li>No complete hour-long, 1,000-neuron fitted real-data model.</li>
+<li>No new anatomical-connectivity recovery claim on HNN or real data.</li>
+<li>No statistical certification that rank 2 is the true biological rank.</li>
+<li>No controlled performance comparison against current NeMoS <code>stochastic_fit</code>.
+  Release 0.3 includes a pinned-upstream loader and numerical accuracy check.</li>
+<li>No stimulus/behavior-adjusted or causally identified coupling estimate.</li>
+<li>No promise that total process RSS stays constant: mapped input pages can
+  remain resident even when feature and differentiation buffers are bounded.</li>
+<li>No controlled speedup estimate: another experiment shared the host, and
+  timing measurements were not repeated across dedicated machines.</li>
+<li>CI configuration is included, but remote CI has not run because no branch
+  has been pushed. Local wheel building and tests are separate verified checks.</li>
+</ul>
+<p>The public dataset is linked by the Pynapple tutorial and downloaded with its
+published SHA-256. Raw data are excluded from Git. See <code>dataset.json</code> in the
+real-data artifact directory for provenance and exact analysis window.</p>
+<h2 id="release-03">Release 0.3</h2>
+<p>See <a href="../artifacts/v4/report.html">measured results</a> and <a href="RELEASE_03.html">protocol</a>.
+Both overlapping five-minute VISp subsets improved held-out likelihood over
+self-history. The 1,000-unit synthetic hour at 10 ms finished at 1.24 GiB peak
+RSS in 27.1 minutes. This is not a real-data 1,000-unit fit or anatomical recovery.
+Relative-objective optimizer convergence does not imply every fit passed a
+strict gradient gate. The pinned NeMoS SVRG check met its 1e-5 gradient gate;
+the earlier 300-pass miss is retained. All 23 tests passed in both environments.</p></main></body></html>

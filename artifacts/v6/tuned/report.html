@@ -1,0 +1,340 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>report</title><style>body{max-width:1100px;margin:auto;padding:32px 20px;font:16px/1.65 system-ui;color:#1e2933;background:#fafbf9}a{color:#165e79}table{border-collapse:collapse;display:block;overflow:auto}td,th{padding:8px;border:1px solid #dce2e6}pre{padding:16px;background:#edf0ed;overflow:auto}img{max-width:100%}nav{display:flex;gap:20px;flex-wrap:wrap}li{overflow-wrap:anywhere}h1,h2{line-height:1.25}</style></head><body><nav aria-label="Results navigation"><a href="../../../index.html">Results</a><a href="../../../RESULTS_REPORT.html">Written report</a><a href="../../../SIMULATIONS.html">Run guide</a><a href="../../../evidence.html">All evidence</a></nav><main><h1 id="tuned-streamglm-nemos-comparison">Tuned StreamGLM / NeMoS comparison</h1>
+<p>Fixed protocol: 60/20/20 chronological splits, fresh seeds, validation-only selection among gradient-gate-passing candidates. Failed settings remain in candidates.json. Two seeds are exploratory, not a significance certification.</p>
+<table>
+<thead>
+<tr>
+<th>Dataset</th>
+<th>Model</th>
+<th style="text-align: right;">Rank</th>
+<th style="text-align: right;">Ridge</th>
+<th style="text-align: right;">Step</th>
+<th style="text-align: right;">Test bits/spike</th>
+<th style="text-align: right;">Filter correlation</th>
+<th style="text-align: right;">Relative filter error</th>
+<th style="text-align: right;">Selected fit seconds</th>
+<th style="text-align: right;">Tuning seconds</th>
+<th style="text-align: right;">Peak GiB</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>lowrank_n64_s31</td>
+<td>dense</td>
+<td style="text-align: right;">None</td>
+<td style="text-align: right;">0.1</td>
+<td style="text-align: right;">None</td>
+<td style="text-align: right;">0.000854251</td>
+<td style="text-align: right;">0.2928</td>
+<td style="text-align: right;">0.9599</td>
+<td style="text-align: right;">2.8</td>
+<td style="text-align: right;">48.7</td>
+<td style="text-align: right;">0.306</td>
+</tr>
+<tr>
+<td>lowrank_n64_s31</td>
+<td>lowrank</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">None</td>
+<td style="text-align: right;">0.00654007</td>
+<td style="text-align: right;">0.7587</td>
+<td style="text-align: right;">0.7124</td>
+<td style="text-align: right;">16.1</td>
+<td style="text-align: right;">789.4</td>
+<td style="text-align: right;">0.296</td>
+</tr>
+<tr>
+<td>lowrank_n64_s31</td>
+<td>nemos</td>
+<td style="text-align: right;">None</td>
+<td style="text-align: right;">0.1</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">0.000853999</td>
+<td style="text-align: right;">0.2928</td>
+<td style="text-align: right;">0.9599</td>
+<td style="text-align: right;">13.6</td>
+<td style="text-align: right;">1696.8</td>
+<td style="text-align: right;">0.488</td>
+</tr>
+<tr>
+<td>permutation_fullrank_n64_s31</td>
+<td>dense</td>
+<td style="text-align: right;">None</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">None</td>
+<td style="text-align: right;">0.0312326</td>
+<td style="text-align: right;">0.7866</td>
+<td style="text-align: right;">0.6167</td>
+<td style="text-align: right;">9.0</td>
+<td style="text-align: right;">60.4</td>
+<td style="text-align: right;">0.305</td>
+</tr>
+<tr>
+<td>permutation_fullrank_n64_s31</td>
+<td>lowrank</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">None</td>
+<td style="text-align: right;">0.0220035</td>
+<td style="text-align: right;">0.6426</td>
+<td style="text-align: right;">0.7618</td>
+<td style="text-align: right;">49.1</td>
+<td style="text-align: right;">836.5</td>
+<td style="text-align: right;">0.294</td>
+</tr>
+<tr>
+<td>permutation_fullrank_n64_s31</td>
+<td>nemos</td>
+<td style="text-align: right;">None</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">0.1</td>
+<td style="text-align: right;">0.0312312</td>
+<td style="text-align: right;">0.7866</td>
+<td style="text-align: right;">0.6167</td>
+<td style="text-align: right;">215.1</td>
+<td style="text-align: right;">1307.8</td>
+<td style="text-align: right;">0.494</td>
+</tr>
+<tr>
+<td>lowrank_n64_s47</td>
+<td>dense</td>
+<td style="text-align: right;">None</td>
+<td style="text-align: right;">0.1</td>
+<td style="text-align: right;">None</td>
+<td style="text-align: right;">0.000958415</td>
+<td style="text-align: right;">0.2950</td>
+<td style="text-align: right;">0.9606</td>
+<td style="text-align: right;">3.2</td>
+<td style="text-align: right;">57.3</td>
+<td style="text-align: right;">0.306</td>
+</tr>
+<tr>
+<td>lowrank_n64_s47</td>
+<td>lowrank</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">None</td>
+<td style="text-align: right;">0.00669658</td>
+<td style="text-align: right;">0.7698</td>
+<td style="text-align: right;">0.7128</td>
+<td style="text-align: right;">15.7</td>
+<td style="text-align: right;">803.6</td>
+<td style="text-align: right;">0.296</td>
+</tr>
+<tr>
+<td>lowrank_n64_s47</td>
+<td>nemos</td>
+<td style="text-align: right;">None</td>
+<td style="text-align: right;">0.1</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">0.000958225</td>
+<td style="text-align: right;">0.2950</td>
+<td style="text-align: right;">0.9606</td>
+<td style="text-align: right;">13.7</td>
+<td style="text-align: right;">1693.5</td>
+<td style="text-align: right;">0.482</td>
+</tr>
+<tr>
+<td>permutation_fullrank_n64_s47</td>
+<td>dense</td>
+<td style="text-align: right;">None</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">None</td>
+<td style="text-align: right;">0.0313343</td>
+<td style="text-align: right;">0.7911</td>
+<td style="text-align: right;">0.6121</td>
+<td style="text-align: right;">13.0</td>
+<td style="text-align: right;">63.4</td>
+<td style="text-align: right;">0.304</td>
+</tr>
+<tr>
+<td>permutation_fullrank_n64_s47</td>
+<td>lowrank</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">None</td>
+<td style="text-align: right;">0.0222147</td>
+<td style="text-align: right;">0.6502</td>
+<td style="text-align: right;">0.7568</td>
+<td style="text-align: right;">65.7</td>
+<td style="text-align: right;">752.1</td>
+<td style="text-align: right;">0.296</td>
+</tr>
+<tr>
+<td>permutation_fullrank_n64_s47</td>
+<td>nemos</td>
+<td style="text-align: right;">None</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">0.5</td>
+<td style="text-align: right;">0.0313339</td>
+<td style="text-align: right;">0.7911</td>
+<td style="text-align: right;">0.6122</td>
+<td style="text-align: right;">50.3</td>
+<td style="text-align: right;">1307.1</td>
+<td style="text-align: right;">0.490</td>
+</tr>
+<tr>
+<td>lowrank_n128_s31</td>
+<td>dense</td>
+<td style="text-align: right;">None</td>
+<td style="text-align: right;">0.1</td>
+<td style="text-align: right;">None</td>
+<td style="text-align: right;">2.72649e-06</td>
+<td style="text-align: right;">0.1545</td>
+<td style="text-align: right;">0.9766</td>
+<td style="text-align: right;">6.8</td>
+<td style="text-align: right;">129.3</td>
+<td style="text-align: right;">0.328</td>
+</tr>
+<tr>
+<td>lowrank_n128_s31</td>
+<td>lowrank</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">None</td>
+<td style="text-align: right;">0.00240575</td>
+<td style="text-align: right;">0.6027</td>
+<td style="text-align: right;">0.7728</td>
+<td style="text-align: right;">31.2</td>
+<td style="text-align: right;">1141.3</td>
+<td style="text-align: right;">0.302</td>
+</tr>
+<tr>
+<td>lowrank_n128_s31</td>
+<td>nemos</td>
+<td style="text-align: right;">None</td>
+<td style="text-align: right;">0.1</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">3.13195e-08</td>
+<td style="text-align: right;">0.1538</td>
+<td style="text-align: right;">0.9768</td>
+<td style="text-align: right;">19.1</td>
+<td style="text-align: right;">3761.1</td>
+<td style="text-align: right;">0.519</td>
+</tr>
+<tr>
+<td>permutation_fullrank_n128_s31</td>
+<td>dense</td>
+<td style="text-align: right;">None</td>
+<td style="text-align: right;">0.1</td>
+<td style="text-align: right;">None</td>
+<td style="text-align: right;">0.0140076</td>
+<td style="text-align: right;">0.6445</td>
+<td style="text-align: right;">0.8423</td>
+<td style="text-align: right;">10.0</td>
+<td style="text-align: right;">162.0</td>
+<td style="text-align: right;">0.328</td>
+</tr>
+<tr>
+<td>permutation_fullrank_n128_s31</td>
+<td>lowrank</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">0.1</td>
+<td style="text-align: right;">None</td>
+<td style="text-align: right;">0.00478865</td>
+<td style="text-align: right;">0.3736</td>
+<td style="text-align: right;">0.9510</td>
+<td style="text-align: right;">37.5</td>
+<td style="text-align: right;">1216.0</td>
+<td style="text-align: right;">0.307</td>
+</tr>
+<tr>
+<td>permutation_fullrank_n128_s31</td>
+<td>nemos</td>
+<td style="text-align: right;">None</td>
+<td style="text-align: right;">0.1</td>
+<td style="text-align: right;">0.1</td>
+<td style="text-align: right;">0.0140068</td>
+<td style="text-align: right;">0.6445</td>
+<td style="text-align: right;">0.8423</td>
+<td style="text-align: right;">191.8</td>
+<td style="text-align: right;">3256.3</td>
+<td style="text-align: right;">0.517</td>
+</tr>
+<tr>
+<td>lowrank_n128_s47</td>
+<td>dense</td>
+<td style="text-align: right;">None</td>
+<td style="text-align: right;">0.1</td>
+<td style="text-align: right;">None</td>
+<td style="text-align: right;">1.22765e-05</td>
+<td style="text-align: right;">0.1495</td>
+<td style="text-align: right;">0.9787</td>
+<td style="text-align: right;">6.5</td>
+<td style="text-align: right;">149.1</td>
+<td style="text-align: right;">0.336</td>
+</tr>
+<tr>
+<td>lowrank_n128_s47</td>
+<td>lowrank</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">None</td>
+<td style="text-align: right;">0.00253489</td>
+<td style="text-align: right;">0.5837</td>
+<td style="text-align: right;">0.7937</td>
+<td style="text-align: right;">43.4</td>
+<td style="text-align: right;">2208.4</td>
+<td style="text-align: right;">0.304</td>
+</tr>
+<tr>
+<td>lowrank_n128_s47</td>
+<td>nemos</td>
+<td style="text-align: right;">None</td>
+<td style="text-align: right;">0.1</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">9.81227e-06</td>
+<td style="text-align: right;">0.1490</td>
+<td style="text-align: right;">0.9789</td>
+<td style="text-align: right;">14.3</td>
+<td style="text-align: right;">3426.8</td>
+<td style="text-align: right;">0.489</td>
+</tr>
+<tr>
+<td>permutation_fullrank_n128_s47</td>
+<td>dense</td>
+<td style="text-align: right;">None</td>
+<td style="text-align: right;">0.1</td>
+<td style="text-align: right;">None</td>
+<td style="text-align: right;">0.0142954</td>
+<td style="text-align: right;">0.6480</td>
+<td style="text-align: right;">0.8421</td>
+<td style="text-align: right;">12.5</td>
+<td style="text-align: right;">186.0</td>
+<td style="text-align: right;">0.328</td>
+</tr>
+<tr>
+<td>permutation_fullrank_n128_s47</td>
+<td>lowrank</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">0.1</td>
+<td style="text-align: right;">None</td>
+<td style="text-align: right;">0.00503344</td>
+<td style="text-align: right;">0.3804</td>
+<td style="text-align: right;">0.9502</td>
+<td style="text-align: right;">49.2</td>
+<td style="text-align: right;">1509.5</td>
+<td style="text-align: right;">0.308</td>
+</tr>
+<tr>
+<td>permutation_fullrank_n128_s47</td>
+<td>nemos</td>
+<td style="text-align: right;">None</td>
+<td style="text-align: right;">0.1</td>
+<td style="text-align: right;">0.1</td>
+<td style="text-align: right;">0.0142946</td>
+<td style="text-align: right;">0.6480</td>
+<td style="text-align: right;">0.8421</td>
+<td style="text-align: right;">168.1</td>
+<td style="text-align: right;">2850.2</td>
+<td style="text-align: right;">0.512</td>
+</tr>
+</tbody>
+</table>
+<p>Candidate outcomes: 256; execution failures: 22; gradient passes: 188.</p>
+<p>Bits/spike are gains over training constant-rate predictions. Correlations are Pearson correlations of reconstructed filters, including diagonals. Low-rank gradient gates use factor coordinates. Timing includes compilation and differs across solver/search configurations; shared host. Do not interpret failures as generic library inferiority. Rank/penalty winners at search boundaries require new confirmation data before further tuning.</p>
+<h2 id="failure-and-convergence-accounting">Failure and convergence accounting</h2>
+<p>Of 256 candidates, 188 passed the convergence gate, 46 finished without passing it, 21 failed with nonfinite objective/gradient, and one timed out. All 24 model selections were available. See <a href="../failure_audit/README.html">the detailed audit</a>. The identical-settings timeout retry is supplementary; original outcomes remain unchanged.</p>
+<h2 id="identical-settings-retry-outcome">Identical-settings retry outcome</h2>
+<p>The timeout candidate finished in 126.7 seconds on retry, using 0.311 GiB peak RSS. It reached the 1500-iteration limit, with gradient infinity norm 9.87083e-05, above the 1e-5 gate. It remains ineligible. Validation log likelihood was -51.508607, compared with -50.513115 for the original selected rank-2, ridge-0.01 model (higher is better). No held-out test evaluation was performed for the retry, and no selected model or original candidate record changed.</p>
+<p>Accounting with the supplementary retry: 188 converged, 47 completed without convergence, 21 numerical failures. Historical original accounting remains 188/46/21/1. This retry resolves the missing outcome without changing the comparison conclusions.</p></main></body></html>

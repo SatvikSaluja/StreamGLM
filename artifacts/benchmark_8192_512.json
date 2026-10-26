@@ -1,0 +1,24 @@
+{
+  "bins": 8192,
+  "neurons": 512,
+  "rank": 5,
+  "chunk": 512,
+  "out": "artifacts/benchmark_8192_512.json",
+  "dtype": "float64",
+  "n_basis": 3,
+  "history": 25,
+  "cold_pass_seconds": 1.06788039499952,
+  "warm_pass_seconds": 0.17841585200221743,
+  "objective": 102.55124297975597,
+  "gradient_inf_norm": 0.00724820368861831,
+  "peak_rss_gib": 0.3125495910644531,
+  "hypothetical_design_gib": 0.09375,
+  "parameter_count": 15872,
+  "cpu_affinity": [
+    6,
+    7
+  ],
+  "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "jax_version": "0.10.2",
+  "note": "Whole-process Linux peak RSS, including JAX, compilation and mapped file pages. Two exact passes; not a fit."
+}

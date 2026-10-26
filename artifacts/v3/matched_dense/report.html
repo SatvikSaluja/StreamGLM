@@ -1,0 +1,441 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>report</title><style>body{max-width:1100px;margin:auto;padding:32px 20px;font:16px/1.65 system-ui;color:#1e2933;background:#fafbf9}a{color:#165e79}table{border-collapse:collapse;display:block;overflow:auto}td,th{padding:8px;border:1px solid #dce2e6}pre{padding:16px;background:#edf0ed;overflow:auto}img{max-width:100%}nav{display:flex;gap:20px;flex-wrap:wrap}li{overflow-wrap:anywhere}h1,h2{line-height:1.25}</style></head><body><nav aria-label="Results navigation"><a href="../../../index.html">Results</a><a href="../../../RESULTS_REPORT.html">Written report</a><a href="../../../SIMULATIONS.html">Run guide</a><a href="../../../evidence.html">All evidence</a></nav><main><h1 id="matched-dense-fits">Matched dense fits</h1>
+<p>Fresh processes, float64, unregularized, identical initialization and splits. Each row is a synthetic dataset; seeds are data replicates, not timing repeats. The HNN simulation shared this host. NeMoS native uses a different solver.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Bins</th>
+<th style="text-align: right;">Seed</th>
+<th>Backend</th>
+<th style="text-align: right;">Seconds*</th>
+<th style="text-align: right;">Peak GiB</th>
+<th style="text-align: right;">Gradient norm</th>
+<th style="text-align: center;">Accuracy gate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">4000</td>
+<td style="text-align: right;">7</td>
+<td>streamed</td>
+<td style="text-align: right;">2.762</td>
+<td style="text-align: right;">0.282</td>
+<td style="text-align: right;">9.7e-08</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: right;">4000</td>
+<td style="text-align: right;">7</td>
+<td>nemos_common</td>
+<td style="text-align: right;">3.339</td>
+<td style="text-align: right;">0.502</td>
+<td style="text-align: right;">7e-08</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: right;">4000</td>
+<td style="text-align: right;">7</td>
+<td>nemos_native</td>
+<td style="text-align: right;">8.378</td>
+<td style="text-align: right;">0.635</td>
+<td style="text-align: right;">1.4e-09</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: right;">4000</td>
+<td style="text-align: right;">11</td>
+<td>streamed</td>
+<td style="text-align: right;">2.681</td>
+<td style="text-align: right;">0.284</td>
+<td style="text-align: right;">7e-08</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: right;">4000</td>
+<td style="text-align: right;">11</td>
+<td>nemos_common</td>
+<td style="text-align: right;">3.395</td>
+<td style="text-align: right;">0.516</td>
+<td style="text-align: right;">9.3e-08</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: right;">4000</td>
+<td style="text-align: right;">11</td>
+<td>nemos_native</td>
+<td style="text-align: right;">9.510</td>
+<td style="text-align: right;">0.624</td>
+<td style="text-align: right;">2.2e-09</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: right;">4000</td>
+<td style="text-align: right;">19</td>
+<td>streamed</td>
+<td style="text-align: right;">3.473</td>
+<td style="text-align: right;">0.289</td>
+<td style="text-align: right;">9.7e-08</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: right;">4000</td>
+<td style="text-align: right;">19</td>
+<td>nemos_common</td>
+<td style="text-align: right;">3.977</td>
+<td style="text-align: right;">0.514</td>
+<td style="text-align: right;">6.2e-08</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: right;">4000</td>
+<td style="text-align: right;">19</td>
+<td>nemos_native</td>
+<td style="text-align: right;">11.332</td>
+<td style="text-align: right;">0.636</td>
+<td style="text-align: right;">1.4e-09</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: right;">16000</td>
+<td style="text-align: right;">7</td>
+<td>streamed</td>
+<td style="text-align: right;">8.105</td>
+<td style="text-align: right;">0.292</td>
+<td style="text-align: right;">7.1e-08</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: right;">16000</td>
+<td style="text-align: right;">7</td>
+<td>nemos_common</td>
+<td style="text-align: right;">6.264</td>
+<td style="text-align: right;">0.587</td>
+<td style="text-align: right;">8.9e-08</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: right;">16000</td>
+<td style="text-align: right;">7</td>
+<td>nemos_native</td>
+<td style="text-align: right;">13.213</td>
+<td style="text-align: right;">0.695</td>
+<td style="text-align: right;">8.1e-10</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: right;">16000</td>
+<td style="text-align: right;">11</td>
+<td>streamed</td>
+<td style="text-align: right;">7.053</td>
+<td style="text-align: right;">0.294</td>
+<td style="text-align: right;">9.4e-08</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: right;">16000</td>
+<td style="text-align: right;">11</td>
+<td>nemos_common</td>
+<td style="text-align: right;">5.962</td>
+<td style="text-align: right;">0.586</td>
+<td style="text-align: right;">5.8e-08</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: right;">16000</td>
+<td style="text-align: right;">11</td>
+<td>nemos_native</td>
+<td style="text-align: right;">12.951</td>
+<td style="text-align: right;">0.699</td>
+<td style="text-align: right;">2.6e-10</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: right;">16000</td>
+<td style="text-align: right;">19</td>
+<td>streamed</td>
+<td style="text-align: right;">7.742</td>
+<td style="text-align: right;">0.286</td>
+<td style="text-align: right;">9.4e-08</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: right;">16000</td>
+<td style="text-align: right;">19</td>
+<td>nemos_common</td>
+<td style="text-align: right;">5.792</td>
+<td style="text-align: right;">0.580</td>
+<td style="text-align: right;">7.2e-08</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: right;">16000</td>
+<td style="text-align: right;">19</td>
+<td>nemos_native</td>
+<td style="text-align: right;">13.058</td>
+<td style="text-align: right;">0.685</td>
+<td style="text-align: right;">9.9e-10</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: right;">64000</td>
+<td style="text-align: right;">7</td>
+<td>streamed</td>
+<td style="text-align: right;">25.147</td>
+<td style="text-align: right;">0.296</td>
+<td style="text-align: right;">5e-08</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: right;">64000</td>
+<td style="text-align: right;">7</td>
+<td>nemos_common</td>
+<td style="text-align: right;">14.695</td>
+<td style="text-align: right;">0.866</td>
+<td style="text-align: right;">7.1e-08</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: right;">64000</td>
+<td style="text-align: right;">7</td>
+<td>nemos_native</td>
+<td style="text-align: right;">26.664</td>
+<td style="text-align: right;">0.955</td>
+<td style="text-align: right;">5.4e-10</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: right;">64000</td>
+<td style="text-align: right;">11</td>
+<td>streamed</td>
+<td style="text-align: right;">24.294</td>
+<td style="text-align: right;">0.299</td>
+<td style="text-align: right;">9.8e-08</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: right;">64000</td>
+<td style="text-align: right;">11</td>
+<td>nemos_common</td>
+<td style="text-align: right;">14.973</td>
+<td style="text-align: right;">0.867</td>
+<td style="text-align: right;">9e-08</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: right;">64000</td>
+<td style="text-align: right;">11</td>
+<td>nemos_native</td>
+<td style="text-align: right;">26.098</td>
+<td style="text-align: right;">0.955</td>
+<td style="text-align: right;">9.4e-10</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: right;">64000</td>
+<td style="text-align: right;">19</td>
+<td>streamed</td>
+<td style="text-align: right;">28.752</td>
+<td style="text-align: right;">0.299</td>
+<td style="text-align: right;">8.2e-08</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: right;">64000</td>
+<td style="text-align: right;">19</td>
+<td>nemos_common</td>
+<td style="text-align: right;">17.402</td>
+<td style="text-align: right;">0.879</td>
+<td style="text-align: right;">7.7e-08</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: right;">64000</td>
+<td style="text-align: right;">19</td>
+<td>nemos_native</td>
+<td style="text-align: right;">31.467</td>
+<td style="text-align: right;">0.954</td>
+<td style="text-align: right;">1.4e-09</td>
+<td style="text-align: center;">True</td>
+</tr>
+</tbody>
+</table>
+<p>*Includes feature construction, initial objective evaluation, compilation and optimization. Peak RSS covers the whole worker, including held-out scoring. Common-driver fits use SciPy L-BFGS-B (ftol=1e-14, gtol=1e-7, maxcor=10). Native NeMoS uses LBFGS tol=1e-7. All have a 1,000-iteration budget. The separate accuracy gate requires gradient infinity norm &lt;=1e-5. No low-rank, real-data, large-scale speedup or current upstream batching claim.</p>
+<p>Native timing also includes the independent objective-audit compilation; use the common-driver arms for the primary implementation comparison.</p>
+<h2 id="agreement-with-streamglm">Agreement with StreamGLM</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Bins</th>
+<th style="text-align: right;">Seed</th>
+<th>Reference</th>
+<th style="text-align: right;">Objective difference</th>
+<th style="text-align: right;">Held-out LL difference</th>
+<th style="text-align: right;">Max prediction difference</th>
+<th style="text-align: center;">All gates pass</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">4000</td>
+<td style="text-align: right;">7</td>
+<td>nemos_common</td>
+<td style="text-align: right;">3.93e-11</td>
+<td style="text-align: right;">3.64e-07</td>
+<td style="text-align: right;">6.81e-06</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: right;">4000</td>
+<td style="text-align: right;">7</td>
+<td>nemos_native</td>
+<td style="text-align: right;">5.2e-11</td>
+<td style="text-align: right;">3.55e-07</td>
+<td style="text-align: right;">9.96e-06</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: right;">4000</td>
+<td style="text-align: right;">11</td>
+<td>nemos_common</td>
+<td style="text-align: right;">3.29e-11</td>
+<td style="text-align: right;">1.16e-06</td>
+<td style="text-align: right;">8.01e-06</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: right;">4000</td>
+<td style="text-align: right;">11</td>
+<td>nemos_native</td>
+<td style="text-align: right;">4.6e-11</td>
+<td style="text-align: right;">1.27e-06</td>
+<td style="text-align: right;">7.79e-06</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: right;">4000</td>
+<td style="text-align: right;">19</td>
+<td>nemos_common</td>
+<td style="text-align: right;">1.01e-11</td>
+<td style="text-align: right;">2.81e-07</td>
+<td style="text-align: right;">7.87e-06</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: right;">4000</td>
+<td style="text-align: right;">19</td>
+<td>nemos_native</td>
+<td style="text-align: right;">9.54e-12</td>
+<td style="text-align: right;">8.67e-08</td>
+<td style="text-align: right;">4.23e-06</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: right;">16000</td>
+<td style="text-align: right;">7</td>
+<td>nemos_common</td>
+<td style="text-align: right;">2.99e-11</td>
+<td style="text-align: right;">2.85e-07</td>
+<td style="text-align: right;">4.8e-06</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: right;">16000</td>
+<td style="text-align: right;">7</td>
+<td>nemos_native</td>
+<td style="text-align: right;">2.31e-11</td>
+<td style="text-align: right;">5.34e-08</td>
+<td style="text-align: right;">8.14e-06</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: right;">16000</td>
+<td style="text-align: right;">11</td>
+<td>nemos_common</td>
+<td style="text-align: right;">1.58e-11</td>
+<td style="text-align: right;">4.62e-07</td>
+<td style="text-align: right;">9.01e-06</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: right;">16000</td>
+<td style="text-align: right;">11</td>
+<td>nemos_native</td>
+<td style="text-align: right;">4.88e-11</td>
+<td style="text-align: right;">7.67e-07</td>
+<td style="text-align: right;">1.08e-05</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: right;">16000</td>
+<td style="text-align: right;">19</td>
+<td>nemos_common</td>
+<td style="text-align: right;">6.7e-12</td>
+<td style="text-align: right;">1.31e-07</td>
+<td style="text-align: right;">6.95e-06</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: right;">16000</td>
+<td style="text-align: right;">19</td>
+<td>nemos_native</td>
+<td style="text-align: right;">2.56e-11</td>
+<td style="text-align: right;">2.64e-07</td>
+<td style="text-align: right;">9.72e-06</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: right;">64000</td>
+<td style="text-align: right;">7</td>
+<td>nemos_common</td>
+<td style="text-align: right;">1.61e-11</td>
+<td style="text-align: right;">8.81e-08</td>
+<td style="text-align: right;">9.33e-06</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: right;">64000</td>
+<td style="text-align: right;">7</td>
+<td>nemos_native</td>
+<td style="text-align: right;">1.03e-11</td>
+<td style="text-align: right;">1.53e-07</td>
+<td style="text-align: right;">4.35e-06</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: right;">64000</td>
+<td style="text-align: right;">11</td>
+<td>nemos_common</td>
+<td style="text-align: right;">1.33e-11</td>
+<td style="text-align: right;">1.44e-07</td>
+<td style="text-align: right;">3.05e-06</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: right;">64000</td>
+<td style="text-align: right;">11</td>
+<td>nemos_native</td>
+<td style="text-align: right;">2.84e-11</td>
+<td style="text-align: right;">1e-07</td>
+<td style="text-align: right;">5.12e-06</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: right;">64000</td>
+<td style="text-align: right;">19</td>
+<td>nemos_common</td>
+<td style="text-align: right;">9.31e-13</td>
+<td style="text-align: right;">7.65e-09</td>
+<td style="text-align: right;">6.19e-06</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: right;">64000</td>
+<td style="text-align: right;">19</td>
+<td>nemos_native</td>
+<td style="text-align: right;">1.97e-11</td>
+<td style="text-align: right;">1.03e-07</td>
+<td style="text-align: right;">5.23e-06</td>
+<td style="text-align: center;">True</td>
+</tr>
+</tbody>
+</table>
+<p>Agreement requires gradient norms &lt;=1e-5, initial objective/gradient differences &lt;=1e-10, final objective and held-out LL differences &lt;=1e-6, and maximum prediction difference &lt;=1e-3. No failed gate is omitted.</p></main></body></html>

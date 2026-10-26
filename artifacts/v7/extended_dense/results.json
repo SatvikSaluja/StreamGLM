@@ -1,0 +1,770 @@
+[
+  {
+    "neurons": 64,
+    "seed": 31,
+    "family": "lowrank",
+    "backend": "streamglm",
+    "ridge": 0.1,
+    "data_sha256": "b33ba5d811a8f598e237eb582ca7fd4d684bceae435c5338d80e7eaa8e16a1ae",
+    "fits": [
+      {
+        "repeat": 0,
+        "fit_seconds": 1.7474976949999927,
+        "objective": 24.970381345970956,
+        "gradient_inf_norm": 9.451022121902648e-07,
+        "gate_passed": true,
+        "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+        "validation": {
+          "log_likelihood_per_bin": -25.356958435823554,
+          "valid_bins": 2392,
+          "spikes": 19667.0,
+          "bin_s": 1.0,
+          "intercept_log_likelihood_per_bin": -25.36352371389454,
+          "gain_nats_per_bin": 0.006565278070989235,
+          "gain_bits_per_spike": 0.0011519953385496092
+        },
+        "nemos_objective_difference": null
+      },
+      {
+        "repeat": 1,
+        "fit_seconds": 0.9025062670000352,
+        "objective": 24.970381345970956,
+        "gradient_inf_norm": 9.451022121902648e-07,
+        "gate_passed": true,
+        "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+        "validation": {
+          "log_likelihood_per_bin": -25.356958435823554,
+          "valid_bins": 2392,
+          "spikes": 19667.0,
+          "bin_s": 1.0,
+          "intercept_log_likelihood_per_bin": -25.36352371389454,
+          "gain_nats_per_bin": 0.006565278070989235,
+          "gain_bits_per_spike": 0.0011519953385496092
+        },
+        "nemos_objective_difference": null
+      }
+    ],
+    "status": "DONE",
+    "peak_rss_gib": 0.3026924133300781
+  },
+  {
+    "neurons": 64,
+    "seed": 31,
+    "family": "lowrank",
+    "backend": "nemos",
+    "ridge": 0.1,
+    "data_sha256": "b33ba5d811a8f598e237eb582ca7fd4d684bceae435c5338d80e7eaa8e16a1ae",
+    "fits": [
+      {
+        "repeat": 0,
+        "fit_seconds": 7.90103883200004,
+        "objective": 24.970381345873754,
+        "gradient_inf_norm": 3.7429096679588716e-08,
+        "gate_passed": true,
+        "message": "None",
+        "validation": {
+          "log_likelihood_per_bin": -25.356958535036743,
+          "valid_bins": 2392,
+          "spikes": 19667.0,
+          "bin_s": 1.0,
+          "intercept_log_likelihood_per_bin": -25.36352371389454,
+          "gain_nats_per_bin": 0.006565178857798487,
+          "gain_bits_per_spike": 0.001151977929822663
+        },
+        "nemos_objective_difference": 3.552713678800501e-15
+      },
+      {
+        "repeat": 1,
+        "fit_seconds": 2.1760411249999834,
+        "objective": 24.970381345873754,
+        "gradient_inf_norm": 3.7429096679588716e-08,
+        "gate_passed": true,
+        "message": "None",
+        "validation": {
+          "log_likelihood_per_bin": -25.356958535036743,
+          "valid_bins": 2392,
+          "spikes": 19667.0,
+          "bin_s": 1.0,
+          "intercept_log_likelihood_per_bin": -25.36352371389454,
+          "gain_nats_per_bin": 0.006565178857798487,
+          "gain_bits_per_spike": 0.001151977929822663
+        },
+        "nemos_objective_difference": 3.552713678800501e-15
+      }
+    ],
+    "status": "DONE",
+    "peak_rss_gib": 0.6393775939941406
+  },
+  {
+    "neurons": 64,
+    "seed": 31,
+    "family": "permutation_fullrank",
+    "backend": "streamglm",
+    "ridge": 0.01,
+    "data_sha256": "e95e78d4e448d574f12b711479281e65349b03e99aa3b8eb034d8ca55fbe94f4",
+    "fits": [
+      {
+        "repeat": 0,
+        "fit_seconds": 4.2513204429999405,
+        "objective": 37.17696717355264,
+        "gradient_inf_norm": 8.621160683358411e-07,
+        "gate_passed": true,
+        "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+        "validation": {
+          "log_likelihood_per_bin": -38.807605279404044,
+          "valid_bins": 2392,
+          "spikes": 37492.0,
+          "bin_s": 1.0,
+          "intercept_log_likelihood_per_bin": -39.08064677726892,
+          "gain_nats_per_bin": 0.2730414978648751,
+          "gain_bits_per_spike": 0.025131925501555186
+        },
+        "nemos_objective_difference": null
+      },
+      {
+        "repeat": 1,
+        "fit_seconds": 3.716131495000127,
+        "objective": 37.17696717355264,
+        "gradient_inf_norm": 8.621160683358411e-07,
+        "gate_passed": true,
+        "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+        "validation": {
+          "log_likelihood_per_bin": -38.807605279404044,
+          "valid_bins": 2392,
+          "spikes": 37492.0,
+          "bin_s": 1.0,
+          "intercept_log_likelihood_per_bin": -39.08064677726892,
+          "gain_nats_per_bin": 0.2730414978648751,
+          "gain_bits_per_spike": 0.025131925501555186
+        },
+        "nemos_objective_difference": null
+      }
+    ],
+    "status": "DONE",
+    "peak_rss_gib": 0.30629730224609375
+  },
+  {
+    "neurons": 64,
+    "seed": 31,
+    "family": "permutation_fullrank",
+    "backend": "nemos",
+    "ridge": 0.01,
+    "data_sha256": "e95e78d4e448d574f12b711479281e65349b03e99aa3b8eb034d8ca55fbe94f4",
+    "fits": [
+      {
+        "repeat": 0,
+        "fit_seconds": 8.509246062000102,
+        "objective": 37.1769671725818,
+        "gradient_inf_norm": 1.5680580955924755e-08,
+        "gate_passed": true,
+        "message": "None",
+        "validation": {
+          "log_likelihood_per_bin": -38.807600145697116,
+          "valid_bins": 2392,
+          "spikes": 37492.0,
+          "bin_s": 1.0,
+          "intercept_log_likelihood_per_bin": -39.08064677726892,
+          "gain_nats_per_bin": 0.27304663157180364,
+          "gain_bits_per_spike": 0.025132398030240696
+        },
+        "nemos_objective_difference": 7.105427357601002e-15
+      },
+      {
+        "repeat": 1,
+        "fit_seconds": 3.967701373999944,
+        "objective": 37.1769671725818,
+        "gradient_inf_norm": 1.5680580955924755e-08,
+        "gate_passed": true,
+        "message": "None",
+        "validation": {
+          "log_likelihood_per_bin": -38.807600145697116,
+          "valid_bins": 2392,
+          "spikes": 37492.0,
+          "bin_s": 1.0,
+          "intercept_log_likelihood_per_bin": -39.08064677726892,
+          "gain_nats_per_bin": 0.27304663157180364,
+          "gain_bits_per_spike": 0.025132398030240696
+        },
+        "nemos_objective_difference": 7.105427357601002e-15
+      }
+    ],
+    "status": "DONE",
+    "peak_rss_gib": 0.6430778503417969
+  },
+  {
+    "neurons": 64,
+    "seed": 47,
+    "family": "lowrank",
+    "backend": "streamglm",
+    "ridge": 0.1,
+    "data_sha256": "3fc29575b1cc6db5ef669b726cc810e27d0944af0c41fdf8d5e0765fc3232e0e",
+    "fits": [
+      {
+        "repeat": 0,
+        "fit_seconds": 1.5328027529999417,
+        "objective": 24.970723493759582,
+        "gradient_inf_norm": 4.6917967760888097e-07,
+        "gate_passed": true,
+        "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+        "validation": {
+          "log_likelihood_per_bin": -25.362469109853585,
+          "valid_bins": 2392,
+          "spikes": 19668.0,
+          "bin_s": 1.0,
+          "intercept_log_likelihood_per_bin": -25.368975631958463,
+          "gain_nats_per_bin": 0.006506522104878652,
+          "gain_bits_per_spike": 0.0011416275066376703
+        },
+        "nemos_objective_difference": null
+      },
+      {
+        "repeat": 1,
+        "fit_seconds": 0.9572752439999022,
+        "objective": 24.970723493759582,
+        "gradient_inf_norm": 4.6917967760888097e-07,
+        "gate_passed": true,
+        "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+        "validation": {
+          "log_likelihood_per_bin": -25.362469109853585,
+          "valid_bins": 2392,
+          "spikes": 19668.0,
+          "bin_s": 1.0,
+          "intercept_log_likelihood_per_bin": -25.368975631958463,
+          "gain_nats_per_bin": 0.006506522104878652,
+          "gain_bits_per_spike": 0.0011416275066376703
+        },
+        "nemos_objective_difference": null
+      }
+    ],
+    "status": "DONE",
+    "peak_rss_gib": 0.3087959289550781
+  },
+  {
+    "neurons": 64,
+    "seed": 47,
+    "family": "lowrank",
+    "backend": "nemos",
+    "ridge": 0.1,
+    "data_sha256": "3fc29575b1cc6db5ef669b726cc810e27d0944af0c41fdf8d5e0765fc3232e0e",
+    "fits": [
+      {
+        "repeat": 0,
+        "fit_seconds": 6.653481358999898,
+        "objective": 24.97072349374841,
+        "gradient_inf_norm": 2.0714960066648388e-08,
+        "gate_passed": true,
+        "message": "None",
+        "validation": {
+          "log_likelihood_per_bin": -25.36246912875799,
+          "valid_bins": 2392,
+          "spikes": 19668.0,
+          "bin_s": 1.0,
+          "intercept_log_likelihood_per_bin": -25.368975631958463,
+          "gain_nats_per_bin": 0.0065065032004746285,
+          "gain_bits_per_spike": 0.001141624189690877
+        },
+        "nemos_objective_difference": 3.552713678800501e-15
+      },
+      {
+        "repeat": 1,
+        "fit_seconds": 2.0929740399999446,
+        "objective": 24.97072349374841,
+        "gradient_inf_norm": 2.0714960066648388e-08,
+        "gate_passed": true,
+        "message": "None",
+        "validation": {
+          "log_likelihood_per_bin": -25.36246912875799,
+          "valid_bins": 2392,
+          "spikes": 19668.0,
+          "bin_s": 1.0,
+          "intercept_log_likelihood_per_bin": -25.368975631958463,
+          "gain_nats_per_bin": 0.0065065032004746285,
+          "gain_bits_per_spike": 0.001141624189690877
+        },
+        "nemos_objective_difference": 3.552713678800501e-15
+      }
+    ],
+    "status": "DONE",
+    "peak_rss_gib": 0.6465187072753906
+  },
+  {
+    "neurons": 64,
+    "seed": 47,
+    "family": "permutation_fullrank",
+    "backend": "streamglm",
+    "ridge": 0.01,
+    "data_sha256": "88f24bd0ae53efc516c577350fc2a6fc9c0df962b8b9403b11e57801e8d664f6",
+    "fits": [
+      {
+        "repeat": 0,
+        "fit_seconds": 4.877044447999879,
+        "objective": 37.1959079617239,
+        "gradient_inf_norm": 4.806928733377015e-07,
+        "gate_passed": true,
+        "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+        "validation": {
+          "log_likelihood_per_bin": -38.86430753462998,
+          "valid_bins": 2392,
+          "spikes": 37617.0,
+          "bin_s": 1.0,
+          "intercept_log_likelihood_per_bin": -39.17450096646794,
+          "gain_nats_per_bin": 0.31019343183795345,
+          "gain_bits_per_spike": 0.028456675061350835
+        },
+        "nemos_objective_difference": null
+      },
+      {
+        "repeat": 1,
+        "fit_seconds": 4.1464912589999585,
+        "objective": 37.1959079617239,
+        "gradient_inf_norm": 4.806928733377015e-07,
+        "gate_passed": true,
+        "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+        "validation": {
+          "log_likelihood_per_bin": -38.86430753462998,
+          "valid_bins": 2392,
+          "spikes": 37617.0,
+          "bin_s": 1.0,
+          "intercept_log_likelihood_per_bin": -39.17450096646794,
+          "gain_nats_per_bin": 0.31019343183795345,
+          "gain_bits_per_spike": 0.028456675061350835
+        },
+        "nemos_objective_difference": null
+      }
+    ],
+    "status": "DONE",
+    "peak_rss_gib": 0.3115234375
+  },
+  {
+    "neurons": 64,
+    "seed": 47,
+    "family": "permutation_fullrank",
+    "backend": "nemos",
+    "ridge": 0.01,
+    "data_sha256": "88f24bd0ae53efc516c577350fc2a6fc9c0df962b8b9403b11e57801e8d664f6",
+    "fits": [
+      {
+        "repeat": 0,
+        "fit_seconds": 8.255489428000146,
+        "objective": 37.195907961410036,
+        "gradient_inf_norm": 1.653098646710614e-08,
+        "gate_passed": true,
+        "message": "None",
+        "validation": {
+          "log_likelihood_per_bin": -38.86430811677545,
+          "valid_bins": 2392,
+          "spikes": 37617.0,
+          "bin_s": 1.0,
+          "intercept_log_likelihood_per_bin": -39.17450096646794,
+          "gain_nats_per_bin": 0.3101928496924904,
+          "gain_bits_per_spike": 0.028456621656208818
+        },
+        "nemos_objective_difference": 7.105427357601002e-15
+      },
+      {
+        "repeat": 1,
+        "fit_seconds": 3.6829819730000963,
+        "objective": 37.195907961410036,
+        "gradient_inf_norm": 1.653098646710614e-08,
+        "gate_passed": true,
+        "message": "None",
+        "validation": {
+          "log_likelihood_per_bin": -38.86430811677545,
+          "valid_bins": 2392,
+          "spikes": 37617.0,
+          "bin_s": 1.0,
+          "intercept_log_likelihood_per_bin": -39.17450096646794,
+          "gain_nats_per_bin": 0.3101928496924904,
+          "gain_bits_per_spike": 0.028456621656208818
+        },
+        "nemos_objective_difference": 7.105427357601002e-15
+      }
+    ],
+    "status": "DONE",
+    "peak_rss_gib": 0.6420936584472656
+  },
+  {
+    "neurons": 128,
+    "seed": 31,
+    "family": "lowrank",
+    "backend": "streamglm",
+    "ridge": 0.1,
+    "data_sha256": "cc79cce587536d2a49e26bc61175d86c00f4179aed52378196d5fa2d796cd5c7",
+    "fits": [
+      {
+        "repeat": 0,
+        "fit_seconds": 3.01847801100007,
+        "objective": 49.97716674151566,
+        "gradient_inf_norm": 3.343752878547341e-07,
+        "gate_passed": true,
+        "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+        "validation": {
+          "log_likelihood_per_bin": -50.80494491967234,
+          "valid_bins": 2392,
+          "spikes": 39447.0,
+          "bin_s": 1.0,
+          "intercept_log_likelihood_per_bin": -50.808627829873444,
+          "gain_nats_per_bin": 0.0036829102011026625,
+          "gain_bits_per_spike": 0.00032219059876145424
+        },
+        "nemos_objective_difference": null
+      },
+      {
+        "repeat": 1,
+        "fit_seconds": 2.3725515730000097,
+        "objective": 49.97716674151566,
+        "gradient_inf_norm": 3.343752878547341e-07,
+        "gate_passed": true,
+        "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+        "validation": {
+          "log_likelihood_per_bin": -50.80494491967234,
+          "valid_bins": 2392,
+          "spikes": 39447.0,
+          "bin_s": 1.0,
+          "intercept_log_likelihood_per_bin": -50.808627829873444,
+          "gain_nats_per_bin": 0.0036829102011026625,
+          "gain_bits_per_spike": 0.00032219059876145424
+        },
+        "nemos_objective_difference": null
+      }
+    ],
+    "status": "DONE",
+    "peak_rss_gib": 0.3345527648925781
+  },
+  {
+    "neurons": 128,
+    "seed": 31,
+    "family": "lowrank",
+    "backend": "nemos",
+    "ridge": 0.1,
+    "data_sha256": "cc79cce587536d2a49e26bc61175d86c00f4179aed52378196d5fa2d796cd5c7",
+    "fits": [
+      {
+        "repeat": 0,
+        "fit_seconds": 8.76426156499997,
+        "objective": 49.97716674150103,
+        "gradient_inf_norm": 2.945098631689045e-08,
+        "gate_passed": true,
+        "message": "None",
+        "validation": {
+          "log_likelihood_per_bin": -50.804944749364076,
+          "valid_bins": 2392,
+          "spikes": 39447.0,
+          "bin_s": 1.0,
+          "intercept_log_likelihood_per_bin": -50.808627829873444,
+          "gain_nats_per_bin": 0.003683080509369535,
+          "gain_bits_per_spike": 0.0003222054977732361
+        },
+        "nemos_objective_difference": 7.105427357601002e-15
+      },
+      {
+        "repeat": 1,
+        "fit_seconds": 3.9894476110000596,
+        "objective": 49.97716674150103,
+        "gradient_inf_norm": 2.945098631689045e-08,
+        "gate_passed": true,
+        "message": "None",
+        "validation": {
+          "log_likelihood_per_bin": -50.804944749364076,
+          "valid_bins": 2392,
+          "spikes": 39447.0,
+          "bin_s": 1.0,
+          "intercept_log_likelihood_per_bin": -50.808627829873444,
+          "gain_nats_per_bin": 0.003683080509369535,
+          "gain_bits_per_spike": 0.0003222054977732361
+        },
+        "nemos_objective_difference": 7.105427357601002e-15
+      }
+    ],
+    "status": "DONE",
+    "peak_rss_gib": 0.7104682922363281
+  },
+  {
+    "neurons": 128,
+    "seed": 31,
+    "family": "permutation_fullrank",
+    "backend": "streamglm",
+    "ridge": 0.01,
+    "data_sha256": "5fd3129fb98190cad8792ea662761a5125b089e3b1f9c45d2995423cd24f7af8",
+    "fits": [
+      {
+        "repeat": 0,
+        "fit_seconds": 10.55378533399994,
+        "objective": 73.82703372228451,
+        "gradient_inf_norm": 8.330060719476818e-07,
+        "gate_passed": true,
+        "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+        "validation": {
+          "log_likelihood_per_bin": -77.97697851847748,
+          "valid_bins": 2392,
+          "spikes": 75094.0,
+          "bin_s": 1.0,
+          "intercept_log_likelihood_per_bin": -78.21136054427835,
+          "gain_nats_per_bin": 0.23438202580087136,
+          "gain_bits_per_spike": 0.010770969089688278
+        },
+        "nemos_objective_difference": null
+      },
+      {
+        "repeat": 1,
+        "fit_seconds": 10.056631427999946,
+        "objective": 73.82703372228451,
+        "gradient_inf_norm": 8.330060719476818e-07,
+        "gate_passed": true,
+        "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+        "validation": {
+          "log_likelihood_per_bin": -77.97697851847748,
+          "valid_bins": 2392,
+          "spikes": 75094.0,
+          "bin_s": 1.0,
+          "intercept_log_likelihood_per_bin": -78.21136054427835,
+          "gain_nats_per_bin": 0.23438202580087136,
+          "gain_bits_per_spike": 0.010770969089688278
+        },
+        "nemos_objective_difference": null
+      }
+    ],
+    "status": "DONE",
+    "peak_rss_gib": 0.34037017822265625
+  },
+  {
+    "neurons": 128,
+    "seed": 31,
+    "family": "permutation_fullrank",
+    "backend": "nemos",
+    "ridge": 0.01,
+    "data_sha256": "5fd3129fb98190cad8792ea662761a5125b089e3b1f9c45d2995423cd24f7af8",
+    "fits": [
+      {
+        "repeat": 0,
+        "fit_seconds": 19.11674416799997,
+        "objective": 73.82703371879624,
+        "gradient_inf_norm": 1.524476860000193e-07,
+        "gate_passed": true,
+        "message": "None",
+        "validation": {
+          "log_likelihood_per_bin": -77.97697191861909,
+          "valid_bins": 2392,
+          "spikes": 75094.0,
+          "bin_s": 1.0,
+          "intercept_log_likelihood_per_bin": -78.21136054427835,
+          "gain_nats_per_bin": 0.23438862565927535,
+          "gain_bits_per_spike": 0.010771272384578843
+        },
+        "nemos_objective_difference": 1.4210854715202004e-14
+      },
+      {
+        "repeat": 1,
+        "fit_seconds": 14.515201356000034,
+        "objective": 73.82703371879624,
+        "gradient_inf_norm": 1.524476860000193e-07,
+        "gate_passed": true,
+        "message": "None",
+        "validation": {
+          "log_likelihood_per_bin": -77.97697191861909,
+          "valid_bins": 2392,
+          "spikes": 75094.0,
+          "bin_s": 1.0,
+          "intercept_log_likelihood_per_bin": -78.21136054427835,
+          "gain_nats_per_bin": 0.23438862565927535,
+          "gain_bits_per_spike": 0.010771272384578843
+        },
+        "nemos_objective_difference": 1.4210854715202004e-14
+      }
+    ],
+    "status": "DONE",
+    "peak_rss_gib": 0.7433052062988281
+  },
+  {
+    "neurons": 128,
+    "seed": 47,
+    "family": "lowrank",
+    "backend": "streamglm",
+    "ridge": 0.1,
+    "data_sha256": "eee3ea07a411db54d91ac9212eb199f0f8403b5f8f75e3e637b79e14c6fafd3e",
+    "fits": [
+      {
+        "repeat": 0,
+        "fit_seconds": 2.4094090539999797,
+        "objective": 49.547283833259726,
+        "gradient_inf_norm": 7.835682751446041e-07,
+        "gate_passed": true,
+        "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+        "validation": {
+          "log_likelihood_per_bin": -50.54047492933118,
+          "valid_bins": 2392,
+          "spikes": 39067.0,
+          "bin_s": 1.0,
+          "intercept_log_likelihood_per_bin": -50.544686857005836,
+          "gain_nats_per_bin": 0.004211927674658724,
+          "gain_bits_per_spike": 0.00037205449580978816
+        },
+        "nemos_objective_difference": null
+      },
+      {
+        "repeat": 1,
+        "fit_seconds": 1.8525334539999676,
+        "objective": 49.547283833259726,
+        "gradient_inf_norm": 7.835682751446041e-07,
+        "gate_passed": true,
+        "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+        "validation": {
+          "log_likelihood_per_bin": -50.54047492933118,
+          "valid_bins": 2392,
+          "spikes": 39067.0,
+          "bin_s": 1.0,
+          "intercept_log_likelihood_per_bin": -50.544686857005836,
+          "gain_nats_per_bin": 0.004211927674658724,
+          "gain_bits_per_spike": 0.00037205449580978816
+        },
+        "nemos_objective_difference": null
+      }
+    ],
+    "status": "DONE",
+    "peak_rss_gib": 0.3227577209472656
+  },
+  {
+    "neurons": 128,
+    "seed": 47,
+    "family": "lowrank",
+    "backend": "nemos",
+    "ridge": 0.1,
+    "data_sha256": "eee3ea07a411db54d91ac9212eb199f0f8403b5f8f75e3e637b79e14c6fafd3e",
+    "fits": [
+      {
+        "repeat": 0,
+        "fit_seconds": 8.72272316800013,
+        "objective": 49.547283832696046,
+        "gradient_inf_norm": 1.0716368212572012e-08,
+        "gate_passed": true,
+        "message": "None",
+        "validation": {
+          "log_likelihood_per_bin": -50.54047328742016,
+          "valid_bins": 2392,
+          "spikes": 39067.0,
+          "bin_s": 1.0,
+          "intercept_log_likelihood_per_bin": -50.544686857005836,
+          "gain_nats_per_bin": 0.004213569585675011,
+          "gain_bits_per_spike": 0.0003721995316277117
+        },
+        "nemos_objective_difference": 0.0
+      },
+      {
+        "repeat": 1,
+        "fit_seconds": 4.031280370000104,
+        "objective": 49.547283832696046,
+        "gradient_inf_norm": 1.0716368212572012e-08,
+        "gate_passed": true,
+        "message": "None",
+        "validation": {
+          "log_likelihood_per_bin": -50.54047328742016,
+          "valid_bins": 2392,
+          "spikes": 39067.0,
+          "bin_s": 1.0,
+          "intercept_log_likelihood_per_bin": -50.544686857005836,
+          "gain_nats_per_bin": 0.004213569585675011,
+          "gain_bits_per_spike": 0.0003721995316277117
+        },
+        "nemos_objective_difference": 0.0
+      }
+    ],
+    "status": "DONE",
+    "peak_rss_gib": 0.7236328125
+  },
+  {
+    "neurons": 128,
+    "seed": 47,
+    "family": "permutation_fullrank",
+    "backend": "streamglm",
+    "ridge": 0.01,
+    "data_sha256": "88a0b7a16198386275c38b361506c6d1c9b5f026aeb0bcfcae37c0017a5b6d3c",
+    "fits": [
+      {
+        "repeat": 0,
+        "fit_seconds": 13.016823326000122,
+        "objective": 73.88330229106722,
+        "gradient_inf_norm": 8.775994313165775e-07,
+        "gate_passed": true,
+        "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+        "validation": {
+          "log_likelihood_per_bin": -78.25697594528128,
+          "valid_bins": 2392,
+          "spikes": 75373.0,
+          "bin_s": 1.0,
+          "intercept_log_likelihood_per_bin": -78.48336027579536,
+          "gain_nats_per_bin": 0.22638433051407905,
+          "gain_bits_per_spike": 0.010364927678539672
+        },
+        "nemos_objective_difference": null
+      },
+      {
+        "repeat": 1,
+        "fit_seconds": 12.49777465499983,
+        "objective": 73.88330229106722,
+        "gradient_inf_norm": 8.775994313165775e-07,
+        "gate_passed": true,
+        "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+        "validation": {
+          "log_likelihood_per_bin": -78.25697594528128,
+          "valid_bins": 2392,
+          "spikes": 75373.0,
+          "bin_s": 1.0,
+          "intercept_log_likelihood_per_bin": -78.48336027579536,
+          "gain_nats_per_bin": 0.22638433051407905,
+          "gain_bits_per_spike": 0.010364927678539672
+        },
+        "nemos_objective_difference": null
+      }
+    ],
+    "status": "DONE",
+    "peak_rss_gib": 0.3383064270019531
+  },
+  {
+    "neurons": 128,
+    "seed": 47,
+    "family": "permutation_fullrank",
+    "backend": "nemos",
+    "ridge": 0.01,
+    "data_sha256": "88a0b7a16198386275c38b361506c6d1c9b5f026aeb0bcfcae37c0017a5b6d3c",
+    "fits": [
+      {
+        "repeat": 0,
+        "fit_seconds": 18.139132950999965,
+        "objective": 73.88330228772939,
+        "gradient_inf_norm": 5.132658983000122e-08,
+        "gate_passed": true,
+        "message": "None",
+        "validation": {
+          "log_likelihood_per_bin": -78.2569711280646,
+          "valid_bins": 2392,
+          "spikes": 75373.0,
+          "bin_s": 1.0,
+          "intercept_log_likelihood_per_bin": -78.48336027579536,
+          "gain_nats_per_bin": 0.22638914773075844,
+          "gain_bits_per_spike": 0.010365148233126557
+        },
+        "nemos_objective_difference": 1.4210854715202004e-14
+      },
+      {
+        "repeat": 1,
+        "fit_seconds": 13.380595822000032,
+        "objective": 73.88330228772939,
+        "gradient_inf_norm": 5.132658983000122e-08,
+        "gate_passed": true,
+        "message": "None",
+        "validation": {
+          "log_likelihood_per_bin": -78.2569711280646,
+          "valid_bins": 2392,
+          "spikes": 75373.0,
+          "bin_s": 1.0,
+          "intercept_log_likelihood_per_bin": -78.48336027579536,
+          "gain_nats_per_bin": 0.22638914773075844,
+          "gain_bits_per_spike": 0.010365148233126557
+        },
+        "nemos_objective_difference": 1.4210854715202004e-14
+      }
+    ],
+    "status": "DONE",
+    "peak_rss_gib": 0.7385177612304688
+  }
+]

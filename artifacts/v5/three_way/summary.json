@@ -1,0 +1,2162 @@
+[
+  {
+    "status": "DONE",
+    "backend": "lowrank",
+    "neurons": 16,
+    "bins": 12000,
+    "gradient_inf_norm": 2.5443180389253557e-07,
+    "gradient_gate_passed": true,
+    "objective": 6.276805606012881,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "test": {
+      "log_likelihood_per_bin": -6.345542555639165,
+      "valid_bins": 2392,
+      "spikes": 5003.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -6.4077555342257115,
+      "gain_nats_per_bin": 0.06221297858654676,
+      "gain_bits_per_spike": 0.04291273611838808
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -6.341464988778313,
+      "valid_bins": 2392,
+      "spikes": 5003.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -6.4077555342257115,
+      "gain_nats_per_bin": 0.06629054544739886,
+      "gain_bits_per_spike": 0.0457253253028363
+    },
+    "filter_relative_error": 0.31830975167177594,
+    "filter_correlation": 0.9112010594085443,
+    "parameters": 144,
+    "seconds": 11.93776040299781,
+    "peak_rss_gib": 0.2853584289550781,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "lowrank",
+    "seed": 7
+  },
+  {
+    "status": "DONE",
+    "backend": "nemos",
+    "neurons": 16,
+    "bins": 12000,
+    "gradient_inf_norm": 1.5347354203823997e-05,
+    "gradient_gate_passed": false,
+    "objective": 6.2597771585509125,
+    "optimizer_message": "StochasticFitSummary(pass_idx=1499, batch_idx=18, n_passes=1500, should_stop=False, stop_reason='')",
+    "test": {
+      "log_likelihood_per_bin": -6.368211967946645,
+      "valid_bins": 2392,
+      "spikes": 5003.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -6.4077555342257115,
+      "gain_nats_per_bin": 0.03954356627906635,
+      "gain_bits_per_spike": 0.02727602284068286
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -6.341464988778313,
+      "valid_bins": 2392,
+      "spikes": 5003.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -6.4077555342257115,
+      "gain_nats_per_bin": 0.06629054544739886,
+      "gain_bits_per_spike": 0.0457253253028363
+    },
+    "filter_relative_error": 0.49973774001132726,
+    "filter_correlation": 0.8196867474275542,
+    "parameters": 528,
+    "seconds": 235.01067031500133,
+    "peak_rss_gib": 0.4525032043457031,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "lowrank",
+    "seed": 7
+  },
+  {
+    "status": "DONE",
+    "backend": "dense",
+    "neurons": 16,
+    "bins": 12000,
+    "gradient_inf_norm": 1.9786455156487794e-06,
+    "gradient_gate_passed": true,
+    "objective": 6.259756826719627,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "test": {
+      "log_likelihood_per_bin": -6.36864546330136,
+      "valid_bins": 2392,
+      "spikes": 5003.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -6.4077555342257115,
+      "gain_nats_per_bin": 0.03911007092435199,
+      "gain_bits_per_spike": 0.0269770101235932
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -6.341464988778313,
+      "valid_bins": 2392,
+      "spikes": 5003.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -6.4077555342257115,
+      "gain_nats_per_bin": 0.06629054544739886,
+      "gain_bits_per_spike": 0.0457253253028363
+    },
+    "filter_relative_error": 0.5079255870708622,
+    "filter_correlation": 0.8144817793643944,
+    "parameters": 528,
+    "seconds": 7.605720092997217,
+    "peak_rss_gib": 0.28466796875,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "lowrank",
+    "seed": 7
+  },
+  {
+    "status": "DONE",
+    "backend": "lowrank",
+    "neurons": 16,
+    "bins": 12000,
+    "gradient_inf_norm": 4.281986125968588e-07,
+    "gradient_gate_passed": true,
+    "objective": 9.363658262373875,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "test": {
+      "log_likelihood_per_bin": -9.701299809314284,
+      "valid_bins": 2392,
+      "spikes": 9331.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -9.750542871923068,
+      "gain_nats_per_bin": 0.04924306260878335,
+      "gain_bits_per_spike": 0.018211787756886994
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -9.61198744464554,
+      "valid_bins": 2392,
+      "spikes": 9331.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -9.750542871923068,
+      "gain_nats_per_bin": 0.13855542727752773,
+      "gain_bits_per_spike": 0.05124258932045068
+    },
+    "filter_relative_error": 0.8156579181075353,
+    "filter_correlation": 0.5954394541939305,
+    "parameters": 144,
+    "seconds": 8.793156273000932,
+    "peak_rss_gib": 0.2856178283691406,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "permutation_fullrank",
+    "seed": 7
+  },
+  {
+    "status": "DONE",
+    "backend": "nemos",
+    "neurons": 16,
+    "bins": 12000,
+    "gradient_inf_norm": 9.75937688306569e-06,
+    "gradient_gate_passed": true,
+    "objective": 9.272035209077561,
+    "optimizer_message": "StochasticFitSummary(pass_idx=499, batch_idx=18, n_passes=1500, should_stop=True, stop_reason='full-gradient gate')",
+    "test": {
+      "log_likelihood_per_bin": -9.641243702598963,
+      "valid_bins": 2392,
+      "spikes": 9331.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -9.750542871923068,
+      "gain_nats_per_bin": 0.10929916932410412,
+      "gain_bits_per_spike": 0.04042261322267133
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -9.61198744464554,
+      "valid_bins": 2392,
+      "spikes": 9331.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -9.750542871923068,
+      "gain_nats_per_bin": 0.13855542727752773,
+      "gain_bits_per_spike": 0.05124258932045068
+    },
+    "filter_relative_error": 0.4550383413391945,
+    "filter_correlation": 0.907822007231715,
+    "parameters": 528,
+    "seconds": 84.43483471399668,
+    "peak_rss_gib": 0.43637847900390625,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "permutation_fullrank",
+    "seed": 7
+  },
+  {
+    "status": "DONE",
+    "backend": "dense",
+    "neurons": 16,
+    "bins": 12000,
+    "gradient_inf_norm": 3.643628273960454e-07,
+    "gradient_gate_passed": true,
+    "objective": 9.272034239227784,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "test": {
+      "log_likelihood_per_bin": -9.641361845529106,
+      "valid_bins": 2392,
+      "spikes": 9331.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -9.750542871923068,
+      "gain_nats_per_bin": 0.1091810263939614,
+      "gain_bits_per_spike": 0.040378919880812617
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -9.61198744464554,
+      "valid_bins": 2392,
+      "spikes": 9331.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -9.750542871923068,
+      "gain_nats_per_bin": 0.13855542727752773,
+      "gain_bits_per_spike": 0.05124258932045068
+    },
+    "filter_relative_error": 0.4563346460336047,
+    "filter_correlation": 0.9074144157657147,
+    "parameters": 528,
+    "seconds": 5.463055714000802,
+    "peak_rss_gib": 0.28504180908203125,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "permutation_fullrank",
+    "seed": 7
+  },
+  {
+    "status": "DONE",
+    "backend": "nemos",
+    "neurons": 16,
+    "bins": 12000,
+    "gradient_inf_norm": 1.4312853780193707e-05,
+    "gradient_gate_passed": false,
+    "objective": 6.546674885149261,
+    "optimizer_message": "StochasticFitSummary(pass_idx=1499, batch_idx=18, n_passes=1500, should_stop=False, stop_reason='')",
+    "test": {
+      "log_likelihood_per_bin": -6.763625319182546,
+      "valid_bins": 2392,
+      "spikes": 5448.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -6.808031589860441,
+      "gain_nats_per_bin": 0.04440627067789444,
+      "gain_bits_per_spike": 0.028128263202525726
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -6.7324884468587545,
+      "valid_bins": 2392,
+      "spikes": 5448.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -6.808031589860441,
+      "gain_nats_per_bin": 0.07554314300168653,
+      "gain_bits_per_spike": 0.04785129165451981
+    },
+    "filter_relative_error": 0.5221295086897193,
+    "filter_correlation": 0.8138539771952826,
+    "parameters": 528,
+    "seconds": 234.76190213299924,
+    "peak_rss_gib": 0.4311027526855469,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "lowrank",
+    "seed": 11
+  },
+  {
+    "status": "DONE",
+    "backend": "dense",
+    "neurons": 16,
+    "bins": 12000,
+    "gradient_inf_norm": 2.7629889678764596e-07,
+    "gradient_gate_passed": true,
+    "objective": 6.546667113365381,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "test": {
+      "log_likelihood_per_bin": -6.7640757130927875,
+      "valid_bins": 2392,
+      "spikes": 5448.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -6.808031589860441,
+      "gain_nats_per_bin": 0.04395587676765331,
+      "gain_bits_per_spike": 0.027842970196410174
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -6.7324884468587545,
+      "valid_bins": 2392,
+      "spikes": 5448.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -6.808031589860441,
+      "gain_nats_per_bin": 0.07554314300168653,
+      "gain_bits_per_spike": 0.04785129165451981
+    },
+    "filter_relative_error": 0.5269282291673422,
+    "filter_correlation": 0.8109806275239266,
+    "parameters": 528,
+    "seconds": 9.125648447003186,
+    "peak_rss_gib": 0.2817955017089844,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "lowrank",
+    "seed": 11
+  },
+  {
+    "status": "DONE",
+    "backend": "lowrank",
+    "neurons": 16,
+    "bins": 12000,
+    "gradient_inf_norm": 6.266488983959592e-07,
+    "gradient_gate_passed": true,
+    "objective": 6.563976929327273,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "test": {
+      "log_likelihood_per_bin": -6.743943621518066,
+      "valid_bins": 2392,
+      "spikes": 5448.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -6.808031589860441,
+      "gain_nats_per_bin": 0.0640879683423751,
+      "gain_bits_per_spike": 0.04059524058494837
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -6.7324884468587545,
+      "valid_bins": 2392,
+      "spikes": 5448.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -6.808031589860441,
+      "gain_nats_per_bin": 0.07554314300168653,
+      "gain_bits_per_spike": 0.04785129165451981
+    },
+    "filter_relative_error": 0.34877887236989563,
+    "filter_correlation": 0.9032083026708374,
+    "parameters": 144,
+    "seconds": 14.233739064002293,
+    "peak_rss_gib": 0.2909507751464844,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "lowrank",
+    "seed": 11
+  },
+  {
+    "status": "DONE",
+    "backend": "nemos",
+    "neurons": 16,
+    "bins": 12000,
+    "gradient_inf_norm": 9.985145481891941e-06,
+    "gradient_gate_passed": true,
+    "objective": 9.287249456580856,
+    "optimizer_message": "StochasticFitSummary(pass_idx=489, batch_idx=18, n_passes=1500, should_stop=True, stop_reason='full-gradient gate')",
+    "test": {
+      "log_likelihood_per_bin": -9.746678733935255,
+      "valid_bins": 2392,
+      "spikes": 9492.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -9.839464410507631,
+      "gain_nats_per_bin": 0.09278567657237664,
+      "gain_bits_per_spike": 0.03373330737588876
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -9.718024342594806,
+      "valid_bins": 2392,
+      "spikes": 9492.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -9.839464410507631,
+      "gain_nats_per_bin": 0.1214400679128253,
+      "gain_bits_per_spike": 0.044150943227284065
+    },
+    "filter_relative_error": 0.4295740832642397,
+    "filter_correlation": 0.9140865173595131,
+    "parameters": 528,
+    "seconds": 81.87836860799871,
+    "peak_rss_gib": 0.4422950744628906,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "permutation_fullrank",
+    "seed": 11
+  },
+  {
+    "status": "DONE",
+    "backend": "dense",
+    "neurons": 16,
+    "bins": 12000,
+    "gradient_inf_norm": 3.190252415963592e-07,
+    "gradient_gate_passed": true,
+    "objective": 9.28724826632616,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "test": {
+      "log_likelihood_per_bin": -9.746848873322156,
+      "valid_bins": 2392,
+      "spikes": 9492.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -9.839464410507631,
+      "gain_nats_per_bin": 0.0926155371854752,
+      "gain_bits_per_spike": 0.033671451231200154
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -9.718024342594806,
+      "valid_bins": 2392,
+      "spikes": 9492.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -9.839464410507631,
+      "gain_nats_per_bin": 0.1214400679128253,
+      "gain_bits_per_spike": 0.044150943227284065
+    },
+    "filter_relative_error": 0.4309581071804979,
+    "filter_correlation": 0.913658800167912,
+    "parameters": 528,
+    "seconds": 5.675271035997866,
+    "peak_rss_gib": 0.2834205627441406,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "permutation_fullrank",
+    "seed": 11
+  },
+  {
+    "status": "DONE",
+    "backend": "lowrank",
+    "neurons": 16,
+    "bins": 12000,
+    "gradient_inf_norm": 1.3961650229236467e-06,
+    "gradient_gate_passed": true,
+    "objective": 9.368902025492357,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "test": {
+      "log_likelihood_per_bin": -9.80110166283541,
+      "valid_bins": 2392,
+      "spikes": 9492.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -9.839464410507631,
+      "gain_nats_per_bin": 0.03836274767222083,
+      "gain_bits_per_spike": 0.01394722123948984
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -9.718024342594806,
+      "valid_bins": 2392,
+      "spikes": 9492.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -9.839464410507631,
+      "gain_nats_per_bin": 0.1214400679128253,
+      "gain_bits_per_spike": 0.044150943227284065
+    },
+    "filter_relative_error": 0.7927679190094133,
+    "filter_correlation": 0.5875094419174691,
+    "parameters": 144,
+    "seconds": 10.665750120999292,
+    "peak_rss_gib": 0.28753662109375,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "permutation_fullrank",
+    "seed": 11
+  },
+  {
+    "status": "DONE",
+    "backend": "lowrank",
+    "neurons": 16,
+    "bins": 12000,
+    "gradient_inf_norm": 2.1665760402233038e-06,
+    "gradient_gate_passed": true,
+    "objective": 6.207235457775154,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "test": {
+      "log_likelihood_per_bin": -6.298950403951935,
+      "valid_bins": 2392,
+      "spikes": 4956.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -6.376501796789856,
+      "gain_nats_per_bin": 0.07755139283792162,
+      "gain_bits_per_spike": 0.05400003220101553
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -6.29191389688568,
+      "valid_bins": 2392,
+      "spikes": 4956.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -6.376501796789856,
+      "gain_nats_per_bin": 0.08458789990417637,
+      "gain_bits_per_spike": 0.058899642565906726
+    },
+    "filter_relative_error": 0.29077680668339545,
+    "filter_correlation": 0.9278486255292255,
+    "parameters": 144,
+    "seconds": 12.948413980000623,
+    "peak_rss_gib": 0.2837944030761719,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "lowrank",
+    "seed": 19
+  },
+  {
+    "status": "DONE",
+    "backend": "nemos",
+    "neurons": 16,
+    "bins": 12000,
+    "gradient_inf_norm": 1.7248470909129604e-05,
+    "gradient_gate_passed": false,
+    "objective": 6.190888946920272,
+    "optimizer_message": "StochasticFitSummary(pass_idx=1499, batch_idx=18, n_passes=1500, should_stop=False, stop_reason='')",
+    "test": {
+      "log_likelihood_per_bin": -6.315869032228251,
+      "valid_bins": 2392,
+      "spikes": 4956.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -6.376501796789856,
+      "gain_nats_per_bin": 0.06063276456160471,
+      "gain_bits_per_spike": 0.04221937374620847
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -6.29191389688568,
+      "valid_bins": 2392,
+      "spikes": 4956.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -6.376501796789856,
+      "gain_nats_per_bin": 0.08458789990417637,
+      "gain_bits_per_spike": 0.058899642565906726
+    },
+    "filter_relative_error": 0.4739165977791831,
+    "filter_correlation": 0.8379754793415993,
+    "parameters": 528,
+    "seconds": 251.40708515200095,
+    "peak_rss_gib": 0.4585418701171875,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "lowrank",
+    "seed": 19
+  },
+  {
+    "status": "DONE",
+    "backend": "dense",
+    "neurons": 16,
+    "bins": 12000,
+    "gradient_inf_norm": 1.2830497782018183e-06,
+    "gradient_gate_passed": true,
+    "objective": 6.190868371442618,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "test": {
+      "log_likelihood_per_bin": -6.316243969734837,
+      "valid_bins": 2392,
+      "spikes": 4956.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -6.376501796789856,
+      "gain_nats_per_bin": 0.06025782705501875,
+      "gain_bits_per_spike": 0.041958299938400466
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -6.29191389688568,
+      "valid_bins": 2392,
+      "spikes": 4956.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -6.376501796789856,
+      "gain_nats_per_bin": 0.08458789990417637,
+      "gain_bits_per_spike": 0.058899642565906726
+    },
+    "filter_relative_error": 0.4806845087187278,
+    "filter_correlation": 0.8337969091331806,
+    "parameters": 528,
+    "seconds": 11.494663269997545,
+    "peak_rss_gib": 0.2894935607910156,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "lowrank",
+    "seed": 19
+  },
+  {
+    "status": "DONE",
+    "backend": "lowrank",
+    "neurons": 16,
+    "bins": 12000,
+    "gradient_inf_norm": 1.9867881730195927e-06,
+    "gradient_gate_passed": true,
+    "objective": 9.378493803117298,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "test": {
+      "log_likelihood_per_bin": -9.685915760380468,
+      "valid_bins": 2392,
+      "spikes": 9295.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -9.732658949882717,
+      "gain_nats_per_bin": 0.04674318950224934,
+      "gain_bits_per_spike": 0.01735420259440837
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -9.610762562756923,
+      "valid_bins": 2392,
+      "spikes": 9295.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -9.732658949882717,
+      "gain_nats_per_bin": 0.1218963871257944,
+      "gain_bits_per_spike": 0.0452561029795725
+    },
+    "filter_relative_error": 0.8352722576523228,
+    "filter_correlation": 0.5564207637854279,
+    "parameters": 144,
+    "seconds": 8.364421239999501,
+    "peak_rss_gib": 0.2880821228027344,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "permutation_fullrank",
+    "seed": 19
+  },
+  {
+    "status": "DONE",
+    "backend": "nemos",
+    "neurons": 16,
+    "bins": 12000,
+    "gradient_inf_norm": 9.588432678343553e-06,
+    "gradient_gate_passed": true,
+    "objective": 9.283386381859101,
+    "optimizer_message": "StochasticFitSummary(pass_idx=489, batch_idx=18, n_passes=1500, should_stop=True, stop_reason='full-gradient gate')",
+    "test": {
+      "log_likelihood_per_bin": -9.632055560784607,
+      "valid_bins": 2392,
+      "spikes": 9295.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -9.732658949882717,
+      "gain_nats_per_bin": 0.10060338909810841,
+      "gain_bits_per_spike": 0.037350716001283
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -9.610762562756923,
+      "valid_bins": 2392,
+      "spikes": 9295.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -9.732658949882717,
+      "gain_nats_per_bin": 0.1218963871257944,
+      "gain_bits_per_spike": 0.0452561029795725
+    },
+    "filter_relative_error": 0.41581074207730595,
+    "filter_correlation": 0.9180103643507233,
+    "parameters": 528,
+    "seconds": 84.01959424799861,
+    "peak_rss_gib": 0.4523277282714844,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "permutation_fullrank",
+    "seed": 19
+  },
+  {
+    "status": "DONE",
+    "backend": "dense",
+    "neurons": 16,
+    "bins": 12000,
+    "gradient_inf_norm": 2.884392482329932e-07,
+    "gradient_gate_passed": true,
+    "objective": 9.283385418356957,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "test": {
+      "log_likelihood_per_bin": -9.632235503551579,
+      "valid_bins": 2392,
+      "spikes": 9295.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -9.732658949882717,
+      "gain_nats_per_bin": 0.10042344633113748,
+      "gain_bits_per_spike": 0.037283909194416265
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -9.610762562756923,
+      "valid_bins": 2392,
+      "spikes": 9295.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -9.732658949882717,
+      "gain_nats_per_bin": 0.1218963871257944,
+      "gain_bits_per_spike": 0.0452561029795725
+    },
+    "filter_relative_error": 0.4171469749802192,
+    "filter_correlation": 0.9175682586172504,
+    "parameters": 528,
+    "seconds": 8.85812456900021,
+    "peak_rss_gib": 0.2851104736328125,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "permutation_fullrank",
+    "seed": 19
+  },
+  {
+    "status": "DONE",
+    "backend": "lowrank",
+    "neurons": 64,
+    "bins": 12000,
+    "gradient_inf_norm": 1.4601219634688585e-06,
+    "gradient_gate_passed": true,
+    "objective": 24.750267830969804,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "test": {
+      "log_likelihood_per_bin": -25.141210110338196,
+      "valid_bins": 2392,
+      "spikes": 19430.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -25.170152777406578,
+      "gain_nats_per_bin": 0.028942667068381632,
+      "gain_bits_per_spike": 0.005140453827131938
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -25.09180484582732,
+      "valid_bins": 2392,
+      "spikes": 19430.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -25.170152777406578,
+      "gain_nats_per_bin": 0.0783479315792574,
+      "gain_bits_per_spike": 0.013915231923268117
+    },
+    "filter_relative_error": 0.6495594999860996,
+    "filter_correlation": 0.7402306499734187,
+    "parameters": 576,
+    "seconds": 51.286407703002624,
+    "peak_rss_gib": 0.297088623046875,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "lowrank",
+    "seed": 7
+  },
+  {
+    "status": "DONE",
+    "backend": "nemos",
+    "neurons": 64,
+    "bins": 12000,
+    "gradient_inf_norm": 2.141642827042189e-05,
+    "gradient_gate_passed": false,
+    "objective": 24.358620692897336,
+    "optimizer_message": "StochasticFitSummary(pass_idx=1499, batch_idx=18, n_passes=1500, should_stop=False, stop_reason='')",
+    "test": {
+      "log_likelihood_per_bin": -25.536687213445134,
+      "valid_bins": 2392,
+      "spikes": 19430.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -25.170152777406578,
+      "gain_nats_per_bin": -0.3665344360385574,
+      "gain_bits_per_spike": -0.06509950655405869
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -25.09180484582732,
+      "valid_bins": 2392,
+      "spikes": 19430.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -25.170152777406578,
+      "gain_nats_per_bin": 0.0783479315792574,
+      "gain_bits_per_spike": 0.013915231923268117
+    },
+    "filter_relative_error": 1.981502439549983,
+    "filter_correlation": 0.35029954550839565,
+    "parameters": 8256,
+    "seconds": 432.0375553800004,
+    "peak_rss_gib": 0.4439659118652344,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "lowrank",
+    "seed": 7
+  },
+  {
+    "status": "DONE",
+    "backend": "dense",
+    "neurons": 64,
+    "bins": 12000,
+    "gradient_inf_norm": 6.058710829538138e-07,
+    "gradient_gate_passed": true,
+    "objective": 24.3584196332035,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "test": {
+      "log_likelihood_per_bin": -25.54547317722312,
+      "valid_bins": 2392,
+      "spikes": 19430.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -25.170152777406578,
+      "gain_nats_per_bin": -0.3753203998165428,
+      "gain_bits_per_spike": -0.06665996540952218
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -25.09180484582732,
+      "valid_bins": 2392,
+      "spikes": 19430.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -25.170152777406578,
+      "gain_nats_per_bin": 0.0783479315792574,
+      "gain_bits_per_spike": 0.013915231923268117
+    },
+    "filter_relative_error": 2.0065694001428485,
+    "filter_correlation": 0.3447337427715656,
+    "parameters": 8256,
+    "seconds": 32.34502567900199,
+    "peak_rss_gib": 0.3096656799316406,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "lowrank",
+    "seed": 7
+  },
+  {
+    "status": "DONE",
+    "backend": "lowrank",
+    "neurons": 64,
+    "bins": 12000,
+    "gradient_inf_norm": 3.0228854526420036e-06,
+    "gradient_gate_passed": true,
+    "objective": 37.570619224420625,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "test": {
+      "log_likelihood_per_bin": -39.00955113479888,
+      "valid_bins": 2392,
+      "spikes": 37420.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -39.04321986836266,
+      "gain_nats_per_bin": 0.03366873356378429,
+      "gain_bits_per_spike": 0.0031049793198716265
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -38.552438378689374,
+      "valid_bins": 2392,
+      "spikes": 37420.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -39.04321986836266,
+      "gain_nats_per_bin": 0.4907814896732907,
+      "gain_bits_per_spike": 0.04526057902131793
+    },
+    "filter_relative_error": 0.9762137288447686,
+    "filter_correlation": 0.26934871505746205,
+    "parameters": 576,
+    "seconds": 25.790010081997025,
+    "peak_rss_gib": 0.2993659973144531,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "permutation_fullrank",
+    "seed": 7
+  },
+  {
+    "status": "DONE",
+    "backend": "nemos",
+    "neurons": 64,
+    "bins": 12000,
+    "gradient_inf_norm": 9.683638078273309e-06,
+    "gradient_gate_passed": true,
+    "objective": 36.75078314130296,
+    "optimizer_message": "StochasticFitSummary(pass_idx=659, batch_idx=18, n_passes=1500, should_stop=True, stop_reason='full-gradient gate')",
+    "test": {
+      "log_likelihood_per_bin": -39.0207416104117,
+      "valid_bins": 2392,
+      "spikes": 37420.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -39.04321986836266,
+      "gain_nats_per_bin": 0.022478257950967834,
+      "gain_bits_per_spike": 0.0020729774689110803
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -38.552438378689374,
+      "valid_bins": 2392,
+      "spikes": 37420.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -39.04321986836266,
+      "gain_nats_per_bin": 0.4907814896732907,
+      "gain_bits_per_spike": 0.04526057902131793
+    },
+    "filter_relative_error": 0.8651545849278557,
+    "filter_correlation": 0.7582714654064332,
+    "parameters": 8256,
+    "seconds": 206.89504943200154,
+    "peak_rss_gib": 0.482025146484375,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "permutation_fullrank",
+    "seed": 7
+  },
+  {
+    "status": "DONE",
+    "backend": "dense",
+    "neurons": 64,
+    "bins": 12000,
+    "gradient_inf_norm": 1.726927622667507e-06,
+    "gradient_gate_passed": true,
+    "objective": 36.750780593936945,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "test": {
+      "log_likelihood_per_bin": -39.02150791047092,
+      "valid_bins": 2392,
+      "spikes": 37420.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -39.04321986836266,
+      "gain_nats_per_bin": 0.02171195789174136,
+      "gain_bits_per_spike": 0.002002308168795974
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -38.552438378689374,
+      "valid_bins": 2392,
+      "spikes": 37420.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -39.04321986836266,
+      "gain_nats_per_bin": 0.4907814896732907,
+      "gain_bits_per_spike": 0.04526057902131793
+    },
+    "filter_relative_error": 0.8659972010096547,
+    "filter_correlation": 0.7579796512310214,
+    "parameters": 8256,
+    "seconds": 25.721905236998282,
+    "peak_rss_gib": 0.3002586364746094,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "permutation_fullrank",
+    "seed": 7
+  },
+  {
+    "status": "DONE",
+    "backend": "nemos",
+    "neurons": 64,
+    "bins": 12000,
+    "gradient_inf_norm": 2.738395755316089e-05,
+    "gradient_gate_passed": false,
+    "objective": 24.960425949157,
+    "optimizer_message": "StochasticFitSummary(pass_idx=1499, batch_idx=18, n_passes=1500, should_stop=False, stop_reason='')",
+    "test": {
+      "log_likelihood_per_bin": -26.224124125875363,
+      "valid_bins": 2392,
+      "spikes": 20224.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -25.84365762211886,
+      "gain_nats_per_bin": -0.38046650375650204,
+      "gain_bits_per_spike": -0.06492098272150572
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -25.7681107764748,
+      "valid_bins": 2392,
+      "spikes": 20224.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -25.84365762211886,
+      "gain_nats_per_bin": 0.07554684564406199,
+      "gain_bits_per_spike": 0.012890952060950228
+    },
+    "filter_relative_error": 2.04032598189876,
+    "filter_correlation": 0.3512828478168787,
+    "parameters": 8256,
+    "seconds": 466.2504338409999,
+    "peak_rss_gib": 0.4575653076171875,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "lowrank",
+    "seed": 11
+  },
+  {
+    "status": "DONE",
+    "backend": "dense",
+    "neurons": 64,
+    "bins": 12000,
+    "gradient_inf_norm": 6.602608017280279e-07,
+    "gradient_gate_passed": true,
+    "objective": 24.960193327506268,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "test": {
+      "log_likelihood_per_bin": -26.232733346025622,
+      "valid_bins": 2392,
+      "spikes": 20224.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -25.84365762211886,
+      "gain_nats_per_bin": -0.38907572390676204,
+      "gain_bits_per_spike": -0.06639001883139248
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -25.7681107764748,
+      "valid_bins": 2392,
+      "spikes": 20224.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -25.84365762211886,
+      "gain_nats_per_bin": 0.07554684564406199,
+      "gain_bits_per_spike": 0.012890952060950228
+    },
+    "filter_relative_error": 2.0666391337055092,
+    "filter_correlation": 0.34569104344003015,
+    "parameters": 8256,
+    "seconds": 36.60863640699972,
+    "peak_rss_gib": 0.2972297668457031,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "lowrank",
+    "seed": 11
+  },
+  {
+    "status": "DONE",
+    "backend": "lowrank",
+    "neurons": 64,
+    "bins": 12000,
+    "gradient_inf_norm": 1.7234183803659782e-06,
+    "gradient_gate_passed": true,
+    "objective": 25.34262578206658,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "test": {
+      "log_likelihood_per_bin": -25.81860465219052,
+      "valid_bins": 2392,
+      "spikes": 20224.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -25.84365762211886,
+      "gain_nats_per_bin": 0.02505296992834257,
+      "gain_bits_per_spike": 0.0042749188477345275
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -25.7681107764748,
+      "valid_bins": 2392,
+      "spikes": 20224.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -25.84365762211886,
+      "gain_nats_per_bin": 0.07554684564406199,
+      "gain_bits_per_spike": 0.012890952060950228
+    },
+    "filter_relative_error": 0.6894242618785211,
+    "filter_correlation": 0.7140474765023563,
+    "parameters": 576,
+    "seconds": 98.27587783800118,
+    "peak_rss_gib": 0.2980155944824219,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "lowrank",
+    "seed": 11
+  },
+  {
+    "status": "DONE",
+    "backend": "nemos",
+    "neurons": 64,
+    "bins": 12000,
+    "gradient_inf_norm": 9.851082272088941e-06,
+    "gradient_gate_passed": true,
+    "objective": 36.84254100382767,
+    "optimizer_message": "StochasticFitSummary(pass_idx=639, batch_idx=18, n_passes=1500, should_stop=True, stop_reason='full-gradient gate')",
+    "test": {
+      "log_likelihood_per_bin": -39.21013511586076,
+      "valid_bins": 2392,
+      "spikes": 37727.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -39.258156681215404,
+      "gain_nats_per_bin": 0.04802156535464576,
+      "gain_bits_per_spike": 0.004392580758325642
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -38.73769522110346,
+      "valid_bins": 2392,
+      "spikes": 37727.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -39.258156681215404,
+      "gain_nats_per_bin": 0.5204614601119476,
+      "gain_bits_per_spike": 0.04760713188448028
+    },
+    "filter_relative_error": 0.8708699884977531,
+    "filter_correlation": 0.7577093045065142,
+    "parameters": 8256,
+    "seconds": 202.31389585299985,
+    "peak_rss_gib": 0.46903228759765625,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "permutation_fullrank",
+    "seed": 11
+  },
+  {
+    "status": "DONE",
+    "backend": "dense",
+    "neurons": 64,
+    "bins": 12000,
+    "gradient_inf_norm": 8.548543902207892e-07,
+    "gradient_gate_passed": true,
+    "objective": 36.84253748650112,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "test": {
+      "log_likelihood_per_bin": -39.210842549190446,
+      "valid_bins": 2392,
+      "spikes": 37727.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -39.258156681215404,
+      "gain_nats_per_bin": 0.047314132024959606,
+      "gain_bits_per_spike": 0.004327871121960633
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -38.73769522110346,
+      "valid_bins": 2392,
+      "spikes": 37727.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -39.258156681215404,
+      "gain_nats_per_bin": 0.5204614601119476,
+      "gain_bits_per_spike": 0.04760713188448028
+    },
+    "filter_relative_error": 0.8717918458835004,
+    "filter_correlation": 0.7573972142073042,
+    "parameters": 8256,
+    "seconds": 27.90226172400071,
+    "peak_rss_gib": 0.3072929382324219,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "permutation_fullrank",
+    "seed": 11
+  },
+  {
+    "status": "DONE",
+    "backend": "lowrank",
+    "neurons": 64,
+    "bins": 12000,
+    "gradient_inf_norm": 1.4086661982548692e-06,
+    "gradient_gate_passed": true,
+    "objective": 37.68637022788152,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "test": {
+      "log_likelihood_per_bin": -39.23929363671449,
+      "valid_bins": 2392,
+      "spikes": 37727.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -39.258156681215404,
+      "gain_nats_per_bin": 0.018863044500916092,
+      "gain_bits_per_spike": 0.0017254216039450376
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -38.73769522110346,
+      "valid_bins": 2392,
+      "spikes": 37727.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -39.258156681215404,
+      "gain_nats_per_bin": 0.5204614601119476,
+      "gain_bits_per_spike": 0.04760713188448028
+    },
+    "filter_relative_error": 0.9777762302802017,
+    "filter_correlation": 0.2666629826004033,
+    "parameters": 576,
+    "seconds": 28.375048129997595,
+    "peak_rss_gib": 0.3010978698730469,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "permutation_fullrank",
+    "seed": 11
+  },
+  {
+    "status": "DONE",
+    "backend": "lowrank",
+    "neurons": 64,
+    "bins": 12000,
+    "gradient_inf_norm": 9.499016084068483e-07,
+    "gradient_gate_passed": true,
+    "objective": 24.942709090541644,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "test": {
+      "log_likelihood_per_bin": -25.456261989799746,
+      "valid_bins": 2392,
+      "spikes": 19792.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -25.51399946704018,
+      "gain_nats_per_bin": 0.0577374772404325,
+      "gain_bits_per_spike": 0.010067087329981891
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -25.410784837934184,
+      "valid_bins": 2392,
+      "spikes": 19792.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -25.51399946704018,
+      "gain_nats_per_bin": 0.10321462910599509,
+      "gain_bits_per_spike": 0.017996468404998148
+    },
+    "filter_relative_error": 0.6764392121082395,
+    "filter_correlation": 0.736455627007636,
+    "parameters": 576,
+    "seconds": 70.80242054100017,
+    "peak_rss_gib": 0.29883575439453125,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "lowrank",
+    "seed": 19
+  },
+  {
+    "status": "DONE",
+    "backend": "nemos",
+    "neurons": 64,
+    "bins": 12000,
+    "gradient_inf_norm": 1.923664913395789e-05,
+    "gradient_gate_passed": false,
+    "objective": 24.552221498198747,
+    "optimizer_message": "StochasticFitSummary(pass_idx=1499, batch_idx=18, n_passes=1500, should_stop=False, stop_reason='')",
+    "test": {
+      "log_likelihood_per_bin": -25.849665787663042,
+      "valid_bins": 2392,
+      "spikes": 19792.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -25.51399946704018,
+      "gain_nats_per_bin": -0.33566632062286356,
+      "gain_bits_per_spike": -0.058526668031794245
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -25.410784837934184,
+      "valid_bins": 2392,
+      "spikes": 19792.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -25.51399946704018,
+      "gain_nats_per_bin": 0.10321462910599509,
+      "gain_bits_per_spike": 0.017996468404998148
+    },
+    "filter_relative_error": 1.9822946879516297,
+    "filter_correlation": 0.36965248470656537,
+    "parameters": 8256,
+    "seconds": 458.8715749469993,
+    "peak_rss_gib": 0.45786285400390625,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "lowrank",
+    "seed": 19
+  },
+  {
+    "status": "DONE",
+    "backend": "dense",
+    "neurons": 64,
+    "bins": 12000,
+    "gradient_inf_norm": 1.1237507204416645e-06,
+    "gradient_gate_passed": true,
+    "objective": 24.55205601203821,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "test": {
+      "log_likelihood_per_bin": -25.857807608148615,
+      "valid_bins": 2392,
+      "spikes": 19792.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -25.51399946704018,
+      "gain_nats_per_bin": -0.3438081411084349,
+      "gain_bits_per_spike": -0.05994627314394632
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -25.410784837934184,
+      "valid_bins": 2392,
+      "spikes": 19792.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -25.51399946704018,
+      "gain_nats_per_bin": 0.10321462910599509,
+      "gain_bits_per_spike": 0.017996468404998148
+    },
+    "filter_relative_error": 2.0042910810152748,
+    "filter_correlation": 0.3651555877689037,
+    "parameters": 8256,
+    "seconds": 32.741267798999615,
+    "peak_rss_gib": 0.3078155517578125,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "lowrank",
+    "seed": 19
+  },
+  {
+    "status": "DONE",
+    "backend": "lowrank",
+    "neurons": 64,
+    "bins": 12000,
+    "gradient_inf_norm": 5.825950134212974e-07,
+    "gradient_gate_passed": true,
+    "objective": 37.59109876386349,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "test": {
+      "log_likelihood_per_bin": -39.1521146454568,
+      "valid_bins": 2392,
+      "spikes": 37623.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -39.17013222352915,
+      "gain_nats_per_bin": 0.018017578072349077,
+      "gain_bits_per_spike": 0.001652641690372063
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -38.65624715875106,
+      "valid_bins": 2392,
+      "spikes": 37623.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -39.17013222352915,
+      "gain_nats_per_bin": 0.5138850647780902,
+      "gain_bits_per_spike": 0.04713551836443326
+    },
+    "filter_relative_error": 0.9797093728809002,
+    "filter_correlation": 0.266985912762139,
+    "parameters": 576,
+    "seconds": 25.663217273002374,
+    "peak_rss_gib": 0.29219818115234375,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "permutation_fullrank",
+    "seed": 19
+  },
+  {
+    "status": "DONE",
+    "backend": "nemos",
+    "neurons": 64,
+    "bins": 12000,
+    "gradient_inf_norm": 9.415252326155583e-06,
+    "gradient_gate_passed": true,
+    "objective": 36.7734990168302,
+    "optimizer_message": "StochasticFitSummary(pass_idx=669, batch_idx=18, n_passes=1500, should_stop=True, stop_reason='full-gradient gate')",
+    "test": {
+      "log_likelihood_per_bin": -39.09260434008689,
+      "valid_bins": 2392,
+      "spikes": 37623.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -39.17013222352915,
+      "gain_nats_per_bin": 0.07752788344225829,
+      "gain_bits_per_spike": 0.007111156218027552
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -38.65624715875106,
+      "valid_bins": 2392,
+      "spikes": 37623.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -39.17013222352915,
+      "gain_nats_per_bin": 0.5138850647780902,
+      "gain_bits_per_spike": 0.04713551836443326
+    },
+    "filter_relative_error": 0.8627310608848479,
+    "filter_correlation": 0.75936297935729,
+    "parameters": 8256,
+    "seconds": 216.5997071419988,
+    "peak_rss_gib": 0.44158935546875,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "permutation_fullrank",
+    "seed": 19
+  },
+  {
+    "status": "DONE",
+    "backend": "dense",
+    "neurons": 64,
+    "bins": 12000,
+    "gradient_inf_norm": 9.080454356253779e-07,
+    "gradient_gate_passed": true,
+    "objective": 36.773496766578646,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "test": {
+      "log_likelihood_per_bin": -39.093205680405056,
+      "valid_bins": 2392,
+      "spikes": 37623.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -39.17013222352915,
+      "gain_nats_per_bin": 0.07692654312409271,
+      "gain_bits_per_spike": 0.007055998966819234
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -38.65624715875106,
+      "valid_bins": 2392,
+      "spikes": 37623.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -39.17013222352915,
+      "gain_nats_per_bin": 0.5138850647780902,
+      "gain_bits_per_spike": 0.04713551836443326
+    },
+    "filter_relative_error": 0.8634919544807786,
+    "filter_correlation": 0.7590947681083673,
+    "parameters": 8256,
+    "seconds": 28.749638486999174,
+    "peak_rss_gib": 0.3081474304199219,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "permutation_fullrank",
+    "seed": 19
+  },
+  {
+    "status": "DONE",
+    "backend": "lowrank",
+    "neurons": 128,
+    "bins": 12000,
+    "gradient_inf_norm": 3.267503673508299e-06,
+    "gradient_gate_passed": true,
+    "objective": 50.30301478541338,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "test": {
+      "log_likelihood_per_bin": -51.289330253198294,
+      "valid_bins": 2392,
+      "spikes": 39915.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -51.270569241925436,
+      "gain_nats_per_bin": -0.018761011272858452,
+      "gain_bits_per_spike": -0.0016220185814253354
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -51.19931521121863,
+      "valid_bins": 2392,
+      "spikes": 39915.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -51.270569241925436,
+      "gain_nats_per_bin": 0.07125403070679881,
+      "gain_bits_per_spike": 0.006160401490461334
+    },
+    "filter_relative_error": 0.9913868692739698,
+    "filter_correlation": 0.5927858307562714,
+    "parameters": 1152,
+    "seconds": 122.29817850700056,
+    "peak_rss_gib": 0.3124237060546875,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "lowrank",
+    "seed": 7
+  },
+  {
+    "status": "DONE",
+    "backend": "nemos",
+    "neurons": 128,
+    "bins": 12000,
+    "gradient_inf_norm": 4.2357218947792806e-05,
+    "gradient_gate_passed": false,
+    "objective": 48.6525329136153,
+    "optimizer_message": "StochasticFitSummary(pass_idx=1499, batch_idx=18, n_passes=1500, should_stop=False, stop_reason='')",
+    "test": {
+      "log_likelihood_per_bin": -53.0625309238808,
+      "valid_bins": 2392,
+      "spikes": 39915.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -51.270569241925436,
+      "gain_nats_per_bin": -1.7919616819553659,
+      "gain_bits_per_spike": -0.1549274238504814
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -51.19931521121863,
+      "valid_bins": 2392,
+      "spikes": 39915.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -51.270569241925436,
+      "gain_nats_per_bin": 0.07125403070679881,
+      "gain_bits_per_spike": 0.006160401490461334
+    },
+    "filter_relative_error": 4.112923828189645,
+    "filter_correlation": 0.19193517666376642,
+    "parameters": 32896,
+    "seconds": 758.2156662809975,
+    "peak_rss_gib": 0.5006484985351562,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "lowrank",
+    "seed": 7
+  },
+  {
+    "status": "DONE",
+    "backend": "dense",
+    "neurons": 128,
+    "bins": 12000,
+    "gradient_inf_norm": 1.7393876150089892e-06,
+    "gradient_gate_passed": true,
+    "objective": 48.651298218469904,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "test": {
+      "log_likelihood_per_bin": -53.11002062392634,
+      "valid_bins": 2392,
+      "spikes": 39915.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -51.270569241925436,
+      "gain_nats_per_bin": -1.8394513820009057,
+      "gain_bits_per_spike": -0.1590332353539167
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -51.19931521121863,
+      "valid_bins": 2392,
+      "spikes": 39915.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -51.270569241925436,
+      "gain_nats_per_bin": 0.07125403070679881,
+      "gain_bits_per_spike": 0.006160401490461334
+    },
+    "filter_relative_error": 4.17838965692699,
+    "filter_correlation": 0.18756434061953425,
+    "parameters": 32896,
+    "seconds": 96.90265394900052,
+    "peak_rss_gib": 0.32517242431640625,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "lowrank",
+    "seed": 7
+  },
+  {
+    "status": "DONE",
+    "backend": "lowrank",
+    "neurons": 128,
+    "bins": 12000,
+    "gradient_inf_norm": 1.3321534864569158e-06,
+    "gradient_gate_passed": true,
+    "objective": 75.23520087275233,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "test": {
+      "log_likelihood_per_bin": -78.27509992728187,
+      "valid_bins": 2392,
+      "spikes": 75156.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -78.24198831190967,
+      "gain_nats_per_bin": -0.03311161537219406,
+      "gain_bits_per_spike": -0.0015203809702158556
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -77.2185358584466,
+      "valid_bins": 2392,
+      "spikes": 75156.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -78.24198831190967,
+      "gain_nats_per_bin": 1.0234524534630647,
+      "gain_bits_per_spike": 0.04699370950873862
+    },
+    "filter_relative_error": 1.0073327919004529,
+    "filter_correlation": 0.1699128467539298,
+    "parameters": 1152,
+    "seconds": 70.26076890399781,
+    "peak_rss_gib": 0.30797576904296875,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "permutation_fullrank",
+    "seed": 7
+  },
+  {
+    "status": "DONE",
+    "backend": "nemos",
+    "neurons": 128,
+    "bins": 12000,
+    "gradient_inf_norm": 0.08854911564064427,
+    "gradient_gate_passed": false,
+    "objective": 73.07876347679267,
+    "optimizer_message": "StochasticFitSummary(pass_idx=1499, batch_idx=18, n_passes=1500, should_stop=False, stop_reason='')",
+    "test": {
+      "log_likelihood_per_bin": -79.48941289388308,
+      "valid_bins": 2392,
+      "spikes": 75156.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -78.24198831190967,
+      "gain_nats_per_bin": -1.2474245819734078,
+      "gain_bits_per_spike": -0.057277803420140626
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -77.2185358584466,
+      "valid_bins": 2392,
+      "spikes": 75156.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -78.24198831190967,
+      "gain_nats_per_bin": 1.0234524534630647,
+      "gain_bits_per_spike": 0.04699370950873862
+    },
+    "filter_relative_error": 1.2627538519551,
+    "filter_correlation": 0.628945602513022,
+    "parameters": 32896,
+    "seconds": 777.4867224279988,
+    "peak_rss_gib": 0.4646873474121094,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "permutation_fullrank",
+    "seed": 7
+  },
+  {
+    "status": "DONE",
+    "backend": "dense",
+    "neurons": 128,
+    "bins": 12000,
+    "gradient_inf_norm": 1.8633493054506214e-06,
+    "gradient_gate_passed": true,
+    "objective": 72.66492625552264,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "test": {
+      "log_likelihood_per_bin": -79.0868297920779,
+      "valid_bins": 2392,
+      "spikes": 75156.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -78.24198831190967,
+      "gain_nats_per_bin": -0.8448414801682413,
+      "gain_bits_per_spike": -0.03879245681186098
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -77.2185358584466,
+      "valid_bins": 2392,
+      "spikes": 75156.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -78.24198831190967,
+      "gain_nats_per_bin": 1.0234524534630647,
+      "gain_bits_per_spike": 0.04699370950873862
+    },
+    "filter_relative_error": 1.2618810718977818,
+    "filter_correlation": 0.6289144965754955,
+    "parameters": 32896,
+    "seconds": 67.9801775220003,
+    "peak_rss_gib": 0.32955169677734375,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "permutation_fullrank",
+    "seed": 7
+  },
+  {
+    "status": "DONE",
+    "backend": "nemos",
+    "neurons": 128,
+    "bins": 12000,
+    "gradient_inf_norm": 4.335300722937897e-05,
+    "gradient_gate_passed": false,
+    "objective": 49.00754026237007,
+    "optimizer_message": "StochasticFitSummary(pass_idx=1499, batch_idx=18, n_passes=1500, should_stop=False, stop_reason='')",
+    "test": {
+      "log_likelihood_per_bin": -53.393863317748504,
+      "valid_bins": 2392,
+      "spikes": 40230.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -51.51991787145959,
+      "gain_nats_per_bin": -1.8739454462889158,
+      "gain_bits_per_spike": -0.1607469070594054
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -51.44470246460115,
+      "valid_bins": 2392,
+      "spikes": 40230.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -51.51991787145959,
+      "gain_nats_per_bin": 0.07521540685843853,
+      "gain_bits_per_spike": 0.006451972249060181
+    },
+    "filter_relative_error": 4.153531088000584,
+    "filter_correlation": 0.18995118569380928,
+    "parameters": 32896,
+    "seconds": 771.8672594500022,
+    "peak_rss_gib": 0.5113067626953125,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "lowrank",
+    "seed": 11
+  },
+  {
+    "status": "DONE",
+    "backend": "dense",
+    "neurons": 128,
+    "bins": 12000,
+    "gradient_inf_norm": 8.341685359602936e-07,
+    "gradient_gate_passed": true,
+    "objective": 49.006416210605586,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "test": {
+      "log_likelihood_per_bin": -53.438322361466604,
+      "valid_bins": 2392,
+      "spikes": 40230.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -51.51991787145959,
+      "gain_nats_per_bin": -1.918404490007016,
+      "gain_bits_per_spike": -0.16456060066647193
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -51.44470246460115,
+      "valid_bins": 2392,
+      "spikes": 40230.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -51.51991787145959,
+      "gain_nats_per_bin": 0.07521540685843853,
+      "gain_bits_per_spike": 0.006451972249060181
+    },
+    "filter_relative_error": 4.214942905074393,
+    "filter_correlation": 0.1861207629385201,
+    "parameters": 32896,
+    "seconds": 105.68677725299858,
+    "peak_rss_gib": 0.3287315368652344,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "lowrank",
+    "seed": 11
+  },
+  {
+    "status": "DONE",
+    "backend": "lowrank",
+    "neurons": 128,
+    "bins": 12000,
+    "gradient_inf_norm": 1.871254131118331e-05,
+    "gradient_gate_passed": false,
+    "objective": 50.668854117771005,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "test": {
+      "log_likelihood_per_bin": -51.558133801777714,
+      "valid_bins": 2392,
+      "spikes": 40230.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -51.51991787145959,
+      "gain_nats_per_bin": -0.03821593031812595,
+      "gain_bits_per_spike": -0.003278159783787747
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -51.44470246460115,
+      "valid_bins": 2392,
+      "spikes": 40230.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -51.51991787145959,
+      "gain_nats_per_bin": 0.07521540685843853,
+      "gain_bits_per_spike": 0.006451972249060181
+    },
+    "filter_relative_error": 0.9989746205192013,
+    "filter_correlation": 0.5687914130161748,
+    "parameters": 1152,
+    "seconds": 132.7981230689984,
+    "peak_rss_gib": 0.3083915710449219,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "lowrank",
+    "seed": 11
+  },
+  {
+    "status": "DONE",
+    "backend": "nemos",
+    "neurons": 128,
+    "bins": 12000,
+    "gradient_inf_norm": 0.13198554942545324,
+    "gradient_gate_passed": false,
+    "objective": 73.24482904241493,
+    "optimizer_message": "StochasticFitSummary(pass_idx=1499, batch_idx=18, n_passes=1500, should_stop=False, stop_reason='')",
+    "test": {
+      "log_likelihood_per_bin": -79.69887630363517,
+      "valid_bins": 2392,
+      "spikes": 75197.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -78.29675521231061,
+      "gain_nats_per_bin": -1.4021210913245685,
+      "gain_bits_per_spike": -0.06434587660771075
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -77.21058200638281,
+      "valid_bins": 2392,
+      "spikes": 75197.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -78.29675521231061,
+      "gain_nats_per_bin": 1.0861732059277964,
+      "gain_bits_per_spike": 0.04984645585582522
+    },
+    "filter_relative_error": 1.2776771914631115,
+    "filter_correlation": 0.61772968070644,
+    "parameters": 32896,
+    "seconds": 761.5315738190002,
+    "peak_rss_gib": 0.4913749694824219,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "permutation_fullrank",
+    "seed": 11
+  },
+  {
+    "status": "DONE",
+    "backend": "dense",
+    "neurons": 128,
+    "bins": 12000,
+    "gradient_inf_norm": 2.1140699051997433e-06,
+    "gradient_gate_passed": true,
+    "objective": 72.76181635049937,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "test": {
+      "log_likelihood_per_bin": -79.19954425866676,
+      "valid_bins": 2392,
+      "spikes": 75197.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -78.29675521231061,
+      "gain_nats_per_bin": -0.9027890463561483,
+      "gain_bits_per_spike": -0.04143062460086659
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -77.21058200638281,
+      "valid_bins": 2392,
+      "spikes": 75197.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -78.29675521231061,
+      "gain_nats_per_bin": 1.0861732059277964,
+      "gain_bits_per_spike": 0.04984645585582522
+    },
+    "filter_relative_error": 1.2767996424309906,
+    "filter_correlation": 0.617595133169956,
+    "parameters": 32896,
+    "seconds": 65.26744094099922,
+    "peak_rss_gib": 0.3261909484863281,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "permutation_fullrank",
+    "seed": 11
+  },
+  {
+    "status": "DONE",
+    "backend": "lowrank",
+    "neurons": 128,
+    "bins": 12000,
+    "gradient_inf_norm": 2.3623823503856064e-06,
+    "gradient_gate_passed": true,
+    "objective": 75.35243531731503,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "test": {
+      "log_likelihood_per_bin": -78.33245874609908,
+      "valid_bins": 2392,
+      "spikes": 75197.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -78.29675521231061,
+      "gain_nats_per_bin": -0.03570353378846482,
+      "gain_bits_per_spike": -0.0016384998370158482
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -77.21058200638281,
+      "valid_bins": 2392,
+      "spikes": 75197.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -78.29675521231061,
+      "gain_nats_per_bin": 1.0861732059277964,
+      "gain_bits_per_spike": 0.04984645585582522
+    },
+    "filter_relative_error": 1.0082060830952895,
+    "filter_correlation": 0.16998370716859643,
+    "parameters": 1152,
+    "seconds": 62.86174651799956,
+    "peak_rss_gib": 0.3039360046386719,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "permutation_fullrank",
+    "seed": 11
+  },
+  {
+    "status": "DONE",
+    "backend": "lowrank",
+    "neurons": 128,
+    "bins": 12000,
+    "gradient_inf_norm": 3.547387164243859e-06,
+    "gradient_gate_passed": true,
+    "objective": 49.70019116033257,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "test": {
+      "log_likelihood_per_bin": -50.675123919461186,
+      "valid_bins": 2392,
+      "spikes": 39259.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -50.63642865616713,
+      "gain_nats_per_bin": -0.03869526329404731,
+      "gain_bits_per_spike": -0.0034013732135009496
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -50.56242099095248,
+      "valid_bins": 2392,
+      "spikes": 39259.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -50.63642865616713,
+      "gain_nats_per_bin": 0.0740076652146553,
+      "gain_bits_per_spike": 0.006505387704484209
+    },
+    "filter_relative_error": 0.9607222479038553,
+    "filter_correlation": 0.5985001607372,
+    "parameters": 1152,
+    "seconds": 91.7110716870011,
+    "peak_rss_gib": 0.30748748779296875,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "lowrank",
+    "seed": 19
+  },
+  {
+    "status": "DONE",
+    "backend": "nemos",
+    "neurons": 128,
+    "bins": 12000,
+    "gradient_inf_norm": 3.794242033673466e-05,
+    "gradient_gate_passed": false,
+    "objective": 48.05502876399529,
+    "optimizer_message": "StochasticFitSummary(pass_idx=1499, batch_idx=18, n_passes=1500, should_stop=False, stop_reason='')",
+    "test": {
+      "log_likelihood_per_bin": -52.493602541954246,
+      "valid_bins": 2392,
+      "spikes": 39259.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -50.63642865616713,
+      "gain_nats_per_bin": -1.8571738857871085,
+      "gain_bits_per_spike": -0.163248443612516
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -50.56242099095248,
+      "valid_bins": 2392,
+      "spikes": 39259.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -50.63642865616713,
+      "gain_nats_per_bin": 0.0740076652146553,
+      "gain_bits_per_spike": 0.006505387704484209
+    },
+    "filter_relative_error": 4.014250121845879,
+    "filter_correlation": 0.20086034356010513,
+    "parameters": 32896,
+    "seconds": 766.4948868200008,
+    "peak_rss_gib": 0.489837646484375,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "lowrank",
+    "seed": 19
+  },
+  {
+    "status": "DONE",
+    "backend": "dense",
+    "neurons": 128,
+    "bins": 12000,
+    "gradient_inf_norm": 1.0392615076576753e-06,
+    "gradient_gate_passed": true,
+    "objective": 48.05355838207861,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "test": {
+      "log_likelihood_per_bin": -52.546681637775464,
+      "valid_bins": 2392,
+      "spikes": 39259.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -50.63642865616713,
+      "gain_nats_per_bin": -1.9102529816083313,
+      "gain_bits_per_spike": -0.1679141778485441
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -50.56242099095248,
+      "valid_bins": 2392,
+      "spikes": 39259.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -50.63642865616713,
+      "gain_nats_per_bin": 0.0740076652146553,
+      "gain_bits_per_spike": 0.006505387704484209
+    },
+    "filter_relative_error": 4.086956456773869,
+    "filter_correlation": 0.1963572108914799,
+    "parameters": 32896,
+    "seconds": 94.81752766999853,
+    "peak_rss_gib": 0.3346519470214844,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "lowrank",
+    "seed": 19
+  },
+  {
+    "status": "DONE",
+    "backend": "lowrank",
+    "neurons": 128,
+    "bins": 12000,
+    "gradient_inf_norm": 1.6741184269904578e-06,
+    "gradient_gate_passed": true,
+    "objective": 75.23071455038462,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "test": {
+      "log_likelihood_per_bin": -78.18873209637005,
+      "valid_bins": 2392,
+      "spikes": 74923.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -78.14136156940826,
+      "gain_nats_per_bin": -0.047370526961786896,
+      "gain_bits_per_spike": -0.002181869500718124
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -77.07203764333546,
+      "valid_bins": 2392,
+      "spikes": 74923.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -78.14136156940826,
+      "gain_nats_per_bin": 1.0693239260727936,
+      "gain_bits_per_spike": 0.04925267693493231
+    },
+    "filter_relative_error": 1.0080334741960422,
+    "filter_correlation": 0.16907870709310702,
+    "parameters": 1152,
+    "seconds": 75.57359835600073,
+    "peak_rss_gib": 0.30637359619140625,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "permutation_fullrank",
+    "seed": 19
+  },
+  {
+    "status": "DONE",
+    "backend": "nemos",
+    "neurons": 128,
+    "bins": 12000,
+    "gradient_inf_norm": 0.10937198720828496,
+    "gradient_gate_passed": false,
+    "objective": 73.1433822036361,
+    "optimizer_message": "StochasticFitSummary(pass_idx=1499, batch_idx=18, n_passes=1500, should_stop=False, stop_reason='')",
+    "test": {
+      "log_likelihood_per_bin": -79.37508055066154,
+      "valid_bins": 2392,
+      "spikes": 74923.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -78.14136156940826,
+      "gain_nats_per_bin": -1.2337189812532716,
+      "gain_bits_per_spike": -0.05682465427975912
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -77.07203764333546,
+      "valid_bins": 2392,
+      "spikes": 74923.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -78.14136156940826,
+      "gain_nats_per_bin": 1.0693239260727936,
+      "gain_bits_per_spike": 0.04925267693493231
+    },
+    "filter_relative_error": 1.2766181693884087,
+    "filter_correlation": 0.623056297156183,
+    "parameters": 32896,
+    "seconds": 787.7020851340021,
+    "peak_rss_gib": 0.5058975219726562,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "permutation_fullrank",
+    "seed": 19
+  },
+  {
+    "status": "DONE",
+    "backend": "dense",
+    "neurons": 128,
+    "bins": 12000,
+    "gradient_inf_norm": 3.2293272816302708e-06,
+    "gradient_gate_passed": true,
+    "objective": 72.64844439515647,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "test": {
+      "log_likelihood_per_bin": -78.93197706770734,
+      "valid_bins": 2392,
+      "spikes": 74923.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -78.14136156940826,
+      "gain_nats_per_bin": -0.790615498299084,
+      "gain_bits_per_spike": -0.036415466602796744
+    },
+    "oracle_test": {
+      "log_likelihood_per_bin": -77.07203764333546,
+      "valid_bins": 2392,
+      "spikes": 74923.0,
+      "bin_s": 1.0,
+      "intercept_log_likelihood_per_bin": -78.14136156940826,
+      "gain_nats_per_bin": 1.0693239260727936,
+      "gain_bits_per_spike": 0.04925267693493231
+    },
+    "filter_relative_error": 1.275753211384515,
+    "filter_correlation": 0.6229608525767721,
+    "parameters": 32896,
+    "seconds": 70.89529458900142,
+    "peak_rss_gib": 0.3363304138183594,
+    "budget": 1500,
+    "cpu_affinity": [
+      6,
+      7
+    ],
+    "family": "permutation_fullrank",
+    "seed": 19
+  }
+]

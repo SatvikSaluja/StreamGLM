@@ -1,0 +1,112 @@
+{
+  "selected": {
+    "rank": 1,
+    "seed": 1,
+    "converged": true,
+    "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "iterations": 64,
+    "seconds": 2.5189670820109313,
+    "gradient_inf_norm": 6.78366167461152e-05,
+    "validation": {
+      "log_likelihood_per_bin": -3.855160885846937,
+      "valid_bins": 3992,
+      "spikes": 5549.0,
+      "bin_s": 0.01,
+      "intercept_log_likelihood_per_bin": -3.897965169739737,
+      "gain_nats_per_bin": 0.04280428389279997,
+      "gain_bits_per_spike": 0.044426037876910414
+    }
+  },
+  "candidates": [
+    {
+      "rank": 0,
+      "seed": 0,
+      "converged": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 20,
+      "seconds": 1.2536301689979155,
+      "gradient_inf_norm": 0.00015260550916734858,
+      "validation": {
+        "log_likelihood_per_bin": -3.89470035427853,
+        "valid_bins": 3992,
+        "spikes": 5549.0,
+        "bin_s": 0.01,
+        "intercept_log_likelihood_per_bin": -3.897965169739737,
+        "gain_nats_per_bin": 0.003264815461207291,
+        "gain_bits_per_spike": 0.003388511666354853
+      }
+    },
+    {
+      "rank": 1,
+      "seed": 0,
+      "converged": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 79,
+      "seconds": 2.6314926580089377,
+      "gradient_inf_norm": 5.2131862775683544e-05,
+      "validation": {
+        "log_likelihood_per_bin": -3.8551615111698387,
+        "valid_bins": 3992,
+        "spikes": 5549.0,
+        "bin_s": 0.01,
+        "intercept_log_likelihood_per_bin": -3.897965169739737,
+        "gain_nats_per_bin": 0.04280365856989821,
+        "gain_bits_per_spike": 0.04442538886198965
+      }
+    },
+    {
+      "rank": 1,
+      "seed": 1,
+      "converged": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 64,
+      "seconds": 2.5189670820109313,
+      "gradient_inf_norm": 6.78366167461152e-05,
+      "validation": {
+        "log_likelihood_per_bin": -3.855160885846937,
+        "valid_bins": 3992,
+        "spikes": 5549.0,
+        "bin_s": 0.01,
+        "intercept_log_likelihood_per_bin": -3.897965169739737,
+        "gain_nats_per_bin": 0.04280428389279997,
+        "gain_bits_per_spike": 0.044426037876910414
+      }
+    },
+    {
+      "rank": 2,
+      "seed": 0,
+      "converged": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 147,
+      "seconds": 4.222750122004072,
+      "gradient_inf_norm": 8.133459226161751e-05,
+      "validation": {
+        "log_likelihood_per_bin": -3.856665496953651,
+        "valid_bins": 3992,
+        "spikes": 5549.0,
+        "bin_s": 0.01,
+        "intercept_log_likelihood_per_bin": -3.897965169739737,
+        "gain_nats_per_bin": 0.041299672786085734,
+        "gain_bits_per_spike": 0.04286442058214822
+      }
+    },
+    {
+      "rank": 2,
+      "seed": 1,
+      "converged": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 180,
+      "seconds": 4.325996591011062,
+      "gradient_inf_norm": 0.0003621376384958219,
+      "validation": {
+        "log_likelihood_per_bin": -3.856779531275666,
+        "valid_bins": 3992,
+        "spikes": 5549.0,
+        "bin_s": 0.01,
+        "intercept_log_likelihood_per_bin": -3.897965169739737,
+        "gain_nats_per_bin": 0.04118563846407073,
+        "gain_bits_per_spike": 0.04274606576696678
+      }
+    }
+  ]
+}

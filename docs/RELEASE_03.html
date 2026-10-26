@@ -1,0 +1,86 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>RELEASE_03</title><style>body{max-width:1100px;margin:auto;padding:32px 20px;font:16px/1.65 system-ui;color:#1e2933;background:#fafbf9}a{color:#165e79}table{border-collapse:collapse;display:block;overflow:auto}td,th{padding:8px;border:1px solid #dce2e6}pre{padding:16px;background:#edf0ed;overflow:auto}img{max-width:100%}nav{display:flex;gap:20px;flex-wrap:wrap}li{overflow-wrap:anywhere}h1,h2{line-height:1.25}</style></head><body><nav aria-label="Results navigation"><a href="../index.html">Results</a><a href="../RESULTS_REPORT.html">Written report</a><a href="../SIMULATIONS.html">Run guide</a><a href="../evidence.html">All evidence</a></nav><main><h1 id="streamglm-03-validation-protocol">StreamGLM 0.3 validation protocol</h1>
+<p>The release adds reproducible Neuropixels predictive workflows, a complete
+synthetic scale test, and a loader for current NeMoS stochastic fitting.
+Measured results are generated in <code>artifacts/v4/report.md</code> and
+<code>artifacts/v4/release_report.json</code>; individual failed or budget-limited runs
+remain available beside successful follow-ups.</p>
+<h2 id="real-data">Real data</h2>
+<p>Data come from the <a href="https://flatironinstitute.github.io/neurorse-workshops/workshops/feb-2026/branch/main/users/group_projects/05_visual_coding-users.html">CCN February 2026 Visual Coding workshop</a>.
+Its <a href="https://github.com/flatironinstitute/ccn-software-feb-2026/blob/main/src/workshop_utils/fetch.py">download registry</a>
+provides the URL and SHA-256 used by <code>streamglm.neuropixels</code>.
+The archive contains 243 VISp units, including 195 labelled good, and flash
+stimulus intervals. It is an extract of Allen Visual Coding Neuropixels data,
+not a new recording, brain-wide dataset, or complete NWB session.</p>
+<p>We take the first 100 and all 195 good VISp units in ascending ID order. Selection
+does not use held-out activity, except that the provider's quality labels were
+computed for the original recording. No waveform metrics are present for an
+independent quality reanalysis. The analysis window is [1285, 1585) seconds,
+covering five minutes around the flash stimulus block; bin width is 5 ms.</p>
+<p>The workflow splits the window chronologically 60/20/20, resets history at
+boundaries, and removes units with no training spikes. Three exponential basis
+functions cover 125 ms. Candidate ranks are 0/2/5, ridge is .01, and nonzero
+ranks each get initializations 0 and 1. The original pipeline's optimizer
+relative-objective tolerance is 1e-7 with a 500-iteration budget. Rank selection
+uses validation likelihood among optimizer-converged candidates; the test set
+is used afterward. Gradient norms are reported separately. Neither positive
+predictive gain nor optimizer success establishes biological connectivity.</p>
+<pre><code class="language-bash">python -m streamglm.neuropixels --neurons 100 --out cache/allen_visp_100_300s
+python -m streamglm.fit_benchmark --data cache/allen_visp_100_300s \
+  --ranks 0 2 5 --out artifacts/v4/allen_visp_100_300s
+python -m streamglm.neuropixels --neurons 195 --out cache/allen_visp_195_300s
+python -m streamglm.fit_benchmark --data cache/allen_visp_195_300s \
+  --ranks 0 2 5 --out artifacts/v4/allen_visp_195_300s
+</code></pre>
+<p>Use fresh output directories. Runs here set <code>OPENBLAS_NUM_THREADS=1</code>,
+<code>OMP_NUM_THREADS=1</code>, <code>JAX_PLATFORMS=cpu</code>, and CPU affinity 6,7. Those particular
+core numbers are machine-specific. The HNN simulation and validation jobs share
+the host, so timing is descriptive, not a controlled speed comparison.</p>
+<h2 id="synthetic-scale-test">Synthetic scale test</h2>
+<pre><code class="language-bash">python -m streamglm.large_fit --out artifacts/v4/null_1000_1h \
+  --counts cache/null_1000_1h.npy
+</code></pre>
+<p>Defaults generate 1,000 independent 4-Hz Poisson units for one hour at <strong>10 ms</strong>
+resolution (360,000 bins), written as an int16 memory map. This is an easy null,
+deliberately separate from biological data or coupled-GLM recovery calibration.
+There is no true cross-neuron coupling. The experiment uses chronological
+60/20/20 partitions, leaves the middle partition unused, and independently fits
+rank 0 and rank 5 on the training partition. It performs no hyperparameter
+selection and reports both held-out scores. Thus an hour of recording is
+processed, but only its 60% training partition is used for optimization.</p>
+<p>Models have separate self-history, 3 basis functions spanning 100 ms, ridge .01,
+chunk size 2,048, float64, and a 100-iteration L-BFGS budget. The generator, fit,
+gradient diagnostics, test scores, checkpoints and whole-process peak RSS are
+saved. An optimizer stop is not a declaration of a global optimum. RSS includes
+mapped input pages and compilation. The hypothetical dense design size refers
+to the full recording and is arithmetic, not a measured OOM comparison.</p>
+<h2 id="current-upstream-compatibility">Current upstream compatibility</h2>
+<p>Pinned source: NeMoS commit <code>81c7200a0e66686e98fd1907e7fa11e111a0e66a</code>.
+It requires Python &gt;=3.12, so it was installed in <code>cache/upstream/venv</code>, leaving
+the HNN environment and the original StreamGLM environment unchanged. The shallow
+checkout reports version <code>0.0.1.dev1</code>; the commit and saved dependency lock are
+the meaningful provenance. See <code>artifacts/v4/upstream_environment.txt</code>.</p>
+<p>Current NeMoS <a href="https://nemos-neuro.org/en/latest/how_to_guide/batching/stochastic_fit.html">already supports stochastic fitting</a>
+and <a href="https://nemos-neuro.org/en/latest/how_to_guide/batching/custom_dataloader.html">custom convolutional loaders with recording gaps</a>.
+Do not claim streaming as an upstream capability gap. <code>NeMoSRecordingLoader</code>
+bridges StreamGLM recordings into this interface; it preserves short tails and
+excludes exactly the incomplete-history rows of each epoch. A regression test
+compares every emitted row against independent whole-epoch NeMoS convolution.</p>
+<pre><code class="language-bash">cache/upstream/venv/bin/python -m streamglm.upstream_streaming \
+  --passes 1500 --out artifacts/v4/upstream_streaming_1500
+</code></pre>
+<p>This uses an unrestricted six-unit synthetic model, two training epochs, and
+SVRG with stepsize .5. An independent full-gradient check every ten passes stops
+at norm &lt;=1e-5. The initial 300-pass budget did not pass; the unchanged longer
+configuration reached the threshold at pass 1,300. Objective difference from
+the StreamGLM L-BFGS reference was 9.25e-7. Held-out likelihoods differ by about
+6.51e-5 nats/bin, so this is not a claim of machine-precision fitted predictions.
+This shared-process experiment is not a solver timing or memory comparison.</p>
+<h2 id="packaging-and-remaining-scope">Packaging and remaining scope</h2>
+<p>The active CI config tests supported workflows, builds a wheel, and separately
+tests the pinned upstream environment. The inherited NeuroTwinBench CI file is
+archived as <code>docs/NEUROTWINBENCH_CI.yml</code>. Local checks and wheel installation are
+distinct from remote CI: no remote CI or publication has been performed.</p>
+<p>Still outside this release: 1,000-neuron hour-long real Neuropixels fitting,
+1 ms scaling at that size, stimulus/behavior-adjusted interpretation, biological
+replication, and accepted upstream contributions. The source and measurements
+provide a usable research-software artifact without those larger claims.</p></main></body></html>

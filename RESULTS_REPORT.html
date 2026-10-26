@@ -1,0 +1,57 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>RESULTS_REPORT</title><style>body{max-width:1100px;margin:auto;padding:32px 20px;font:16px/1.65 system-ui;color:#1e2933;background:#fafbf9}a{color:#165e79}table{border-collapse:collapse;display:block;overflow:auto}td,th{padding:8px;border:1px solid #dce2e6}pre{padding:16px;background:#edf0ed;overflow:auto}img{max-width:100%}nav{display:flex;gap:20px;flex-wrap:wrap}li{overflow-wrap:anywhere}h1,h2{line-height:1.25}</style></head><body><nav aria-label="Results navigation"><a href="./index.html">Results</a><a href="./RESULTS_REPORT.html">Written report</a><a href="./SIMULATIONS.html">Run guide</a><a href="./evidence.html">All evidence</a></nav><main><h1 id="streamglm-results">StreamGLM results</h1>
+<p>Snapshot: 2026-10-05. This is a fitting and prediction project; it is distinct from NeuroTwinBench's biological connectivity benchmark.</p>
+<h2 id="tuned-comparison-means-across-seeds-31-and-47">Tuned comparison (means across seeds 31 and 47)</h2>
+<table>
+<thead>
+<tr>
+<th>Generating network</th>
+<th style="text-align: right;">Neurons</th>
+<th style="text-align: right;">Low-rank StreamGLM test bits/spike</th>
+<th style="text-align: right;">NeMoS test bits/spike</th>
+<th style="text-align: right;">Low-rank filter correlation</th>
+<th style="text-align: right;">NeMoS correlation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Low rank</td>
+<td style="text-align: right;">64</td>
+<td style="text-align: right;">0.006618</td>
+<td style="text-align: right;">0.000906</td>
+<td style="text-align: right;">0.764</td>
+<td style="text-align: right;">0.294</td>
+</tr>
+<tr>
+<td>Low rank</td>
+<td style="text-align: right;">128</td>
+<td style="text-align: right;">0.002470</td>
+<td style="text-align: right;">0.000005</td>
+<td style="text-align: right;">0.593</td>
+<td style="text-align: right;">0.151</td>
+</tr>
+<tr>
+<td>Full rank</td>
+<td style="text-align: right;">64</td>
+<td style="text-align: right;">0.022109</td>
+<td style="text-align: right;">0.031283</td>
+<td style="text-align: right;">0.646</td>
+<td style="text-align: right;">0.789</td>
+</tr>
+<tr>
+<td>Full rank</td>
+<td style="text-align: right;">128</td>
+<td style="text-align: right;">0.004911</td>
+<td style="text-align: right;">0.014151</td>
+<td style="text-align: right;">0.377</td>
+<td style="text-align: right;">0.646</td>
+</tr>
+</tbody>
+</table>
+<p>Low rank helps when its structural assumption matches the generator; it hurts on the full-rank fixtures. StreamGLM's dense model closely matches the full NeMoS model's predictive/recovery outcomes. These are different model classes, not proof of implementation superiority. Correlations are Pearson correlations including self-history; bits/spike are test likelihood gains over a training constant-rate baseline. Settings were selected on validation data among gradient-gate-passing candidates. Two seeds remain exploratory.</p>
+<p>Of 256 original candidates: 188 passed, 46 finished without passing, 21 had numerical failures and one timed out. The timeout retry completed but did not pass. All 24 selected outcomes were available. See <a href="sources/streamglm_tuning_report.html">tuning evidence</a>.</p>
+<h2 id="runtime-memory-and-real-data">Runtime, memory and real data</h2>
+<p>64-neuron, 96,000-bin length pilot: low-rank-generated data repeat fit 4.802 s / 0.335 GiB (StreamGLM) versus 5.034 s / 1.018 GiB (NeMoS). Full-rank-generated data: 21.315 s / 0.332 GiB versus 16.682 s / 1.020 GiB. NeMoS is faster in the latter case. These are fixed solver/configuration pilots with different caching/compilation boundaries, not universal speed claims or streaming-versus-streaming results.</p>
+<p>Allen VISp cohorts, same session and 300 seconds: 98 neurons gained 0.0456 test bits/spike over self-history; 185 neurons gained 0.0766. This is predictive evidence without a synaptic answer key. The two cohorts are not independent-session replication. Optimizer-success flags in that older report are weaker than the later strict 1e-5 gradient gate.</p>
+<p>The independent-Poisson 1,000-neuron workload demonstrates feasibility, not coupled recovery. Coupled seed 941 has six completed candidate records and a candidate-6 checkpoint, but no final report. Seed 942 has generated data, with fits pending. Candidate 2's 0.001304 bits/spike is VALIDATION gain, not final test performance. Final selection, off-diagonal truth recovery and null evaluation remain pending.</p>
+<h2 id="evidence-and-reproduction">Evidence and reproduction</h2>
+<p>The <a href="index.html">HTML page</a> bundles compact source reports in <a href="evidence.html">results_page/sources</a>. See <a href="SIMULATIONS.html">SIMULATIONS.md</a> for commands, resume behavior and new confirmation recipes. Large count arrays, model checkpoints and public-data downloads remain local. No universal NeMoS superiority, arbitrary 1,000-neuron recovery, or real anatomical connectivity claim is supported.</p></main></body></html>

@@ -1,0 +1,50 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TUNED_COMPARISON</title><style>body{max-width:1100px;margin:auto;padding:32px 20px;font:16px/1.65 system-ui;color:#1e2933;background:#fafbf9}a{color:#165e79}table{border-collapse:collapse;display:block;overflow:auto}td,th{padding:8px;border:1px solid #dce2e6}pre{padding:16px;background:#edf0ed;overflow:auto}img{max-width:100%}nav{display:flex;gap:20px;flex-wrap:wrap}li{overflow-wrap:anywhere}h1,h2{line-height:1.25}</style></head><body><nav aria-label="Results navigation"><a href="../index.html">Results</a><a href="../RESULTS_REPORT.html">Written report</a><a href="../SIMULATIONS.html">Run guide</a><a href="../evidence.html">All evidence</a></nav><main><h1 id="validation-selected-regularization-rank-and-nemos-step-size">Validation-selected regularization, rank and NeMoS step size</h1>
+<p>This follows the unregularized v5 experiment; it is a new experiment, not a
+replacement of inconvenient results. Fresh generator seeds 31 and 47, neuron
+counts 64 and 128, both rank-2 and full-rank permutation inhibitory ground truths.
+Each dataset has 12,000 bins with chronological 60/20/20 train/validation/test
+partitions. History resets at each partition; bins have no assigned physical time.</p>
+<p>Each of the eight datasets has 32 candidates:</p>
+<ul>
+<li>StreamGLM dense: ridge 0, 0.001, 0.01, 0.1 (4 fits).</li>
+<li>StreamGLM factorized: the same ridge grid crossed with ranks 2, 4, 8, 16 (16 fits).</li>
+<li>NeMoS streamed SVRG: the same ridge grid crossed with stepsizes 0.1, 0.5, 1 (12 fits).</li>
+</ul>
+<p>Use float64 and the same two history basis functions. Ridge penalizes the
+materialized coupling weights by 0.5 * ridge * sum(W**2), not factor norms;
+intercepts are unpenalized. Both losses average over time and sum over neurons.
+Every NeMoS worker checks a nonzero-parameter penalized value and gradient
+against an explicit calculation before fitting. Factorized/dense objective
+penalty equivalence and validation-only selection have unit tests.</p>
+<p>Every candidate uses its own fresh process. L-BFGS budget is 1,500 iterations;
+SVRG budget is 1,500 passes; neither is an equal-compute budget. A 900-second
+worker limit applies to both. L-BFGS tolerance is 1e-12. NeMoS checks the full
+penalized gradient every ten passes and stops at infinity norm &lt;= 1e-5. All
+candidates get a final full-gradient check. Low-rank starts use seed 0; there
+are no multiple restarts in this grid. A small gradient does not establish a
+low-rank global optimum and is coordinate dependent.</p>
+<p>Within each backend, select the largest validation log-likelihood among
+candidates passing the gradient gate. No eligible candidate means no reported
+winner for that backend/dataset. Freeze selection to JSON before evaluating
+its held-out test and known coupling filters. Candidate workers do not read
+truth files or score test data. Selected fits are not refitted. Oracle likelihood,
+filter correlation and relative error are reported only after selection.</p>
+<p>Report constant-rate predictive baseline, selected test likelihood/bits per
+spike, filter recovery, final gradient, chosen hyperparameters, peak process
+RSS, selected fit runtime AND total tuning runtime. Different search sizes
+must not be concealed. All failed candidates, timeouts and misses are retained.
+Both synthetic families differ in structure/strength; compare methods within
+each dataset. Compare against v5 cautiously: fresh seeds and different split.</p>
+<p>This is a limited grid, not globally optimal tuning of any library. Two seeds
+are exploratory evidence, not a strong significance claim. If winners reach
+grid boundaries, report that and plan a new confirmation experiment; do not
+adapt the grid to test results. No claims of current-NeMoS supremacy or
+1,000-neuron performance follow from this experiment alone.</p>
+<p>Run in cache/upstream/venv (NeMoS commit
+81c7200a0e66686e98fd1907e7fa11e111a0e66a), CPU cores 6/7, one BLAS thread:</p>
+<pre><code>python -m streamglm.tuned_comparison --out artifacts/v6/tuned
+</code></pre>
+<p>Progress: status.json; all tuning outcomes: candidates.json; selected test
+results: selected.json. Protocol includes source hashes. The 256 candidate
+limits permit about 64 hours plus generation/evaluation overhead in the worst
+case. Actual runtime should be measured, not predicted from iteration counts.</p></main></body></html>

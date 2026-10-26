@@ -1,0 +1,455 @@
+{
+  "status": "DONE",
+  "candidates": [
+    {
+      "status": "DONE",
+      "candidate": 0,
+      "rank": 0,
+      "ridge": 0.01,
+      "start": 0,
+      "gradient_inf_norm": 3.8794604850182074e-08,
+      "gate_passed": true,
+      "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 17,
+      "seconds": 1.24345796399939,
+      "validation": {
+        "log_likelihood_per_bin": -4.3418174997786005,
+        "valid_bins": 392,
+        "spikes": 526.0,
+        "bin_s": 0.01,
+        "intercept_log_likelihood_per_bin": -4.357951416961988,
+        "gain_nats_per_bin": 0.01613391718338773,
+        "gain_bits_per_spike": 0.017346612824619755
+      },
+      "model": "artifacts/v8/smoke_coupled/candidate0.npz"
+    },
+    {
+      "status": "DONE",
+      "candidate": 1,
+      "rank": 4,
+      "ridge": 0.001,
+      "start": 0,
+      "gradient_inf_norm": 3.082348273558651e-07,
+      "gate_passed": true,
+      "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 208,
+      "seconds": 6.445452446998388,
+      "validation": {
+        "log_likelihood_per_bin": -4.285768253924068,
+        "valid_bins": 392,
+        "spikes": 526.0,
+        "bin_s": 0.01,
+        "intercept_log_likelihood_per_bin": -4.357951416961988,
+        "gain_nats_per_bin": 0.0721831630379211,
+        "gain_bits_per_spike": 0.07760876465663766
+      },
+      "model": "artifacts/v8/smoke_coupled/candidate1.npz"
+    },
+    {
+      "status": "DONE",
+      "candidate": 2,
+      "rank": 4,
+      "ridge": 0.001,
+      "start": 1,
+      "gradient_inf_norm": 1.1081355768432534e-07,
+      "gate_passed": true,
+      "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 205,
+      "seconds": 5.764897388999088,
+      "validation": {
+        "log_likelihood_per_bin": -4.285768391696898,
+        "valid_bins": 392,
+        "spikes": 526.0,
+        "bin_s": 0.01,
+        "intercept_log_likelihood_per_bin": -4.357951416961988,
+        "gain_nats_per_bin": 0.07218302526509064,
+        "gain_bits_per_spike": 0.07760861652819988
+      },
+      "model": "artifacts/v8/smoke_coupled/candidate2.npz"
+    },
+    {
+      "status": "DONE",
+      "candidate": 3,
+      "rank": 4,
+      "ridge": 0.01,
+      "start": 0,
+      "gradient_inf_norm": 1.532787429363908e-07,
+      "gate_passed": true,
+      "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 348,
+      "seconds": 8.86403955700007,
+      "validation": {
+        "log_likelihood_per_bin": -4.314139802805777,
+        "valid_bins": 392,
+        "spikes": 526.0,
+        "bin_s": 0.01,
+        "intercept_log_likelihood_per_bin": -4.357951416961988,
+        "gain_nats_per_bin": 0.04381161415621048,
+        "gain_bits_per_spike": 0.0471046863170916
+      },
+      "model": "artifacts/v8/smoke_coupled/candidate3.npz"
+    },
+    {
+      "status": "DONE",
+      "candidate": 4,
+      "rank": 4,
+      "ridge": 0.01,
+      "start": 1,
+      "gradient_inf_norm": 2.2178164826476554e-05,
+      "gate_passed": false,
+      "optimizer_message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+      "iterations": 1500,
+      "seconds": 37.89981737600101,
+      "validation": {
+        "log_likelihood_per_bin": -4.312739901289693,
+        "valid_bins": 392,
+        "spikes": 526.0,
+        "bin_s": 0.01,
+        "intercept_log_likelihood_per_bin": -4.357951416961988,
+        "gain_nats_per_bin": 0.045211515672295435,
+        "gain_bits_per_spike": 0.04860981054179801
+      },
+      "model": "artifacts/v8/smoke_coupled/candidate4.npz"
+    },
+    {
+      "status": "DONE",
+      "candidate": 5,
+      "rank": 8,
+      "ridge": 0.001,
+      "start": 0,
+      "gradient_inf_norm": 7.478734969576983e-07,
+      "gate_passed": true,
+      "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 1275,
+      "seconds": 35.924279056998785,
+      "validation": {
+        "log_likelihood_per_bin": -4.291447552928799,
+        "valid_bins": 392,
+        "spikes": 526.0,
+        "bin_s": 0.01,
+        "intercept_log_likelihood_per_bin": -4.357951416961988,
+        "gain_nats_per_bin": 0.0665038640331885,
+        "gain_bits_per_spike": 0.0715025847481538
+      },
+      "model": "artifacts/v8/smoke_coupled/candidate5.npz"
+    },
+    {
+      "status": "DONE",
+      "candidate": 6,
+      "rank": 8,
+      "ridge": 0.001,
+      "start": 1,
+      "gradient_inf_norm": 1.1485066934441328e-07,
+      "gate_passed": true,
+      "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 1016,
+      "seconds": 24.294731958998455,
+      "validation": {
+        "log_likelihood_per_bin": -4.291447326286168,
+        "valid_bins": 392,
+        "spikes": 526.0,
+        "bin_s": 0.01,
+        "intercept_log_likelihood_per_bin": -4.357951416961988,
+        "gain_nats_per_bin": 0.06650409067582046,
+        "gain_bits_per_spike": 0.07150282842623529
+      },
+      "model": "artifacts/v8/smoke_coupled/candidate6.npz"
+    },
+    {
+      "status": "DONE",
+      "candidate": 7,
+      "rank": 8,
+      "ridge": 0.01,
+      "start": 0,
+      "gradient_inf_norm": 2.216018716516598e-06,
+      "gate_passed": true,
+      "optimizer_message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+      "iterations": 1500,
+      "seconds": 39.01100240999949,
+      "validation": {
+        "log_likelihood_per_bin": -4.311747179684353,
+        "valid_bins": 392,
+        "spikes": 526.0,
+        "bin_s": 0.01,
+        "intercept_log_likelihood_per_bin": -4.357951416961988,
+        "gain_nats_per_bin": 0.04620423727763523,
+        "gain_bits_per_spike": 0.049677149436297564
+      },
+      "model": "artifacts/v8/smoke_coupled/candidate7.npz"
+    },
+    {
+      "status": "DONE",
+      "candidate": 8,
+      "rank": 8,
+      "ridge": 0.01,
+      "start": 1,
+      "gradient_inf_norm": 3.733466715493791e-06,
+      "gate_passed": true,
+      "optimizer_message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+      "iterations": 1500,
+      "seconds": 35.992890682002326,
+      "validation": {
+        "log_likelihood_per_bin": -4.31190421315395,
+        "valid_bins": 392,
+        "spikes": 526.0,
+        "bin_s": 0.01,
+        "intercept_log_likelihood_per_bin": -4.357951416961988,
+        "gain_nats_per_bin": 0.04604720380803844,
+        "gain_bits_per_spike": 0.04950831264566329
+      },
+      "model": "artifacts/v8/smoke_coupled/candidate8.npz"
+    }
+  ],
+  "peak_rss_gib": 0.19060897827148438,
+  "selected": {
+    "status": "DONE",
+    "candidate": 1,
+    "rank": 4,
+    "ridge": 0.001,
+    "start": 0,
+    "gradient_inf_norm": 3.082348273558651e-07,
+    "gate_passed": true,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "iterations": 208,
+    "seconds": 6.445452446998388,
+    "validation": {
+      "log_likelihood_per_bin": -4.285768253924068,
+      "valid_bins": 392,
+      "spikes": 526.0,
+      "bin_s": 0.01,
+      "intercept_log_likelihood_per_bin": -4.357951416961988,
+      "gain_nats_per_bin": 0.0721831630379211,
+      "gain_bits_per_spike": 0.07760876465663766
+    },
+    "model": "artifacts/v8/smoke_coupled/candidate1.npz"
+  },
+  "test": {
+    "log_likelihood_per_bin": -4.195921714236703,
+    "valid_bins": 392,
+    "spikes": 516.0,
+    "bin_s": 0.01,
+    "intercept_log_likelihood_per_bin": -4.287762042767814,
+    "gain_nats_per_bin": 0.09184032853111043,
+    "gain_bits_per_spike": 0.10065708123638549
+  },
+  "recovery": {
+    "sampled_offdiagonal_pairs": 132,
+    "pair_sampling": "fixed random sample with replacement; descriptive metrics, not independent-replicate uncertainty",
+    "filter_correlation": 0.7423124839366926,
+    "filter_relative_error": 0.6614526257212042,
+    "edge_auc": 0.9695216049382717,
+    "edge_average_precision": 0.8915400156211695,
+    "edge_prevalence": 0.18181818181818182
+  },
+  "target_label_permutation_recovery": [
+    {
+      "sampled_offdiagonal_pairs": 132,
+      "pair_sampling": "fixed random sample with replacement; descriptive metrics, not independent-replicate uncertainty",
+      "filter_correlation": -0.108605061898556,
+      "filter_relative_error": 1.274818062617601,
+      "edge_auc": 0.49266975308641975,
+      "edge_average_precision": 0.21284651218522901,
+      "edge_prevalence": 0.18181818181818182
+    },
+    {
+      "sampled_offdiagonal_pairs": 132,
+      "pair_sampling": "fixed random sample with replacement; descriptive metrics, not independent-replicate uncertainty",
+      "filter_correlation": -0.09059789740607786,
+      "filter_relative_error": 1.285001686089715,
+      "edge_auc": 0.6716820987654322,
+      "edge_average_precision": 0.2916077424682358,
+      "edge_prevalence": 0.18181818181818182
+    },
+    {
+      "sampled_offdiagonal_pairs": 132,
+      "pair_sampling": "fixed random sample with replacement; descriptive metrics, not independent-replicate uncertainty",
+      "filter_correlation": 0.2625594277611404,
+      "filter_relative_error": 1.1098194514600919,
+      "edge_auc": 0.5891203703703705,
+      "edge_average_precision": 0.35123481438902227,
+      "edge_prevalence": 0.18181818181818182
+    },
+    {
+      "sampled_offdiagonal_pairs": 132,
+      "pair_sampling": "fixed random sample with replacement; descriptive metrics, not independent-replicate uncertainty",
+      "filter_correlation": 0.0711917035777669,
+      "filter_relative_error": 1.3007912000792008,
+      "edge_auc": 0.7110339506172839,
+      "edge_average_precision": 0.3500678925925988,
+      "edge_prevalence": 0.18181818181818182
+    },
+    {
+      "sampled_offdiagonal_pairs": 132,
+      "pair_sampling": "fixed random sample with replacement; descriptive metrics, not independent-replicate uncertainty",
+      "filter_correlation": 0.04337113563762992,
+      "filter_relative_error": 1.1862631645574793,
+      "edge_auc": 0.4012345679012346,
+      "edge_average_precision": 0.1647844457120589,
+      "edge_prevalence": 0.18181818181818182
+    },
+    {
+      "sampled_offdiagonal_pairs": 132,
+      "pair_sampling": "fixed random sample with replacement; descriptive metrics, not independent-replicate uncertainty",
+      "filter_correlation": -0.09745556411500308,
+      "filter_relative_error": 1.3059974891661095,
+      "edge_auc": 0.4969135802469136,
+      "edge_average_precision": 0.19219313778785374,
+      "edge_prevalence": 0.18181818181818182
+    },
+    {
+      "sampled_offdiagonal_pairs": 132,
+      "pair_sampling": "fixed random sample with replacement; descriptive metrics, not independent-replicate uncertainty",
+      "filter_correlation": 0.025429505438996167,
+      "filter_relative_error": 1.3892907180951821,
+      "edge_auc": 0.6084104938271605,
+      "edge_average_precision": 0.24869247274155135,
+      "edge_prevalence": 0.18181818181818182
+    },
+    {
+      "sampled_offdiagonal_pairs": 132,
+      "pair_sampling": "fixed random sample with replacement; descriptive metrics, not independent-replicate uncertainty",
+      "filter_correlation": 0.09146278756669077,
+      "filter_relative_error": 1.223874519467924,
+      "edge_auc": 0.5922067901234568,
+      "edge_average_precision": 0.2848616574710504,
+      "edge_prevalence": 0.18181818181818182
+    },
+    {
+      "sampled_offdiagonal_pairs": 132,
+      "pair_sampling": "fixed random sample with replacement; descriptive metrics, not independent-replicate uncertainty",
+      "filter_correlation": 0.30607924248105406,
+      "filter_relative_error": 1.0834562771763698,
+      "edge_auc": 0.7573302469135802,
+      "edge_average_precision": 0.4965301539850214,
+      "edge_prevalence": 0.18181818181818182
+    },
+    {
+      "sampled_offdiagonal_pairs": 132,
+      "pair_sampling": "fixed random sample with replacement; descriptive metrics, not independent-replicate uncertainty",
+      "filter_correlation": 0.15358575742256936,
+      "filter_relative_error": 1.2626175289203607,
+      "edge_auc": 0.6215277777777778,
+      "edge_average_precision": 0.2694226568070985,
+      "edge_prevalence": 0.18181818181818182
+    },
+    {
+      "sampled_offdiagonal_pairs": 132,
+      "pair_sampling": "fixed random sample with replacement; descriptive metrics, not independent-replicate uncertainty",
+      "filter_correlation": -0.001754213092771895,
+      "filter_relative_error": 1.3009386628769046,
+      "edge_auc": 0.5497685185185185,
+      "edge_average_precision": 0.21264396733627144,
+      "edge_prevalence": 0.18181818181818182
+    },
+    {
+      "sampled_offdiagonal_pairs": 132,
+      "pair_sampling": "fixed random sample with replacement; descriptive metrics, not independent-replicate uncertainty",
+      "filter_correlation": 0.07227430770864667,
+      "filter_relative_error": 1.1261399723976804,
+      "edge_auc": 0.7685185185185185,
+      "edge_average_precision": 0.37584286505918707,
+      "edge_prevalence": 0.18181818181818182
+    },
+    {
+      "sampled_offdiagonal_pairs": 132,
+      "pair_sampling": "fixed random sample with replacement; descriptive metrics, not independent-replicate uncertainty",
+      "filter_correlation": 0.14480994483035337,
+      "filter_relative_error": 1.1728111789747744,
+      "edge_auc": 0.5455246913580247,
+      "edge_average_precision": 0.20503296480992972,
+      "edge_prevalence": 0.18181818181818182
+    },
+    {
+      "sampled_offdiagonal_pairs": 132,
+      "pair_sampling": "fixed random sample with replacement; descriptive metrics, not independent-replicate uncertainty",
+      "filter_correlation": 0.16386690719868985,
+      "filter_relative_error": 1.1428129668383624,
+      "edge_auc": 0.4930555555555556,
+      "edge_average_precision": 0.27570812002249817,
+      "edge_prevalence": 0.18181818181818182
+    },
+    {
+      "sampled_offdiagonal_pairs": 132,
+      "pair_sampling": "fixed random sample with replacement; descriptive metrics, not independent-replicate uncertainty",
+      "filter_correlation": 0.07534720879380308,
+      "filter_relative_error": 1.1840650017032748,
+      "edge_auc": 0.5435956790123457,
+      "edge_average_precision": 0.2267188716380933,
+      "edge_prevalence": 0.18181818181818182
+    },
+    {
+      "sampled_offdiagonal_pairs": 132,
+      "pair_sampling": "fixed random sample with replacement; descriptive metrics, not independent-replicate uncertainty",
+      "filter_correlation": 0.14776832707276458,
+      "filter_relative_error": 1.1378694259052131,
+      "edge_auc": 0.5343364197530865,
+      "edge_average_precision": 0.2568437667878213,
+      "edge_prevalence": 0.18181818181818182
+    },
+    {
+      "sampled_offdiagonal_pairs": 132,
+      "pair_sampling": "fixed random sample with replacement; descriptive metrics, not independent-replicate uncertainty",
+      "filter_correlation": 0.20445425750203328,
+      "filter_relative_error": 1.1520968447171591,
+      "edge_auc": 0.5752314814814815,
+      "edge_average_precision": 0.352415051822649,
+      "edge_prevalence": 0.18181818181818182
+    },
+    {
+      "sampled_offdiagonal_pairs": 132,
+      "pair_sampling": "fixed random sample with replacement; descriptive metrics, not independent-replicate uncertainty",
+      "filter_correlation": -0.18836533235713912,
+      "filter_relative_error": 1.3871785125062404,
+      "edge_auc": 0.4807098765432099,
+      "edge_average_precision": 0.18083705081328705,
+      "edge_prevalence": 0.18181818181818182
+    },
+    {
+      "sampled_offdiagonal_pairs": 132,
+      "pair_sampling": "fixed random sample with replacement; descriptive metrics, not independent-replicate uncertainty",
+      "filter_correlation": 0.039904745184622684,
+      "filter_relative_error": 1.170358464921615,
+      "edge_auc": 0.308641975308642,
+      "edge_average_precision": 0.14192789751313883,
+      "edge_prevalence": 0.18181818181818182
+    },
+    {
+      "sampled_offdiagonal_pairs": 132,
+      "pair_sampling": "fixed random sample with replacement; descriptive metrics, not independent-replicate uncertainty",
+      "filter_correlation": 0.20076697609762975,
+      "filter_relative_error": 1.1730664432949987,
+      "edge_auc": 0.32523148148148145,
+      "edge_average_precision": 0.24828914180394202,
+      "edge_prevalence": 0.18181818181818182
+    }
+  ],
+  "permutation_scope": "20 target-label permutations of learned off-diagonal filters; descriptive recovery control, not surrogate refits or independent biological replications",
+  "shifted_test": {
+    "log_likelihood_per_bin": -4.310416607331932,
+    "valid_bins": 392,
+    "spikes": 515.0,
+    "bin_s": 0.01,
+    "intercept_log_likelihood_per_bin": -4.275524186971704,
+    "gain_nats_per_bin": -0.034892420360228715,
+    "gain_bits_per_spike": -0.038316380102484476
+  },
+  "self_history_test": {
+    "log_likelihood_per_bin": -4.27065970241393,
+    "valid_bins": 392,
+    "spikes": 516.0,
+    "bin_s": 0.01,
+    "intercept_log_likelihood_per_bin": -4.287762042767814,
+    "gain_nats_per_bin": 0.017102340353883902,
+    "gain_bits_per_spike": 0.018744180142496618
+  },
+  "gain_over_self_history_nats_per_bin": 0.07473798817722699,
+  "oracle_test": {
+    "log_likelihood_per_bin": -4.153787259135738,
+    "valid_bins": 392,
+    "spikes": 516.0,
+    "bin_s": 0.01,
+    "intercept_log_likelihood_per_bin": -4.287762042767814,
+    "gain_nats_per_bin": 0.1339747836320758,
+    "gain_bits_per_spike": 0.14683648126446844
+  }
+}
